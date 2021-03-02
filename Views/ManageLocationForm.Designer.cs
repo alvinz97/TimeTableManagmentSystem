@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.headerLable = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.addNewLocationBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerLable
@@ -44,31 +44,26 @@
             this.headerLable.Text = "Manage Location";
             this.headerLable.Click += new System.EventHandler(this.headerLable_Click);
             // 
-            // tableLayoutPanel1
+            // addNewLocationBtn
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.42529F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.57471F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 343F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 115);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 235F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(833, 318);
-            this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.addNewLocationBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addNewLocationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewLocationBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewLocationBtn.ForeColor = System.Drawing.Color.White;
+            this.addNewLocationBtn.Location = new System.Drawing.Point(37, 93);
+            this.addNewLocationBtn.Name = "addNewLocationBtn";
+            this.addNewLocationBtn.Size = new System.Drawing.Size(110, 40);
+            this.addNewLocationBtn.TabIndex = 3;
+            this.addNewLocationBtn.Text = "New";
+            this.addNewLocationBtn.UseVisualStyleBackColor = false;
+            this.addNewLocationBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManageLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 703);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.addNewLocationBtn);
             this.Controls.Add(this.headerLable);
             this.Name = "ManageLocation";
             this.Text = "ManageLocation";
@@ -81,6 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Label headerLable;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button addNewLocationBtn;
     }
 }

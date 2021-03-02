@@ -16,7 +16,7 @@ namespace TimeTableManagmentSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddLocationForm());
+            Application.Run(new ManageLocation());
         }
     }
 }
