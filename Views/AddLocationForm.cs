@@ -61,6 +61,10 @@ namespace TimeTableManagmentSystem
         {
 
         }
+        private void roomClearBtn_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
 
         public void Clear()
         {
@@ -103,5 +107,6 @@ namespace TimeTableManagmentSystem
                 Clear();
             }
         }
+
     }
 }

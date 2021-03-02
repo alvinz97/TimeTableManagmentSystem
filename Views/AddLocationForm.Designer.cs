@@ -188,6 +188,7 @@
             this.roomClearBtn.TabIndex = 11;
             this.roomClearBtn.Text = "Clear";
             this.roomClearBtn.UseVisualStyleBackColor = false;
+            this.roomClearBtn.Click += new System.EventHandler(this.roomClearBtn_Click);
             // 
             // roomSaveBtn
             // 
