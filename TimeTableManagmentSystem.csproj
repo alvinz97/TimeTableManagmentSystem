@@ -51,6 +51,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>I:\SLIIT Documents\3rd Year\2nd Sem\ITPM\Project\Resources\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -63,6 +66,7 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.23\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -102,33 +106,84 @@
     <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.23\lib\net452\Ubiety.Dns.Core.dll</HintPath>
     </Reference>
+    <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
+      <HintPath>packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.23\lib\net452\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\Connection.cs" />
-    <Compile Include="Controllers\LocationController.cs" />
-    <Compile Include="Views\ManageLocationForm.cs">
+    <Compile Include="Controllers\Location\LocationController.cs" />
+    <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ManageLocationForm.Designer.cs">
+    <Compile Include="Views\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Location\EditLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Location\EditLocationForm.Designer.cs">
+      <DependentUpon>EditLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Location\ManageLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Location\ManageLocationForm.Designer.cs">
       <DependentUpon>ManageLocationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Location.cs" />
     <Compile Include="Test.cs" />
-    <Compile Include="Views\AddLocationForm.cs">
+    <Compile Include="Views\Location\AddLocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AddLocationForm.Designer.cs">
+    <Compile Include="Views\Location\AddLocationForm.Designer.cs">
       <DependentUpon>AddLocationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\AddLocationForm.resx">
+    <Compile Include="Views\Session\ManageSessionRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Session\ManageSessionRoomForm.Designer.cs">
+      <DependentUpon>ManageSessionRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SubMenu.Designer.cs">
+      <DependentUpon>SubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Working\AddWeekdayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Working\AddWeekdayForm.Designer.cs">
+      <DependentUpon>AddWeekdayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Working\AddWeekendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Working\AddWeekendForm.Designer.cs">
+      <DependentUpon>AddWeekendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Working\ViewDetailsFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Working\ViewDetailsFrom.Designer.cs">
+      <DependentUpon>ViewDetailsFrom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Location\AddLocationForm.resx">
       <DependentUpon>AddLocationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ManageLocationForm.resx">
+    <EmbeddedResource Include="Views\Location\EditLocationForm.resx">
+      <DependentUpon>EditLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Location\ManageLocationForm.resx">
       <DependentUpon>ManageLocationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,6 +196,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Session\ManageSessionRoomForm.resx">
+      <DependentUpon>ManageSessionRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SubMenu.resx">
+      <DependentUpon>SubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

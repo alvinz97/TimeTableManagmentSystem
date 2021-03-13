@@ -81,21 +81,21 @@ namespace TimeTableManagmentSystem
                 type = 1;
             }
 
-            if (buildingNameInput.Text.Trim().Length < 0)
+            if (buildingNameInput.Text == "")
             {
-                MessageBox.Show("Builing Name is required.");
+                MessageBox.Show("Builing Name is required.", "ERROR");
                 return;
             }
 
-            if (roomNameInput.Text.Trim().Length < 0)
+            if (roomNameInput.Text == "")
             {
-                MessageBox.Show("Room Name is required.");
+                MessageBox.Show("Room Name is required.", "ERROR");
                 return;
             }
 
-            if (roomCapacityInput.Text.Trim().Length < 0)
+            if (roomCapacityInput.Text == "")
             {
-                MessageBox.Show("Room capacity is required.");
+                MessageBox.Show("Room capacity is required.", "ERROR");
                 return;
             }
 
@@ -103,10 +103,14 @@ namespace TimeTableManagmentSystem
             {
                 int capacity = Int16.Parse(roomCapacityInput.Text.Trim());
                 Location location = new Location(buildingNameInput.Text.Trim(), roomNameInput.Text.Trim(), type, capacity);
-                LocationController.AddLocation(location);
+                LocationController.Store(location);
                 Clear();
             }
         }
 
+        private void headerBackgroundPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

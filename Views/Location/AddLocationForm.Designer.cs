@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.headerLable = new System.Windows.Forms.Label();
             this.buildingNameLabel = new System.Windows.Forms.Label();
             this.buildingNameInput = new System.Windows.Forms.TextBox();
             this.roomNameInput = new System.Windows.Forms.TextBox();
@@ -41,9 +40,8 @@
             this.roomCapacityLable = new System.Windows.Forms.Label();
             this.roomClearBtn = new System.Windows.Forms.Button();
             this.roomSaveBtn = new System.Windows.Forms.Button();
-            this.addLocationPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.addLocationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -56,24 +54,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // headerLable
-            // 
-            this.headerLable.AllowDrop = true;
-            this.headerLable.AutoSize = true;
-            this.headerLable.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLable.ForeColor = System.Drawing.Color.White;
-            this.headerLable.Location = new System.Drawing.Point(30, 26);
-            this.headerLable.Name = "headerLable";
-            this.headerLable.Size = new System.Drawing.Size(202, 36);
-            this.headerLable.TabIndex = 1;
-            this.headerLable.Text = "Add Location";
-            this.headerLable.Click += new System.EventHandler(this.label1_Click);
-            // 
             // buildingNameLabel
             // 
             this.buildingNameLabel.AutoSize = true;
+            this.buildingNameLabel.BackColor = System.Drawing.Color.White;
             this.buildingNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingNameLabel.Location = new System.Drawing.Point(37, 206);
+            this.buildingNameLabel.Location = new System.Drawing.Point(57, 112);
             this.buildingNameLabel.Name = "buildingNameLabel";
             this.buildingNameLabel.Size = new System.Drawing.Size(138, 25);
             this.buildingNameLabel.TabIndex = 2;
@@ -87,7 +73,7 @@
             this.buildingNameInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.buildingNameInput.CausesValidation = false;
             this.buildingNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingNameInput.Location = new System.Drawing.Point(248, 201);
+            this.buildingNameInput.Location = new System.Drawing.Point(248, 113);
             this.buildingNameInput.Name = "buildingNameInput";
             this.buildingNameInput.Size = new System.Drawing.Size(403, 30);
             this.buildingNameInput.TabIndex = 3;
@@ -99,7 +85,7 @@
             this.roomNameInput.AcceptsTab = true;
             this.roomNameInput.CausesValidation = false;
             this.roomNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomNameInput.Location = new System.Drawing.Point(248, 295);
+            this.roomNameInput.Location = new System.Drawing.Point(248, 207);
             this.roomNameInput.Name = "roomNameInput";
             this.roomNameInput.Size = new System.Drawing.Size(403, 30);
             this.roomNameInput.TabIndex = 5;
@@ -108,8 +94,9 @@
             // roomNameLable
             // 
             this.roomNameLable.AutoSize = true;
+            this.roomNameLable.BackColor = System.Drawing.Color.White;
             this.roomNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomNameLable.Location = new System.Drawing.Point(37, 300);
+            this.roomNameLable.Location = new System.Drawing.Point(57, 206);
             this.roomNameLable.Name = "roomNameLable";
             this.roomNameLable.Size = new System.Drawing.Size(120, 25);
             this.roomNameLable.TabIndex = 4;
@@ -119,8 +106,9 @@
             // roomTypeLable
             // 
             this.roomTypeLable.AutoSize = true;
+            this.roomTypeLable.BackColor = System.Drawing.Color.White;
             this.roomTypeLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomTypeLable.Location = new System.Drawing.Point(37, 395);
+            this.roomTypeLable.Location = new System.Drawing.Point(57, 301);
             this.roomTypeLable.Name = "roomTypeLable";
             this.roomTypeLable.Size = new System.Drawing.Size(113, 25);
             this.roomTypeLable.TabIndex = 6;
@@ -129,27 +117,29 @@
             // lectureTypeRadio
             // 
             this.lectureTypeRadio.AutoSize = true;
+            this.lectureTypeRadio.BackColor = System.Drawing.Color.White;
             this.lectureTypeRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lectureTypeRadio.Location = new System.Drawing.Point(248, 398);
+            this.lectureTypeRadio.Location = new System.Drawing.Point(251, 304);
             this.lectureTypeRadio.Name = "lectureTypeRadio";
             this.lectureTypeRadio.Size = new System.Drawing.Size(122, 24);
             this.lectureTypeRadio.TabIndex = 7;
             this.lectureTypeRadio.TabStop = true;
             this.lectureTypeRadio.Text = "Lecture Hall";
-            this.lectureTypeRadio.UseVisualStyleBackColor = true;
+            this.lectureTypeRadio.UseVisualStyleBackColor = false;
             this.lectureTypeRadio.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // labTypeRadio
             // 
             this.labTypeRadio.AutoSize = true;
+            this.labTypeRadio.BackColor = System.Drawing.Color.White;
             this.labTypeRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTypeRadio.Location = new System.Drawing.Point(425, 398);
+            this.labTypeRadio.Location = new System.Drawing.Point(428, 304);
             this.labTypeRadio.Name = "labTypeRadio";
             this.labTypeRadio.Size = new System.Drawing.Size(110, 24);
             this.labTypeRadio.TabIndex = 8;
             this.labTypeRadio.TabStop = true;
             this.labTypeRadio.Text = "Laboratory";
-            this.labTypeRadio.UseVisualStyleBackColor = true;
+            this.labTypeRadio.UseVisualStyleBackColor = false;
             this.labTypeRadio.CheckedChanged += new System.EventHandler(this.labTypeRadio_CheckedChanged);
             // 
             // roomCapacityInput
@@ -158,7 +148,7 @@
             this.roomCapacityInput.AcceptsTab = true;
             this.roomCapacityInput.CausesValidation = false;
             this.roomCapacityInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomCapacityInput.Location = new System.Drawing.Point(248, 481);
+            this.roomCapacityInput.Location = new System.Drawing.Point(248, 392);
             this.roomCapacityInput.Name = "roomCapacityInput";
             this.roomCapacityInput.Size = new System.Drawing.Size(403, 30);
             this.roomCapacityInput.TabIndex = 10;
@@ -166,8 +156,9 @@
             // roomCapacityLable
             // 
             this.roomCapacityLable.AutoSize = true;
+            this.roomCapacityLable.BackColor = System.Drawing.Color.White;
             this.roomCapacityLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomCapacityLable.Location = new System.Drawing.Point(37, 486);
+            this.roomCapacityLable.Location = new System.Drawing.Point(57, 392);
             this.roomCapacityLable.Name = "roomCapacityLable";
             this.roomCapacityLable.Size = new System.Drawing.Size(145, 25);
             this.roomCapacityLable.TabIndex = 9;
@@ -181,7 +172,7 @@
             this.roomClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomClearBtn.ForeColor = System.Drawing.Color.White;
-            this.roomClearBtn.Location = new System.Drawing.Point(186, 596);
+            this.roomClearBtn.Location = new System.Drawing.Point(186, 500);
             this.roomClearBtn.Name = "roomClearBtn";
             this.roomClearBtn.Padding = new System.Windows.Forms.Padding(10);
             this.roomClearBtn.Size = new System.Drawing.Size(131, 53);
@@ -199,7 +190,7 @@
             this.roomSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.roomSaveBtn.Location = new System.Drawing.Point(425, 596);
+            this.roomSaveBtn.Location = new System.Drawing.Point(425, 500);
             this.roomSaveBtn.Name = "roomSaveBtn";
             this.roomSaveBtn.Padding = new System.Windows.Forms.Padding(10);
             this.roomSaveBtn.Size = new System.Drawing.Size(131, 53);
@@ -208,22 +199,21 @@
             this.roomSaveBtn.UseVisualStyleBackColor = false;
             this.roomSaveBtn.Click += new System.EventHandler(this.roomSaveBtn_Click);
             // 
-            // addLocationPanel
+            // panel1
             // 
-            this.addLocationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.addLocationPanel.Controls.Add(this.headerLable);
-            this.addLocationPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.addLocationPanel.Location = new System.Drawing.Point(0, 0);
-            this.addLocationPanel.Name = "addLocationPanel";
-            this.addLocationPanel.Size = new System.Drawing.Size(742, 92);
-            this.addLocationPanel.TabIndex = 13;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1126, 575);
+            this.panel1.TabIndex = 13;
             // 
             // AddLocationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 751);
-            this.Controls.Add(this.addLocationPanel);
+            this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.roomSaveBtn);
             this.Controls.Add(this.roomClearBtn);
             this.Controls.Add(this.roomCapacityInput);
@@ -236,14 +226,14 @@
             this.Controls.Add(this.buildingNameInput);
             this.Controls.Add(this.buildingNameLabel);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddLocationForm";
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "   ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.addLocationPanel.ResumeLayout(false);
-            this.addLocationPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +242,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label headerLable;
         private System.Windows.Forms.Label buildingNameLabel;
         private System.Windows.Forms.TextBox buildingNameInput;
         private System.Windows.Forms.TextBox roomNameInput;
@@ -264,7 +253,7 @@
         private System.Windows.Forms.Label roomCapacityLable;
         private System.Windows.Forms.Button roomClearBtn;
         private System.Windows.Forms.Button roomSaveBtn;
-        private System.Windows.Forms.Panel addLocationPanel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
