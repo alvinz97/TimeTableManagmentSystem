@@ -28,7 +28,12 @@ namespace TimeTableManagmentSystem.Views
         private void customizedDetsing() {
             workingHDSubMenuPanel.Visible = false;
             locationSubMenuPanel.Visible = false;
+            lecturerSubMenuPanel.Visible = false;
+            tagSubMenuPanel.Visible = false;
+            studentSubMenuPanel.Visible = false;
+            subjectSubMenuPanel.Visible = false;
             sessionManagemntSubmenuPanel.Visible = false;
+            roomManagmentSubmenuPanel.Visible = false;
         }
 
         public void hideSubmenu() {
@@ -38,8 +43,23 @@ namespace TimeTableManagmentSystem.Views
             if (locationSubMenuPanel.Visible == true) {
                 locationSubMenuPanel.Visible = false;
             }
+            if (lecturerSubMenuPanel.Visible == true) {
+                lecturerSubMenuPanel.Visible = false;
+            }
+            if (tagSubMenuPanel.Visible == true) {
+                tagSubMenuPanel.Visible = false;
+            }
+            if (studentSubMenuPanel.Visible == true) {
+                studentSubMenuPanel.Visible = false;
+            }
+            if (subjectSubMenuPanel.Visible == true) {
+                subjectSubMenuPanel.Visible = false;
+            }
             if (sessionManagemntSubmenuPanel.Visible == true) {
                 sessionManagemntSubmenuPanel.Visible = false;
+            }
+            if (roomManagmentSubmenuPanel.Visible == true) {
+                roomManagmentSubmenuPanel.Visible = false;
             }
         }
 
@@ -86,11 +106,6 @@ namespace TimeTableManagmentSystem.Views
             showSubMenu(workingHDSubMenuPanel);
         }
 
-        private void locationsMenuBtn_Click(object sender, EventArgs e)
-        {
-            showSubMenu(locationSubMenuPanel);
-        }
-
         private Form activeForm = null;
         public void openChildContainer(Form childForm) {
             if (activeForm != null) {
@@ -120,21 +135,6 @@ namespace TimeTableManagmentSystem.Views
             hideSubmenu();
         }
 
-        private void workingHDSubMenuPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void studentsMenuBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void locationsMenuBtn_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(locationSubMenuPanel);
-        }
-
         private void viewWeekdaysDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
             openChildContainer(new ManageWeekendNWeekdayFrom());
@@ -149,16 +149,46 @@ namespace TimeTableManagmentSystem.Views
             hideSubmenu();
         }
 
-        private void sessionManagemntMenuBtn_Click(object sender, EventArgs e)
-        {
-            showSubMenu(sessionManagemntSubmenuPanel);
-        }
-
         private void allocateNotAvailableSubmenuBtn_Click(object sender, EventArgs e)
         {
             openChildContainer(new AddNotAvailableSessionForm());
             changeHeaderText("Add Not Available Session");
             hideSubmenu();
+        }
+
+        private void lecturersMenuBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(lecturerSubMenuPanel);
+        }
+
+        private void tagMenuBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(tagSubMenuPanel);
+        }
+
+        private void studentsMenuBtn_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(studentSubMenuPanel);
+        }
+
+        private void subjectMenuBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subjectSubMenuPanel);
+        }
+
+        private void locationsMenuBtn_Click_2(object sender, EventArgs e)
+        {
+            showSubMenu(locationSubMenuPanel);
+        }
+
+        private void sessionManagemntMenuBtn_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(sessionManagemntSubmenuPanel);
+        }
+
+        private void roomManagmentMenuBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(roomManagmentSubmenuPanel);
         }
     }
 }
