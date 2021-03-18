@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeTableManagmentSystem.Views.Working
 {
-    public partial class ViewDetailsFrom : Form
+    public partial class EditWeekdayWeekendForm : Form
     {
-        public ViewDetailsFrom()
+        public EditWeekdayWeekendForm()
         {
             InitializeComponent();
         }

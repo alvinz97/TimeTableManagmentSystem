@@ -21,7 +21,7 @@ namespace TimeTableManagmentSystem.Configurations
             {
                 connection.Open();
             }
-            catch (MySqlException e){
+            catch (SqlException e){
                 MessageBox.Show("SQL Server Connection! \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return connection;

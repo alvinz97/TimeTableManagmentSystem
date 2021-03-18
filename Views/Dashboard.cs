@@ -71,15 +71,8 @@ namespace TimeTableManagmentSystem.Views
 
         private void weekendDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddWeekendForm());
-            changeHeaderText("Add Weekend Details");
-            hideSubmenu();
-        }
-
-        private void weekdayDetailsSubmenuBtn_Click(object sender, EventArgs e)
-        {
-            openChildContainer(new AddWeekdayForm());
-            changeHeaderText("Add Weekday Details");
+            openChildContainer(new AddWeekdayWeekendForm());
+            changeHeaderText("Add Details");
             hideSubmenu();
         }
 
@@ -144,7 +137,7 @@ namespace TimeTableManagmentSystem.Views
 
         private void viewWeekdaysDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ViewDetailsFrom());
+            openChildContainer(new ManageWeekendNWeekdayFrom());
             changeHeaderText("Working Hours And Days Details");
             hideSubmenu();
         }
@@ -159,6 +152,13 @@ namespace TimeTableManagmentSystem.Views
         private void sessionManagemntMenuBtn_Click(object sender, EventArgs e)
         {
             showSubMenu(sessionManagemntSubmenuPanel);
+        }
+
+        private void allocateNotAvailableSubmenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new AddNotAvailableSessionForm());
+            changeHeaderText("Add Not Available Session");
+            hideSubmenu();
         }
     }
 }

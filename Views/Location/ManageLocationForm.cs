@@ -17,10 +17,12 @@ namespace TimeTableManagmentSystem
     {
         public string id, BuildingName, RoomName, RoomType, RoomCapacity;
         AddLocationForm locationForm;
+        Dashboard dashboard;
         public ManageLocation()
         {
             InitializeComponent();
             locationForm = new AddLocationForm();
+            dashboard = new Dashboard();
         }
 
         private void headerLable_Click(object sender, EventArgs e)
@@ -40,14 +42,12 @@ namespace TimeTableManagmentSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.openChildContainer(new AddLocationForm());
+            dashboard.openChildContainer(locationForm);
             dashboard.changeHeaderText("Add Locations");
             dashboard.hideSubmenu();
-            /*
-            AddLocationForm manageLocation = new AddLocationForm();
-            manageLocation.ShowDialog();
-            */
+            
+            /*AddLocationForm manageLocation = new AddLocationForm();
+            manageLocation.ShowDialog();*/
         }
 
         public void Display()
@@ -90,7 +90,6 @@ namespace TimeTableManagmentSystem
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0) {
-                Dashboard dashboard = new Dashboard();
                 dashboard.openChildContainer(new AddLocationForm());
                 dashboard.changeHeaderText("Add Locations");
                 dashboard.hideSubmenu();

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeTableManagmentSystem.Views.Working
+namespace TimeTableManagmentSystem.Views.Lecturer
 {
-    public partial class AddWeekdayForm : Form
+    public partial class AddLecturer : Form
     {
-        public AddWeekdayForm()
+        public AddLecturer()
         {
             InitializeComponent();
         }

@@ -116,11 +116,19 @@
   <ItemGroup>
     <Compile Include="Configurations\Connection.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
+    <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
+    <Compile Include="Models\Workingday.cs" />
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lecturer\AddLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lecturer\AddLecturer.Designer.cs">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Location\EditLocationForm.cs">
       <SubType>Form</SubType>
@@ -144,6 +152,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Session\AddNotAvailableSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Session\AddNotAvailableSessionForm.Designer.cs">
+      <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Session\AddSessionRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,26 +170,29 @@
     <Compile Include="Views\SubMenu.Designer.cs">
       <DependentUpon>SubMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Working\AddWeekdayForm.cs">
+    <Compile Include="Views\Working\AddWeekdayWeekendForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Working\AddWeekdayForm.Designer.cs">
-      <DependentUpon>AddWeekdayForm.cs</DependentUpon>
+    <Compile Include="Views\Working\AddWeekdayWeekendForm.Designer.cs">
+      <DependentUpon>AddWeekdayWeekendForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Working\AddWeekendForm.cs">
+    <Compile Include="Views\Working\EditWeekdayWeekendForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Working\AddWeekendForm.Designer.cs">
-      <DependentUpon>AddWeekendForm.cs</DependentUpon>
+    <Compile Include="Views\Working\EditWeekdayWeekendForm.Designer.cs">
+      <DependentUpon>EditWeekdayWeekendForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Working\ViewDetailsFrom.cs">
+    <Compile Include="Views\Working\ManageWeekendNWeekdayFrom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Working\ViewDetailsFrom.Designer.cs">
-      <DependentUpon>ViewDetailsFrom.cs</DependentUpon>
+    <Compile Include="Views\Working\ManageWeekendNWeekdayFrom.Designer.cs">
+      <DependentUpon>ManageWeekendNWeekdayFrom.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lecturer\AddLecturer.resx">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Location\AddLocationForm.resx">
       <DependentUpon>AddLocationForm.cs</DependentUpon>
@@ -196,20 +213,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Session\AddNotAvailableSessionForm.resx">
+      <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Session\AddSessionRoomForm.resx">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Working\AddWeekdayForm.resx">
-      <DependentUpon>AddWeekdayForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Working\AddWeekdayWeekendForm.resx">
+      <DependentUpon>AddWeekdayWeekendForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Working\AddWeekendForm.resx">
-      <DependentUpon>AddWeekendForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Working\EditWeekdayWeekendForm.resx">
+      <DependentUpon>EditWeekdayWeekendForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Working\ViewDetailsFrom.resx">
-      <DependentUpon>ViewDetailsFrom.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Working\ManageWeekendNWeekdayFrom.resx">
+      <DependentUpon>ManageWeekendNWeekdayFrom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="packages.config" />
