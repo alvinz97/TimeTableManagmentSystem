@@ -144,11 +144,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Session\ManageSessionRoomForm.cs">
+    <Compile Include="Views\Session\AddSessionRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Session\ManageSessionRoomForm.Designer.cs">
-      <DependentUpon>ManageSessionRoomForm.cs</DependentUpon>
+    <Compile Include="Views\Session\AddSessionRoomForm.Designer.cs">
+      <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SubMenu.cs">
       <SubType>UserControl</SubType>
@@ -196,11 +196,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\Session\ManageSessionRoomForm.resx">
-      <DependentUpon>ManageSessionRoomForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Session\AddSessionRoomForm.resx">
+      <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Working\AddWeekdayForm.resx">
+      <DependentUpon>AddWeekdayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Working\AddWeekendForm.resx">
+      <DependentUpon>AddWeekendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Working\ViewDetailsFrom.resx">
+      <DependentUpon>ViewDetailsFrom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="packages.config" />

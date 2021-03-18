@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTableManagmentSystem.Views.Session;
 using TimeTableManagmentSystem.Views.Working;
 
 namespace TimeTableManagmentSystem.Views
@@ -27,6 +28,7 @@ namespace TimeTableManagmentSystem.Views
         private void customizedDetsing() {
             workingHDSubMenuPanel.Visible = false;
             locationSubMenuPanel.Visible = false;
+            sessionManagemntSubmenuPanel.Visible = false;
         }
 
         public void hideSubmenu() {
@@ -35,6 +37,9 @@ namespace TimeTableManagmentSystem.Views
             }
             if (locationSubMenuPanel.Visible == true) {
                 locationSubMenuPanel.Visible = false;
+            }
+            if (sessionManagemntSubmenuPanel.Visible == true) {
+                sessionManagemntSubmenuPanel.Visible = false;
             }
         }
 
@@ -142,6 +147,18 @@ namespace TimeTableManagmentSystem.Views
             openChildContainer(new ViewDetailsFrom());
             changeHeaderText("Working Hours And Days Details");
             hideSubmenu();
+        }
+
+        private void addSessionSubmenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new AddSessionRoomForm());
+            changeHeaderText("Add Session");
+            hideSubmenu();
+        }
+
+        private void sessionManagemntMenuBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(sessionManagemntSubmenuPanel);
         }
     }
 }

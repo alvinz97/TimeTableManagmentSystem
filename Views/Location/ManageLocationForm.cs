@@ -52,7 +52,7 @@ namespace TimeTableManagmentSystem
 
         public void Display()
         {
-            string query = "SELECT id, BuildingName, RoomName, RoomType, RoomCapacity FROM itpm_location";
+            string query = "SELECT id, BuildingName, RoomName, RoomType, RoomCapacity FROM location";
             LocationController.Index(query, dataGridView);
         }
 
@@ -75,7 +75,7 @@ namespace TimeTableManagmentSystem
         {
             string query = 
                 "SELECT id, BuildingName, RoomName, RoomType, RoomCapacity " +
-                "FROM itpm_location " +
+                "FROM location " +
                 "WHERE BuildingName " +
                 "LIKE '%"+ locationSearchInput.Text + "%' " +
                 "OR RoomName " +

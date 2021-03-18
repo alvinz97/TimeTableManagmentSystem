@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +11,18 @@ namespace TimeTableManagmentSystem.Configurations
 {
     class Connection
     {
-        public static MySqlConnection GetConnection() 
+        public static SqlConnection GetConnection() 
         {
-            string database = "itpm_time_table_management_system";
-            string host = "localhost";
-            string port = "3306";
-            string username = "root";
-            string password = "issa123";
+            string url = "Data Source=ALVIN-NOTEBOOK\\DEVELOPERSQL;Initial Catalog=itpm_db;Integrated Security=True";
 
-            string url = "datasource=localhost;port=3306;username=root;password=issa123;database=itpm_time_table_management_system";
-
-            MySqlConnection connection = new MySqlConnection(url);
+            SqlConnection connection = new SqlConnection(url);
 
             try
             {
                 connection.Open();
             }
             catch (MySqlException e){
-                MessageBox.Show("NySQL Connection! \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("SQL Server Connection! \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return connection;
         }

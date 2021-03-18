@@ -30,8 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.topHeaderPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.subSystemNameLable = new System.Windows.Forms.Label();
+            this.systemNameLable = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerDynamicLabel = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.roomManagmentSubmenuPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.roomManagmentMenuBtn = new System.Windows.Forms.Button();
+            this.sessionManagemntSubmenuPanel = new System.Windows.Forms.Panel();
+            this.notOverlappingSessionSubmenuBtn = new System.Windows.Forms.Button();
+            this.paralleSessionSubmenuBtn = new System.Windows.Forms.Button();
+            this.consecutiveSessionSubmenuBtn = new System.Windows.Forms.Button();
+            this.allocateNotAvailableSubmenuBtn = new System.Windows.Forms.Button();
+            this.addSessionSubmenuBtn = new System.Windows.Forms.Button();
+            this.sessionManagemntMenuBtn = new System.Windows.Forms.Button();
             this.locationSubMenuPanel = new System.Windows.Forms.Panel();
             this.addLocationSubMenuBtn = new System.Windows.Forms.Button();
             this.locationListSubMenuBtn = new System.Windows.Forms.Button();
@@ -47,16 +61,14 @@
             this.workingHDMenuBtn = new System.Windows.Forms.Button();
             this.dashboardMenuBtn = new System.Windows.Forms.Button();
             this.childContainerPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.systemNameLable = new System.Windows.Forms.Label();
-            this.subSystemNameLable = new System.Windows.Forms.Label();
             this.topHeaderPanel.SuspendLayout();
-            this.sidebarPanel.SuspendLayout();
-            this.locationSubMenuPanel.SuspendLayout();
-            this.workingHDSubMenuPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.sidebarPanel.SuspendLayout();
+            this.roomManagmentSubmenuPanel.SuspendLayout();
+            this.sessionManagemntSubmenuPanel.SuspendLayout();
+            this.locationSubMenuPanel.SuspendLayout();
+            this.workingHDSubMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // topHeaderPanel
@@ -70,6 +82,49 @@
             this.topHeaderPanel.Size = new System.Drawing.Size(1459, 86);
             this.topHeaderPanel.TabIndex = 0;
             this.topHeaderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topHeaderPanel_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.subSystemNameLable);
+            this.panel1.Controls.Add(this.systemNameLable);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(275, 86);
+            this.panel1.TabIndex = 1;
+            // 
+            // subSystemNameLable
+            // 
+            this.subSystemNameLable.AutoSize = true;
+            this.subSystemNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subSystemNameLable.ForeColor = System.Drawing.Color.White;
+            this.subSystemNameLable.Location = new System.Drawing.Point(134, 50);
+            this.subSystemNameLable.Name = "subSystemNameLable";
+            this.subSystemNameLable.Size = new System.Drawing.Size(125, 24);
+            this.subSystemNameLable.TabIndex = 2;
+            this.subSystemNameLable.Text = "ITPM @ SLIIT";
+            // 
+            // systemNameLable
+            // 
+            this.systemNameLable.AutoSize = true;
+            this.systemNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.systemNameLable.ForeColor = System.Drawing.Color.White;
+            this.systemNameLable.Location = new System.Drawing.Point(129, 10);
+            this.systemNameLable.Name = "systemNameLable";
+            this.systemNameLable.Size = new System.Drawing.Size(110, 39);
+            this.systemNameLable.TabIndex = 1;
+            this.systemNameLable.Text = "TTMS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // headerDynamicLabel
             // 
@@ -87,6 +142,10 @@
             // 
             this.sidebarPanel.AutoScroll = true;
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
+            this.sidebarPanel.Controls.Add(this.roomManagmentSubmenuPanel);
+            this.sidebarPanel.Controls.Add(this.roomManagmentMenuBtn);
+            this.sidebarPanel.Controls.Add(this.sessionManagemntSubmenuPanel);
+            this.sidebarPanel.Controls.Add(this.sessionManagemntMenuBtn);
             this.sidebarPanel.Controls.Add(this.locationSubMenuPanel);
             this.sidebarPanel.Controls.Add(this.locationsMenuBtn);
             this.sidebarPanel.Controls.Add(this.tagMenuBtn);
@@ -99,8 +158,170 @@
             this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebarPanel.Location = new System.Drawing.Point(0, 86);
             this.sidebarPanel.Name = "sidebarPanel";
-            this.sidebarPanel.Size = new System.Drawing.Size(275, 662);
+            this.sidebarPanel.Size = new System.Drawing.Size(275, 969);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // roomManagmentSubmenuPanel
+            // 
+            this.roomManagmentSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.roomManagmentSubmenuPanel.Controls.Add(this.button1);
+            this.roomManagmentSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 664);
+            this.roomManagmentSubmenuPanel.Name = "roomManagmentSubmenuPanel";
+            this.roomManagmentSubmenuPanel.Size = new System.Drawing.Size(275, 158);
+            this.roomManagmentSubmenuPanel.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(275, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Not Overlapping Sessions";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // roomManagmentMenuBtn
+            // 
+            this.roomManagmentMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(138)))));
+            this.roomManagmentMenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomManagmentMenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomManagmentMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomManagmentMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomManagmentMenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomManagmentMenuBtn.Location = new System.Drawing.Point(0, 629);
+            this.roomManagmentMenuBtn.Name = "roomManagmentMenuBtn";
+            this.roomManagmentMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.roomManagmentMenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.roomManagmentMenuBtn.TabIndex = 16;
+            this.roomManagmentMenuBtn.Text = "Room Managment";
+            this.roomManagmentMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomManagmentMenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // sessionManagemntSubmenuPanel
+            // 
+            this.sessionManagemntSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.notOverlappingSessionSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.paralleSessionSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.consecutiveSessionSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.allocateNotAvailableSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.addSessionSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sessionManagemntSubmenuPanel.Location = new System.Drawing.Point(0, 454);
+            this.sessionManagemntSubmenuPanel.Name = "sessionManagemntSubmenuPanel";
+            this.sessionManagemntSubmenuPanel.Size = new System.Drawing.Size(275, 175);
+            this.sessionManagemntSubmenuPanel.TabIndex = 15;
+            // 
+            // notOverlappingSessionSubmenuBtn
+            // 
+            this.notOverlappingSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.notOverlappingSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.notOverlappingSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.notOverlappingSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.notOverlappingSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notOverlappingSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.notOverlappingSessionSubmenuBtn.Location = new System.Drawing.Point(0, 140);
+            this.notOverlappingSessionSubmenuBtn.Name = "notOverlappingSessionSubmenuBtn";
+            this.notOverlappingSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.notOverlappingSessionSubmenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.notOverlappingSessionSubmenuBtn.TabIndex = 4;
+            this.notOverlappingSessionSubmenuBtn.Text = "Not Overlapping Sessions";
+            this.notOverlappingSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.notOverlappingSessionSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // paralleSessionSubmenuBtn
+            // 
+            this.paralleSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.paralleSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paralleSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.paralleSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paralleSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paralleSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.paralleSessionSubmenuBtn.Location = new System.Drawing.Point(0, 105);
+            this.paralleSessionSubmenuBtn.Name = "paralleSessionSubmenuBtn";
+            this.paralleSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.paralleSessionSubmenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.paralleSessionSubmenuBtn.TabIndex = 3;
+            this.paralleSessionSubmenuBtn.Text = "Paralle Session";
+            this.paralleSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.paralleSessionSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // consecutiveSessionSubmenuBtn
+            // 
+            this.consecutiveSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.consecutiveSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.consecutiveSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.consecutiveSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.consecutiveSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consecutiveSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.consecutiveSessionSubmenuBtn.Location = new System.Drawing.Point(0, 70);
+            this.consecutiveSessionSubmenuBtn.Name = "consecutiveSessionSubmenuBtn";
+            this.consecutiveSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.consecutiveSessionSubmenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.consecutiveSessionSubmenuBtn.TabIndex = 2;
+            this.consecutiveSessionSubmenuBtn.Text = "Consecutive Session";
+            this.consecutiveSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.consecutiveSessionSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // allocateNotAvailableSubmenuBtn
+            // 
+            this.allocateNotAvailableSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.allocateNotAvailableSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.allocateNotAvailableSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.allocateNotAvailableSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.allocateNotAvailableSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allocateNotAvailableSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.allocateNotAvailableSubmenuBtn.Location = new System.Drawing.Point(0, 35);
+            this.allocateNotAvailableSubmenuBtn.Name = "allocateNotAvailableSubmenuBtn";
+            this.allocateNotAvailableSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.allocateNotAvailableSubmenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.allocateNotAvailableSubmenuBtn.TabIndex = 1;
+            this.allocateNotAvailableSubmenuBtn.Text = "Allocate Not Available";
+            this.allocateNotAvailableSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.allocateNotAvailableSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // addSessionSubmenuBtn
+            // 
+            this.addSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.addSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.addSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.addSessionSubmenuBtn.Location = new System.Drawing.Point(0, 0);
+            this.addSessionSubmenuBtn.Name = "addSessionSubmenuBtn";
+            this.addSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.addSessionSubmenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.addSessionSubmenuBtn.TabIndex = 0;
+            this.addSessionSubmenuBtn.Text = "Add Session";
+            this.addSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addSessionSubmenuBtn.UseVisualStyleBackColor = false;
+            this.addSessionSubmenuBtn.Click += new System.EventHandler(this.addSessionSubmenuBtn_Click);
+            // 
+            // sessionManagemntMenuBtn
+            // 
+            this.sessionManagemntMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(138)))));
+            this.sessionManagemntMenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sessionManagemntMenuBtn.FlatAppearance.BorderSize = 0;
+            this.sessionManagemntMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sessionManagemntMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionManagemntMenuBtn.ForeColor = System.Drawing.Color.White;
+            this.sessionManagemntMenuBtn.Location = new System.Drawing.Point(0, 419);
+            this.sessionManagemntMenuBtn.Name = "sessionManagemntMenuBtn";
+            this.sessionManagemntMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.sessionManagemntMenuBtn.Size = new System.Drawing.Size(275, 35);
+            this.sessionManagemntMenuBtn.TabIndex = 14;
+            this.sessionManagemntMenuBtn.Text = "Session Managment";
+            this.sessionManagemntMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sessionManagemntMenuBtn.UseVisualStyleBackColor = false;
+            this.sessionManagemntMenuBtn.Click += new System.EventHandler(this.sessionManagemntMenuBtn_Click);
             // 
             // locationSubMenuPanel
             // 
@@ -110,7 +331,7 @@
             this.locationSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.locationSubMenuPanel.Location = new System.Drawing.Point(0, 349);
             this.locationSubMenuPanel.Name = "locationSubMenuPanel";
-            this.locationSubMenuPanel.Size = new System.Drawing.Size(275, 74);
+            this.locationSubMenuPanel.Size = new System.Drawing.Size(275, 70);
             this.locationSubMenuPanel.TabIndex = 13;
             // 
             // addLocationSubMenuBtn
@@ -344,58 +565,15 @@
             this.childContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.childContainerPanel.Location = new System.Drawing.Point(275, 86);
             this.childContainerPanel.Name = "childContainerPanel";
-            this.childContainerPanel.Size = new System.Drawing.Size(1184, 662);
+            this.childContainerPanel.Size = new System.Drawing.Size(1184, 969);
             this.childContainerPanel.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.subSystemNameLable);
-            this.panel1.Controls.Add(this.systemNameLable);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 86);
-            this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // systemNameLable
-            // 
-            this.systemNameLable.AutoSize = true;
-            this.systemNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.systemNameLable.ForeColor = System.Drawing.Color.White;
-            this.systemNameLable.Location = new System.Drawing.Point(129, 10);
-            this.systemNameLable.Name = "systemNameLable";
-            this.systemNameLable.Size = new System.Drawing.Size(110, 39);
-            this.systemNameLable.TabIndex = 1;
-            this.systemNameLable.Text = "TTMS";
-            // 
-            // subSystemNameLable
-            // 
-            this.subSystemNameLable.AutoSize = true;
-            this.subSystemNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subSystemNameLable.ForeColor = System.Drawing.Color.White;
-            this.subSystemNameLable.Location = new System.Drawing.Point(134, 50);
-            this.subSystemNameLable.Name = "subSystemNameLable";
-            this.subSystemNameLable.Size = new System.Drawing.Size(125, 24);
-            this.subSystemNameLable.TabIndex = 2;
-            this.subSystemNameLable.Text = "ITPM @ SLIIT";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1459, 748);
+            this.ClientSize = new System.Drawing.Size(1459, 1055);
             this.Controls.Add(this.childContainerPanel);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.topHeaderPanel);
@@ -406,12 +584,14 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.topHeaderPanel.ResumeLayout(false);
             this.topHeaderPanel.PerformLayout();
-            this.sidebarPanel.ResumeLayout(false);
-            this.locationSubMenuPanel.ResumeLayout(false);
-            this.workingHDSubMenuPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.sidebarPanel.ResumeLayout(false);
+            this.roomManagmentSubmenuPanel.ResumeLayout(false);
+            this.sessionManagemntSubmenuPanel.ResumeLayout(false);
+            this.locationSubMenuPanel.ResumeLayout(false);
+            this.workingHDSubMenuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -440,5 +620,15 @@
         private System.Windows.Forms.Label subSystemNameLable;
         private System.Windows.Forms.Label systemNameLable;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel sessionManagemntSubmenuPanel;
+        private System.Windows.Forms.Button sessionManagemntMenuBtn;
+        private System.Windows.Forms.Button notOverlappingSessionSubmenuBtn;
+        private System.Windows.Forms.Button paralleSessionSubmenuBtn;
+        private System.Windows.Forms.Button consecutiveSessionSubmenuBtn;
+        private System.Windows.Forms.Button allocateNotAvailableSubmenuBtn;
+        private System.Windows.Forms.Button addSessionSubmenuBtn;
+        private System.Windows.Forms.Panel roomManagmentSubmenuPanel;
+        private System.Windows.Forms.Button roomManagmentMenuBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

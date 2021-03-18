@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeTableManagmentSystem.Views.Session
 {
-    public partial class ManageSessionRoomForm : Form
+    public partial class AddSessionRoomForm : Form
     {
-        public ManageSessionRoomForm()
+        public AddSessionRoomForm()
         {
             InitializeComponent();
         }
