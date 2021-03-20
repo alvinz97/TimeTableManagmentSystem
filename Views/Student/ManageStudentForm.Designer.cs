@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.studentDataGridView = new System.Windows.Forms.DataGridView();
-            this.locationSearcheIcon = new System.Windows.Forms.PictureBox();
-            this.studentSearchInput = new System.Windows.Forms.TextBox();
-            this.addNewLocationBtn = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +51,9 @@
             this.SubGroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.locationSearcheIcon = new System.Windows.Forms.PictureBox();
+            this.studentSearchInput = new System.Windows.Forms.TextBox();
+            this.addNewLocationBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationSearcheIcon)).BeginInit();
@@ -108,6 +109,130 @@
             this.studentDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellClick_1);
             this.studentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellContentClick_1);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.ToolTipText = "ID";
+            // 
+            // Year
+            // 
+            this.Year.DataPropertyName = "Year";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Year.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Year.HeaderText = "Year";
+            this.Year.MinimumWidth = 6;
+            this.Year.Name = "Year";
+            this.Year.ReadOnly = true;
+            this.Year.ToolTipText = "Year";
+            // 
+            // Semester
+            // 
+            this.Semester.DataPropertyName = "Semester";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Semester.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Semester.HeaderText = "Semester";
+            this.Semester.MinimumWidth = 6;
+            this.Semester.Name = "Semester";
+            this.Semester.ReadOnly = true;
+            this.Semester.ToolTipText = "Semester";
+            // 
+            // Program
+            // 
+            this.Program.DataPropertyName = "Program";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Program.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Program.HeaderText = "Program";
+            this.Program.MinimumWidth = 6;
+            this.Program.Name = "Program";
+            this.Program.ReadOnly = true;
+            this.Program.ToolTipText = "Program";
+            // 
+            // GroupNo
+            // 
+            this.GroupNo.DataPropertyName = "GroupNo";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.GroupNo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.GroupNo.HeaderText = "GroupNo";
+            this.GroupNo.MinimumWidth = 6;
+            this.GroupNo.Name = "GroupNo";
+            this.GroupNo.ReadOnly = true;
+            this.GroupNo.ToolTipText = "GroupNo";
+            // 
+            // SubGroupNo
+            // 
+            this.SubGroupNo.DataPropertyName = "SubGroupNo";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.SubGroupNo.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SubGroupNo.HeaderText = "SubGroupNo";
+            this.SubGroupNo.MinimumWidth = 6;
+            this.SubGroupNo.Name = "SubGroupNo";
+            this.SubGroupNo.ReadOnly = true;
+            this.SubGroupNo.ToolTipText = "SubGroupNo";
+            // 
+            // GroupID
+            // 
+            this.GroupID.DataPropertyName = "GroupID";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.GroupID.DefaultCellStyle = dataGridViewCellStyle7;
+            this.GroupID.HeaderText = "GroupID";
+            this.GroupID.MinimumWidth = 6;
+            this.GroupID.Name = "GroupID";
+            this.GroupID.ReadOnly = true;
+            this.GroupID.ToolTipText = "GroupID";
+            // 
+            // SubGroupID
+            // 
+            this.SubGroupID.DataPropertyName = "SubGroupID";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.SubGroupID.DefaultCellStyle = dataGridViewCellStyle8;
+            this.SubGroupID.HeaderText = "SubGroupID";
+            this.SubGroupID.MinimumWidth = 6;
+            this.SubGroupID.Name = "SubGroupID";
+            this.SubGroupID.ReadOnly = true;
+            this.SubGroupID.ToolTipText = "SubGroupID";
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column1.HeaderText = "Edit";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Text = "Edit";
+            this.Column1.ToolTipText = "Edit";
+            this.Column1.UseColumnTextForButtonValue = true;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column2.HeaderText = "Delete";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Text = "Delete";
+            this.Column2.ToolTipText = "Delete";
+            this.Column2.UseColumnTextForButtonValue = true;
+            // 
             // locationSearcheIcon
             // 
             this.locationSearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -144,139 +269,16 @@
             this.addNewLocationBtn.Text = "New";
             this.addNewLocationBtn.UseVisualStyleBackColor = false;
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.DefaultCellStyle = dataGridViewCellStyle61;
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.ToolTipText = "ID";
-            // 
-            // Year
-            // 
-            this.Year.DataPropertyName = "Year";
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Year.DefaultCellStyle = dataGridViewCellStyle62;
-            this.Year.HeaderText = "Year";
-            this.Year.MinimumWidth = 6;
-            this.Year.Name = "Year";
-            this.Year.ReadOnly = true;
-            this.Year.ToolTipText = "Year";
-            // 
-            // Semester
-            // 
-            this.Semester.DataPropertyName = "Semester";
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Semester.DefaultCellStyle = dataGridViewCellStyle63;
-            this.Semester.HeaderText = "Semester";
-            this.Semester.MinimumWidth = 6;
-            this.Semester.Name = "Semester";
-            this.Semester.ReadOnly = true;
-            this.Semester.ToolTipText = "Semester";
-            // 
-            // Program
-            // 
-            this.Program.DataPropertyName = "Program";
-            dataGridViewCellStyle64.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Program.DefaultCellStyle = dataGridViewCellStyle64;
-            this.Program.HeaderText = "Program";
-            this.Program.MinimumWidth = 6;
-            this.Program.Name = "Program";
-            this.Program.ReadOnly = true;
-            this.Program.ToolTipText = "Program";
-            // 
-            // GroupNo
-            // 
-            this.GroupNo.DataPropertyName = "GroupNo";
-            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.GroupNo.DefaultCellStyle = dataGridViewCellStyle65;
-            this.GroupNo.HeaderText = "GroupNo";
-            this.GroupNo.MinimumWidth = 6;
-            this.GroupNo.Name = "GroupNo";
-            this.GroupNo.ReadOnly = true;
-            this.GroupNo.ToolTipText = "GroupNo";
-            // 
-            // SubGroupNo
-            // 
-            this.SubGroupNo.DataPropertyName = "SubGroupNo";
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.SubGroupNo.DefaultCellStyle = dataGridViewCellStyle66;
-            this.SubGroupNo.HeaderText = "SubGroupNo";
-            this.SubGroupNo.MinimumWidth = 6;
-            this.SubGroupNo.Name = "SubGroupNo";
-            this.SubGroupNo.ReadOnly = true;
-            this.SubGroupNo.ToolTipText = "SubGroupNo";
-            // 
-            // GroupID
-            // 
-            this.GroupID.DataPropertyName = "GroupID";
-            dataGridViewCellStyle67.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.GroupID.DefaultCellStyle = dataGridViewCellStyle67;
-            this.GroupID.HeaderText = "GroupID";
-            this.GroupID.MinimumWidth = 6;
-            this.GroupID.Name = "GroupID";
-            this.GroupID.ReadOnly = true;
-            this.GroupID.ToolTipText = "GroupID";
-            // 
-            // SubGroupID
-            // 
-            this.SubGroupID.DataPropertyName = "SubGroupID";
-            dataGridViewCellStyle68.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.SubGroupID.DefaultCellStyle = dataGridViewCellStyle68;
-            this.SubGroupID.HeaderText = "SubGroupID";
-            this.SubGroupID.MinimumWidth = 6;
-            this.SubGroupID.Name = "SubGroupID";
-            this.SubGroupID.ReadOnly = true;
-            this.SubGroupID.ToolTipText = "SubGroupID";
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle69.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle69.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            dataGridViewCellStyle69.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.Color.White;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle69;
-            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column1.HeaderText = "Edit";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Text = "Edit";
-            this.Column1.ToolTipText = "Edit";
-            this.Column1.UseColumnTextForButtonValue = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle70.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle70.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            dataGridViewCellStyle70.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle70.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle70.SelectionForeColor = System.Drawing.Color.White;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle70;
-            this.Column2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column2.HeaderText = "Delete";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Text = "Delete";
-            this.Column2.ToolTipText = "Delete";
-            this.Column2.UseColumnTextForButtonValue = true;
-            // 
             // ManageStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageStudentForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "ManageStudentForm";
+            this.Text = "Manage Students";
             this.Shown += new System.EventHandler(this.ManageStudentForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

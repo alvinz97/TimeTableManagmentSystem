@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditWeekdayWeekendForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.weekendNweekdayUpdateBtn = new System.Windows.Forms.Button();
             this.minutesLable = new System.Windows.Forms.Label();
             this.hoursLable = new System.Windows.Forms.Label();
             this.workingTimeMinutesInput = new System.Windows.Forms.NumericUpDown();
@@ -46,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.selectLecturerComboBox = new System.Windows.Forms.ComboBox();
             this.lecturerNameLabel = new System.Windows.Forms.Label();
-            this.weekendNweekdayUpdateBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeMinutesInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeHoursInput)).BeginInit();
@@ -80,6 +81,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1126, 575);
             this.panel1.TabIndex = 23;
+            // 
+            // weekendNweekdayUpdateBtn
+            // 
+            this.weekendNweekdayUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.weekendNweekdayUpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.weekendNweekdayUpdateBtn.FlatAppearance.BorderSize = 0;
+            this.weekendNweekdayUpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.weekendNweekdayUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weekendNweekdayUpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weekendNweekdayUpdateBtn.ForeColor = System.Drawing.Color.White;
+            this.weekendNweekdayUpdateBtn.Location = new System.Drawing.Point(447, 464);
+            this.weekendNweekdayUpdateBtn.Name = "weekendNweekdayUpdateBtn";
+            this.weekendNweekdayUpdateBtn.Padding = new System.Windows.Forms.Padding(10);
+            this.weekendNweekdayUpdateBtn.Size = new System.Drawing.Size(131, 53);
+            this.weekendNweekdayUpdateBtn.TabIndex = 55;
+            this.weekendNweekdayUpdateBtn.Text = "Update";
+            this.weekendNweekdayUpdateBtn.UseVisualStyleBackColor = false;
             // 
             // minutesLable
             // 
@@ -290,29 +308,13 @@
             this.lecturerNameLabel.TabIndex = 37;
             this.lecturerNameLabel.Text = "Lecturer Name";
             // 
-            // weekendNweekdayUpdateBtn
-            // 
-            this.weekendNweekdayUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
-            this.weekendNweekdayUpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.weekendNweekdayUpdateBtn.FlatAppearance.BorderSize = 0;
-            this.weekendNweekdayUpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.weekendNweekdayUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weekendNweekdayUpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weekendNweekdayUpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.weekendNweekdayUpdateBtn.Location = new System.Drawing.Point(447, 464);
-            this.weekendNweekdayUpdateBtn.Name = "weekendNweekdayUpdateBtn";
-            this.weekendNweekdayUpdateBtn.Padding = new System.Windows.Forms.Padding(10);
-            this.weekendNweekdayUpdateBtn.Size = new System.Drawing.Size(131, 53);
-            this.weekendNweekdayUpdateBtn.TabIndex = 55;
-            this.weekendNweekdayUpdateBtn.Text = "Update";
-            this.weekendNweekdayUpdateBtn.UseVisualStyleBackColor = false;
-            // 
             // EditWeekdayWeekendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditWeekdayWeekendForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "AddWeekendForm";

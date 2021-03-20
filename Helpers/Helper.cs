@@ -14,5 +14,47 @@ namespace TimeTableManagmentSystem.Helpers
             Random random = new Random();
             return random.Next(10000000);
         }
+
+        public int getRegisteredLecturersCount() {
+            return RunQuery("SELECT COUNT(*) FROM lecturer;");
+        }
+
+        public int getRegisteredStudentsCount() {
+            return RunQuery("SELECT COUNT(*) FROM student;");
+        }
+
+        public int getRegisteredSubjectsCount() {
+            return RunQuery("SELECT COUNT(*) FROM student;");
+        }
+
+        public int getRegisteredRoomsCount() {
+            return RunQuery("SELECT COUNT(*) FROM location;");
+        }
+
+        public string getLatestLecturer() {
+            return FindLatest("SELECT TOP 1 LecturerName FROM lecturer ORDER BY id DESC;");
+        }
+        public string getLatestStudentGroup()
+        {
+            return FindLatest("SELECT TOP 1 SubGroupID FROM student ORDER BY id DESC;");
+        }
+        public string getLatestSubject()
+        {
+            return FindLatest("SELECT TOP 1 SubGroupID FROM student ORDER BY id DESC;");
+        }
+
+        protected string FindLatest(string query) {
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
+            String latestValue = (String)command.ExecuteScalar();
+            return latestValue;
+        }
+
+        protected int RunQuery(string query) {
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
+            int count = Convert.ToInt32(command.ExecuteScalar());
+            return count;
+        }
     }
 }

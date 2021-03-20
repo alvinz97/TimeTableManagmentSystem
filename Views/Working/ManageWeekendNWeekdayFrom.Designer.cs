@@ -35,11 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageWeekendNWeekdayFrom));
             this.panel1 = new System.Windows.Forms.Panel();
             this.weekendWeekdayDataGridView = new System.Windows.Forms.DataGridView();
-            this.weekendWeekdaySearcheIcon = new System.Windows.Forms.PictureBox();
-            this.weekendWeekdaySearchInput = new System.Windows.Forms.TextBox();
-            this.addNewWeekdayNWeekendBtn = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +45,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.weekendWeekdaySearcheIcon = new System.Windows.Forms.PictureBox();
+            this.weekendWeekdaySearchInput = new System.Windows.Forms.TextBox();
+            this.addNewWeekdayNWeekendBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekendWeekdayDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekendWeekdaySearcheIcon)).BeginInit();
@@ -97,44 +98,6 @@
             this.weekendWeekdayDataGridView.Size = new System.Drawing.Size(1098, 481);
             this.weekendWeekdayDataGridView.TabIndex = 6;
             this.weekendWeekdayDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.weekendWeekdayDataGridView_CellContentClick);
-            // 
-            // weekendWeekdaySearcheIcon
-            // 
-            this.weekendWeekdaySearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.weekendWeekdaySearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weekendWeekdaySearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
-            this.weekendWeekdaySearcheIcon.Location = new System.Drawing.Point(1073, 18);
-            this.weekendWeekdaySearcheIcon.Name = "weekendWeekdaySearcheIcon";
-            this.weekendWeekdaySearcheIcon.Size = new System.Drawing.Size(39, 38);
-            this.weekendWeekdaySearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.weekendWeekdaySearcheIcon.TabIndex = 9;
-            this.weekendWeekdaySearcheIcon.TabStop = false;
-            // 
-            // weekendWeekdaySearchInput
-            // 
-            this.weekendWeekdaySearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.weekendWeekdaySearchInput.BackColor = System.Drawing.SystemColors.Control;
-            this.weekendWeekdaySearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weekendWeekdaySearchInput.Location = new System.Drawing.Point(664, 18);
-            this.weekendWeekdaySearchInput.Name = "weekendWeekdaySearchInput";
-            this.weekendWeekdaySearchInput.Size = new System.Drawing.Size(409, 38);
-            this.weekendWeekdaySearchInput.TabIndex = 8;
-            this.weekendWeekdaySearchInput.TextChanged += new System.EventHandler(this.weekendWeekdaySearchInput_TextChanged);
-            // 
-            // addNewWeekdayNWeekendBtn
-            // 
-            this.addNewWeekdayNWeekendBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
-            this.addNewWeekdayNWeekendBtn.FlatAppearance.BorderSize = 0;
-            this.addNewWeekdayNWeekendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addNewWeekdayNWeekendBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewWeekdayNWeekendBtn.ForeColor = System.Drawing.Color.White;
-            this.addNewWeekdayNWeekendBtn.Location = new System.Drawing.Point(14, 16);
-            this.addNewWeekdayNWeekendBtn.Name = "addNewWeekdayNWeekendBtn";
-            this.addNewWeekdayNWeekendBtn.Size = new System.Drawing.Size(110, 40);
-            this.addNewWeekdayNWeekendBtn.TabIndex = 7;
-            this.addNewWeekdayNWeekendBtn.Text = "New";
-            this.addNewWeekdayNWeekendBtn.UseVisualStyleBackColor = false;
-            this.addNewWeekdayNWeekendBtn.Click += new System.EventHandler(this.addNewWeekdayNWeekendBtn_Click);
             // 
             // Column1
             // 
@@ -220,12 +183,51 @@
             this.Column7.Text = "Delete";
             this.Column7.UseColumnTextForButtonValue = true;
             // 
+            // weekendWeekdaySearcheIcon
+            // 
+            this.weekendWeekdaySearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.weekendWeekdaySearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weekendWeekdaySearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
+            this.weekendWeekdaySearcheIcon.Location = new System.Drawing.Point(1073, 18);
+            this.weekendWeekdaySearcheIcon.Name = "weekendWeekdaySearcheIcon";
+            this.weekendWeekdaySearcheIcon.Size = new System.Drawing.Size(39, 38);
+            this.weekendWeekdaySearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.weekendWeekdaySearcheIcon.TabIndex = 9;
+            this.weekendWeekdaySearcheIcon.TabStop = false;
+            // 
+            // weekendWeekdaySearchInput
+            // 
+            this.weekendWeekdaySearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.weekendWeekdaySearchInput.BackColor = System.Drawing.SystemColors.Control;
+            this.weekendWeekdaySearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weekendWeekdaySearchInput.Location = new System.Drawing.Point(664, 18);
+            this.weekendWeekdaySearchInput.Name = "weekendWeekdaySearchInput";
+            this.weekendWeekdaySearchInput.Size = new System.Drawing.Size(409, 38);
+            this.weekendWeekdaySearchInput.TabIndex = 8;
+            this.weekendWeekdaySearchInput.TextChanged += new System.EventHandler(this.weekendWeekdaySearchInput_TextChanged);
+            // 
+            // addNewWeekdayNWeekendBtn
+            // 
+            this.addNewWeekdayNWeekendBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.addNewWeekdayNWeekendBtn.FlatAppearance.BorderSize = 0;
+            this.addNewWeekdayNWeekendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewWeekdayNWeekendBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewWeekdayNWeekendBtn.ForeColor = System.Drawing.Color.White;
+            this.addNewWeekdayNWeekendBtn.Location = new System.Drawing.Point(14, 16);
+            this.addNewWeekdayNWeekendBtn.Name = "addNewWeekdayNWeekendBtn";
+            this.addNewWeekdayNWeekendBtn.Size = new System.Drawing.Size(110, 40);
+            this.addNewWeekdayNWeekendBtn.TabIndex = 7;
+            this.addNewWeekdayNWeekendBtn.Text = "New";
+            this.addNewWeekdayNWeekendBtn.UseVisualStyleBackColor = false;
+            this.addNewWeekdayNWeekendBtn.Click += new System.EventHandler(this.addNewWeekdayNWeekendBtn_Click);
+            // 
             // ManageWeekendNWeekdayFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageWeekendNWeekdayFrom";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "ViewDetailsFrom";

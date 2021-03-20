@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddSessionRoomForm));
             this.selectSessionLabel = new System.Windows.Forms.Label();
             this.selectSessionInput = new System.Windows.Forms.ComboBox();
             this.selectRoomInput = new System.Windows.Forms.ComboBox();
             this.selectRoomLable = new System.Windows.Forms.Label();
             this.selectedSessionLable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.selectedSessionTextBox = new System.Windows.Forms.RichTextBox();
             this.roomSaveBtn = new System.Windows.Forms.Button();
+            this.selectedSessionTextBox = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,14 +105,6 @@
             this.panel1.Size = new System.Drawing.Size(1126, 575);
             this.panel1.TabIndex = 22;
             // 
-            // selectedSessionTextBox
-            // 
-            this.selectedSessionTextBox.Location = new System.Drawing.Point(232, 272);
-            this.selectedSessionTextBox.Name = "selectedSessionTextBox";
-            this.selectedSessionTextBox.Size = new System.Drawing.Size(473, 164);
-            this.selectedSessionTextBox.TabIndex = 22;
-            this.selectedSessionTextBox.Text = "";
-            // 
             // roomSaveBtn
             // 
             this.roomSaveBtn.BackColor = System.Drawing.Color.Blue;
@@ -129,15 +122,24 @@
             this.roomSaveBtn.Text = "Save";
             this.roomSaveBtn.UseVisualStyleBackColor = false;
             // 
-            // ManageSessionRoomForm
+            // selectedSessionTextBox
+            // 
+            this.selectedSessionTextBox.Location = new System.Drawing.Point(232, 272);
+            this.selectedSessionTextBox.Name = "selectedSessionTextBox";
+            this.selectedSessionTextBox.Size = new System.Drawing.Size(473, 164);
+            this.selectedSessionTextBox.TabIndex = 22;
+            this.selectedSessionTextBox.Text = "";
+            // 
+            // AddSessionRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
-            this.Name = "ManageSessionRoomForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AddSessionRoomForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "ManageSessionRoomForm";
+            this.Text = "Manage Session Rooms";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNotAvailableSessionForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.setTimeInput = new System.Windows.Forms.TextBox();
             this.setTimeLable = new System.Windows.Forms.Label();
@@ -188,9 +189,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNotAvailableSessionForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "AddNotAvailableSessionForm";
+            this.Text = "Add Not Available Sessions";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

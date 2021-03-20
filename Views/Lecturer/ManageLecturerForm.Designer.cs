@@ -38,10 +38,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageLecturerForm));
             this.lecturerPanel = new System.Windows.Forms.Panel();
-            this.lecturerSearcheIcon = new System.Windows.Forms.PictureBox();
-            this.lecturerSearchInput = new System.Windows.Forms.TextBox();
-            this.addNewLecturerBtn = new System.Windows.Forms.Button();
             this.lecturerDataGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LecturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +51,12 @@
             this.Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.addNewLecturerBtn = new System.Windows.Forms.Button();
+            this.lecturerSearcheIcon = new System.Windows.Forms.PictureBox();
+            this.lecturerSearchInput = new System.Windows.Forms.TextBox();
             this.lecturerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturerSearcheIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerSearcheIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // lecturerPanel
@@ -70,43 +71,6 @@
             this.lecturerPanel.Name = "lecturerPanel";
             this.lecturerPanel.Size = new System.Drawing.Size(1126, 575);
             this.lecturerPanel.TabIndex = 0;
-            // 
-            // lecturerSearcheIcon
-            // 
-            this.lecturerSearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lecturerSearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lecturerSearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
-            this.lecturerSearcheIcon.Location = new System.Drawing.Point(1076, 12);
-            this.lecturerSearcheIcon.Name = "lecturerSearcheIcon";
-            this.lecturerSearcheIcon.Size = new System.Drawing.Size(39, 38);
-            this.lecturerSearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lecturerSearcheIcon.TabIndex = 7;
-            this.lecturerSearcheIcon.TabStop = false;
-            // 
-            // lecturerSearchInput
-            // 
-            this.lecturerSearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lecturerSearchInput.BackColor = System.Drawing.SystemColors.Control;
-            this.lecturerSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lecturerSearchInput.Location = new System.Drawing.Point(667, 12);
-            this.lecturerSearchInput.Name = "lecturerSearchInput";
-            this.lecturerSearchInput.Size = new System.Drawing.Size(409, 38);
-            this.lecturerSearchInput.TabIndex = 6;
-            this.lecturerSearchInput.TextChanged += new System.EventHandler(this.lecturerSearchInput_TextChanged);
-            // 
-            // addNewLecturerBtn
-            // 
-            this.addNewLecturerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
-            this.addNewLecturerBtn.FlatAppearance.BorderSize = 0;
-            this.addNewLecturerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addNewLecturerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewLecturerBtn.ForeColor = System.Drawing.Color.White;
-            this.addNewLecturerBtn.Location = new System.Drawing.Point(12, 10);
-            this.addNewLecturerBtn.Name = "addNewLecturerBtn";
-            this.addNewLecturerBtn.Size = new System.Drawing.Size(110, 40);
-            this.addNewLecturerBtn.TabIndex = 8;
-            this.addNewLecturerBtn.Text = "New";
-            this.addNewLecturerBtn.UseVisualStyleBackColor = false;
             // 
             // lecturerDataGridView
             // 
@@ -270,20 +234,58 @@
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // addNewLecturerBtn
+            // 
+            this.addNewLecturerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.addNewLecturerBtn.FlatAppearance.BorderSize = 0;
+            this.addNewLecturerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewLecturerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewLecturerBtn.ForeColor = System.Drawing.Color.White;
+            this.addNewLecturerBtn.Location = new System.Drawing.Point(12, 10);
+            this.addNewLecturerBtn.Name = "addNewLecturerBtn";
+            this.addNewLecturerBtn.Size = new System.Drawing.Size(110, 40);
+            this.addNewLecturerBtn.TabIndex = 8;
+            this.addNewLecturerBtn.Text = "New";
+            this.addNewLecturerBtn.UseVisualStyleBackColor = false;
+            // 
+            // lecturerSearcheIcon
+            // 
+            this.lecturerSearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecturerSearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lecturerSearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
+            this.lecturerSearcheIcon.Location = new System.Drawing.Point(1076, 12);
+            this.lecturerSearcheIcon.Name = "lecturerSearcheIcon";
+            this.lecturerSearcheIcon.Size = new System.Drawing.Size(39, 38);
+            this.lecturerSearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lecturerSearcheIcon.TabIndex = 7;
+            this.lecturerSearcheIcon.TabStop = false;
+            // 
+            // lecturerSearchInput
+            // 
+            this.lecturerSearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecturerSearchInput.BackColor = System.Drawing.SystemColors.Control;
+            this.lecturerSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lecturerSearchInput.Location = new System.Drawing.Point(667, 12);
+            this.lecturerSearchInput.Name = "lecturerSearchInput";
+            this.lecturerSearchInput.Size = new System.Drawing.Size(409, 38);
+            this.lecturerSearchInput.TabIndex = 6;
+            this.lecturerSearchInput.TextChanged += new System.EventHandler(this.lecturerSearchInput_TextChanged);
+            // 
             // ManageLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.lecturerPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageLecturerForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "ManageLecturerForm";
+            this.Text = "Manage Lecturers";
             this.Shown += new System.EventHandler(this.ManageLecturerForm_Shown);
             this.lecturerPanel.ResumeLayout(false);
             this.lecturerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturerSearcheIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerSearcheIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

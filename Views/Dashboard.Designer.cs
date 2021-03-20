@@ -771,9 +771,9 @@
             this.Controls.Add(this.childContainerPanel);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.topHeaderPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.topHeaderPanel.ResumeLayout(false);
             this.topHeaderPanel.PerformLayout();

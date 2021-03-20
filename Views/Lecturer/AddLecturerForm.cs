@@ -170,5 +170,10 @@ namespace TimeTableManagmentSystem.Views.Lecturer
             int selectedIndex = selectLevelComboBox.SelectedIndex;
             rankInput.Text = (selectedIndex+1).ToString()+"." + employeeIDInput.Text;
         }
+
+        private void employeeIDInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

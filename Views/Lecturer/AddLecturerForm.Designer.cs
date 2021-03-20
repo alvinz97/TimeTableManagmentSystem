@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLecturerForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.selectCenterCombobox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -381,6 +382,7 @@
             this.employeeIDInput.Name = "employeeIDInput";
             this.employeeIDInput.Size = new System.Drawing.Size(345, 30);
             this.employeeIDInput.TabIndex = 26;
+            this.employeeIDInput.TextChanged += new System.EventHandler(this.employeeIDInput_TextChanged);
             // 
             // employeeIDLable
             // 
@@ -436,9 +438,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddLecturerForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "AddLecturer";
+            this.Text = "Add Lecturers";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.levelInfoPanel.ResumeLayout(false);

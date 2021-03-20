@@ -34,17 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageTagForm));
             this.tagPanel = new System.Windows.Forms.Panel();
             this.tagDataGridView = new System.Windows.Forms.DataGridView();
-            this.tagSearcheIcon = new System.Windows.Forms.PictureBox();
-            this.tagSearchInput = new System.Windows.Forms.TextBox();
-            this.addNewTagBtn = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TagName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RelatedTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tagSearcheIcon = new System.Windows.Forms.PictureBox();
+            this.tagSearchInput = new System.Windows.Forms.TextBox();
+            this.addNewTagBtn = new System.Windows.Forms.Button();
             this.tagPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tagDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagSearcheIcon)).BeginInit();
@@ -95,43 +96,6 @@
             this.tagDataGridView.Size = new System.Drawing.Size(1098, 491);
             this.tagDataGridView.TabIndex = 0;
             this.tagDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // tagSearcheIcon
-            // 
-            this.tagSearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagSearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tagSearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
-            this.tagSearcheIcon.Location = new System.Drawing.Point(1072, 15);
-            this.tagSearcheIcon.Name = "tagSearcheIcon";
-            this.tagSearcheIcon.Size = new System.Drawing.Size(39, 38);
-            this.tagSearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.tagSearcheIcon.TabIndex = 8;
-            this.tagSearcheIcon.TabStop = false;
-            // 
-            // tagSearchInput
-            // 
-            this.tagSearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagSearchInput.BackColor = System.Drawing.SystemColors.Control;
-            this.tagSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tagSearchInput.Location = new System.Drawing.Point(663, 15);
-            this.tagSearchInput.Name = "tagSearchInput";
-            this.tagSearchInput.Size = new System.Drawing.Size(409, 38);
-            this.tagSearchInput.TabIndex = 7;
-            this.tagSearchInput.TextChanged += new System.EventHandler(this.tagSearchInput_TextChanged);
-            // 
-            // addNewTagBtn
-            // 
-            this.addNewTagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
-            this.addNewTagBtn.FlatAppearance.BorderSize = 0;
-            this.addNewTagBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addNewTagBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewTagBtn.ForeColor = System.Drawing.Color.White;
-            this.addNewTagBtn.Location = new System.Drawing.Point(13, 13);
-            this.addNewTagBtn.Name = "addNewTagBtn";
-            this.addNewTagBtn.Size = new System.Drawing.Size(110, 40);
-            this.addNewTagBtn.TabIndex = 6;
-            this.addNewTagBtn.Text = "New";
-            this.addNewTagBtn.UseVisualStyleBackColor = false;
             // 
             // ID
             // 
@@ -212,15 +176,53 @@
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // tagSearcheIcon
+            // 
+            this.tagSearcheIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagSearcheIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tagSearcheIcon.Image = global::TimeTableManagmentSystem.Properties.Resources.search;
+            this.tagSearcheIcon.Location = new System.Drawing.Point(1072, 15);
+            this.tagSearcheIcon.Name = "tagSearcheIcon";
+            this.tagSearcheIcon.Size = new System.Drawing.Size(39, 38);
+            this.tagSearcheIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tagSearcheIcon.TabIndex = 8;
+            this.tagSearcheIcon.TabStop = false;
+            // 
+            // tagSearchInput
+            // 
+            this.tagSearchInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagSearchInput.BackColor = System.Drawing.SystemColors.Control;
+            this.tagSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagSearchInput.Location = new System.Drawing.Point(663, 15);
+            this.tagSearchInput.Name = "tagSearchInput";
+            this.tagSearchInput.Size = new System.Drawing.Size(409, 38);
+            this.tagSearchInput.TabIndex = 7;
+            this.tagSearchInput.TextChanged += new System.EventHandler(this.tagSearchInput_TextChanged);
+            // 
+            // addNewTagBtn
+            // 
+            this.addNewTagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.addNewTagBtn.FlatAppearance.BorderSize = 0;
+            this.addNewTagBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewTagBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewTagBtn.ForeColor = System.Drawing.Color.White;
+            this.addNewTagBtn.Location = new System.Drawing.Point(13, 13);
+            this.addNewTagBtn.Name = "addNewTagBtn";
+            this.addNewTagBtn.Size = new System.Drawing.Size(110, 40);
+            this.addNewTagBtn.TabIndex = 6;
+            this.addNewTagBtn.Text = "New";
+            this.addNewTagBtn.UseVisualStyleBackColor = false;
+            // 
             // ManageTagForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.tagPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageTagForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "ManageTagForm";
+            this.Text = "Manage Tags";
             this.Shown += new System.EventHandler(this.ManageTagForm_Shown);
             this.tagPanel.ResumeLayout(false);
             this.tagPanel.PerformLayout();

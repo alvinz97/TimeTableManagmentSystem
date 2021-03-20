@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTagForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tagSaveBtn = new System.Windows.Forms.Button();
             this.tagClearBtn = new System.Windows.Forms.Button();
@@ -167,9 +168,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 615);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddTagForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "AddTagForm";
+            this.Text = "Add Tags";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

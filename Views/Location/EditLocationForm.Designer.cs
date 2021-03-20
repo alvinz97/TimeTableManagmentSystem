@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditLocationForm));
             this.roomUpdateBtn = new System.Windows.Forms.Button();
             this.roomCapacityInput = new System.Windows.Forms.TextBox();
             this.roomCapacityLable = new System.Windows.Forms.Label();
@@ -189,9 +190,10 @@
             this.Controls.Add(this.buildingNameInput);
             this.Controls.Add(this.buildingNameLabel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditLocationForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "EditLocation";
+            this.Text = "Edit Location";
             this.Load += new System.EventHandler(this.EditLocationForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

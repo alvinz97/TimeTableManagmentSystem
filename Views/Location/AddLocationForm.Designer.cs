@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLocationForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buildingNameLabel = new System.Windows.Forms.Label();
             this.buildingNameInput = new System.Windows.Forms.TextBox();
@@ -228,10 +229,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddLocationForm";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.Text = "   ";
+            this.Text = "   Add Locations";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

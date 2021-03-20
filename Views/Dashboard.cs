@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTableManagmentSystem.Helpers;
 using TimeTableManagmentSystem.Views.Lecturer;
 using TimeTableManagmentSystem.Views.Session;
 using TimeTableManagmentSystem.Views.Student;
@@ -21,7 +23,9 @@ namespace TimeTableManagmentSystem.Views
         {
             InitializeComponent();
             customizedDetsing();
+            openChildContainer(new FrontForm());
             changeHeaderText("Dashboard");
+            hideSubmenu();
         }
 
         public void changeHeaderText(string hedaerText) {
@@ -101,7 +105,9 @@ namespace TimeTableManagmentSystem.Views
 
         private void dashboardMenuBtn_Click(object sender, EventArgs e)
         {
-
+            openChildContainer(new FrontForm());
+            changeHeaderText("Dashboard");
+            hideSubmenu();
         }
 
         private void workingHDMenuBtn_Click(object sender, EventArgs e)
