@@ -118,10 +118,12 @@
     <Compile Include="Controllers\Lecturer\LecturerController.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
+    <Compile Include="Controllers\Tag\TagController.cs" />
     <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Workingday.cs" />
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
@@ -193,6 +195,18 @@
     <Compile Include="Views\SubMenu.Designer.cs">
       <DependentUpon>SubMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tag\AddTagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tag\AddTagForm.Designer.cs">
+      <DependentUpon>AddTagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tag\ManageTagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tag\ManageTagForm.Designer.cs">
+      <DependentUpon>ManageTagForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Working\AddWeekdayWeekendForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tag\AddTagForm.resx">
+      <DependentUpon>AddTagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tag\ManageTagForm.resx">
+      <DependentUpon>ManageTagForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Working\AddWeekdayWeekendForm.resx">
       <DependentUpon>AddWeekdayWeekendForm.cs</DependentUpon>

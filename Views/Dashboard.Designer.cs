@@ -568,6 +568,7 @@
             this.tagListSubMenuBtn.Text = "Tag List";
             this.tagListSubMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tagListSubMenuBtn.UseVisualStyleBackColor = false;
+            this.tagListSubMenuBtn.Click += new System.EventHandler(this.tagListSubMenuBtn_Click);
             // 
             // addTagSubMenuBtn
             // 
@@ -585,6 +586,7 @@
             this.addTagSubMenuBtn.Text = "Add Tag";
             this.addTagSubMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addTagSubMenuBtn.UseVisualStyleBackColor = false;
+            this.addTagSubMenuBtn.Click += new System.EventHandler(this.addTagSubMenuBtn_Click);
             // 
             // tagMenuBtn
             // 
