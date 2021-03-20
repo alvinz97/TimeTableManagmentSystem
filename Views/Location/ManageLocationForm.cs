@@ -45,9 +45,6 @@ namespace TimeTableManagmentSystem
             dashboard.openChildContainer(locationForm);
             dashboard.changeHeaderText("Add Locations");
             dashboard.hideSubmenu();
-            
-            /*AddLocationForm manageLocation = new AddLocationForm();
-            manageLocation.ShowDialog();*/
         }
 
         public void Display()

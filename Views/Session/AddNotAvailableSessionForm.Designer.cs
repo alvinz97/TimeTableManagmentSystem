@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roomSaveBtn = new System.Windows.Forms.Button();
-            this.selectLecturerLabel = new System.Windows.Forms.Label();
-            this.selectLecturerCombobox = new System.Windows.Forms.ComboBox();
-            this.selectGroupLable = new System.Windows.Forms.Label();
-            this.selectGroupCombobox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.selectSubGroupCombobox = new System.Windows.Forms.ComboBox();
+            this.setTimeInput = new System.Windows.Forms.TextBox();
+            this.setTimeLable = new System.Windows.Forms.Label();
             this.selectSessionIDLable = new System.Windows.Forms.Label();
             this.selectSessionIDCombobox = new System.Windows.Forms.ComboBox();
-            this.setTimeLable = new System.Windows.Forms.Label();
-            this.setTimeInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.selectSubGroupCombobox = new System.Windows.Forms.ComboBox();
+            this.selectGroupLable = new System.Windows.Forms.Label();
+            this.selectGroupCombobox = new System.Windows.Forms.ComboBox();
+            this.selectLecturerLabel = new System.Windows.Forms.Label();
+            this.selectLecturerCombobox = new System.Windows.Forms.ComboBox();
+            this.roomSaveBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,82 +64,25 @@
             this.panel1.Size = new System.Drawing.Size(1126, 575);
             this.panel1.TabIndex = 23;
             // 
-            // roomSaveBtn
+            // setTimeInput
             // 
-            this.roomSaveBtn.BackColor = System.Drawing.Color.Blue;
-            this.roomSaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.roomSaveBtn.FlatAppearance.BorderSize = 0;
-            this.roomSaveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.roomSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roomSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.roomSaveBtn.Location = new System.Drawing.Point(397, 472);
-            this.roomSaveBtn.Name = "roomSaveBtn";
-            this.roomSaveBtn.Padding = new System.Windows.Forms.Padding(10);
-            this.roomSaveBtn.Size = new System.Drawing.Size(131, 53);
-            this.roomSaveBtn.TabIndex = 23;
-            this.roomSaveBtn.Text = "Save";
-            this.roomSaveBtn.UseVisualStyleBackColor = false;
+            this.setTimeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setTimeInput.Location = new System.Drawing.Point(247, 403);
+            this.setTimeInput.Margin = new System.Windows.Forms.Padding(4);
+            this.setTimeInput.Name = "setTimeInput";
+            this.setTimeInput.Size = new System.Drawing.Size(468, 30);
+            this.setTimeInput.TabIndex = 54;
             // 
-            // selectLecturerLabel
+            // setTimeLable
             // 
-            this.selectLecturerLabel.AutoSize = true;
-            this.selectLecturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectLecturerLabel.Location = new System.Drawing.Point(46, 33);
-            this.selectLecturerLabel.Name = "selectLecturerLabel";
-            this.selectLecturerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.selectLecturerLabel.Size = new System.Drawing.Size(143, 25);
-            this.selectLecturerLabel.TabIndex = 16;
-            this.selectLecturerLabel.Text = "Select Lecturer";
-            // 
-            // selectLecturerCombobox
-            // 
-            this.selectLecturerCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectLecturerCombobox.FormattingEnabled = true;
-            this.selectLecturerCombobox.Location = new System.Drawing.Point(247, 30);
-            this.selectLecturerCombobox.Name = "selectLecturerCombobox";
-            this.selectLecturerCombobox.Size = new System.Drawing.Size(468, 33);
-            this.selectLecturerCombobox.TabIndex = 18;
-            // 
-            // selectGroupLable
-            // 
-            this.selectGroupLable.AutoSize = true;
-            this.selectGroupLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectGroupLable.Location = new System.Drawing.Point(46, 124);
-            this.selectGroupLable.Name = "selectGroupLable";
-            this.selectGroupLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.selectGroupLable.Size = new System.Drawing.Size(126, 25);
-            this.selectGroupLable.TabIndex = 24;
-            this.selectGroupLable.Text = "Select Group";
-            // 
-            // selectGroupCombobox
-            // 
-            this.selectGroupCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectGroupCombobox.FormattingEnabled = true;
-            this.selectGroupCombobox.Location = new System.Drawing.Point(247, 121);
-            this.selectGroupCombobox.Name = "selectGroupCombobox";
-            this.selectGroupCombobox.Size = new System.Drawing.Size(468, 33);
-            this.selectGroupCombobox.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 219);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(167, 25);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Select Sub Group";
-            // 
-            // selectSubGroupCombobox
-            // 
-            this.selectSubGroupCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectSubGroupCombobox.FormattingEnabled = true;
-            this.selectSubGroupCombobox.Location = new System.Drawing.Point(247, 216);
-            this.selectSubGroupCombobox.Name = "selectSubGroupCombobox";
-            this.selectSubGroupCombobox.Size = new System.Drawing.Size(468, 33);
-            this.selectSubGroupCombobox.TabIndex = 27;
+            this.setTimeLable.AutoSize = true;
+            this.setTimeLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setTimeLable.Location = new System.Drawing.Point(46, 403);
+            this.setTimeLable.Name = "setTimeLable";
+            this.setTimeLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.setTimeLable.Size = new System.Drawing.Size(91, 25);
+            this.setTimeLable.TabIndex = 30;
+            this.setTimeLable.Text = "Set Time";
             // 
             // selectSessionIDLable
             // 
@@ -161,25 +104,83 @@
             this.selectSessionIDCombobox.Size = new System.Drawing.Size(468, 33);
             this.selectSessionIDCombobox.TabIndex = 29;
             // 
-            // setTimeLable
+            // label1
             // 
-            this.setTimeLable.AutoSize = true;
-            this.setTimeLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setTimeLable.Location = new System.Drawing.Point(46, 403);
-            this.setTimeLable.Name = "setTimeLable";
-            this.setTimeLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.setTimeLable.Size = new System.Drawing.Size(91, 25);
-            this.setTimeLable.TabIndex = 30;
-            this.setTimeLable.Text = "Set Time";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 219);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(167, 25);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Select Sub Group";
             // 
-            // setTimeInput
+            // selectSubGroupCombobox
             // 
-            this.setTimeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setTimeInput.Location = new System.Drawing.Point(247, 403);
-            this.setTimeInput.Margin = new System.Windows.Forms.Padding(4);
-            this.setTimeInput.Name = "setTimeInput";
-            this.setTimeInput.Size = new System.Drawing.Size(468, 30);
-            this.setTimeInput.TabIndex = 54;
+            this.selectSubGroupCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectSubGroupCombobox.FormattingEnabled = true;
+            this.selectSubGroupCombobox.Location = new System.Drawing.Point(247, 216);
+            this.selectSubGroupCombobox.Name = "selectSubGroupCombobox";
+            this.selectSubGroupCombobox.Size = new System.Drawing.Size(468, 33);
+            this.selectSubGroupCombobox.TabIndex = 27;
+            // 
+            // selectGroupLable
+            // 
+            this.selectGroupLable.AutoSize = true;
+            this.selectGroupLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectGroupLable.Location = new System.Drawing.Point(46, 124);
+            this.selectGroupLable.Name = "selectGroupLable";
+            this.selectGroupLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.selectGroupLable.Size = new System.Drawing.Size(126, 25);
+            this.selectGroupLable.TabIndex = 24;
+            this.selectGroupLable.Text = "Select Group";
+            // 
+            // selectGroupCombobox
+            // 
+            this.selectGroupCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectGroupCombobox.FormattingEnabled = true;
+            this.selectGroupCombobox.Location = new System.Drawing.Point(247, 121);
+            this.selectGroupCombobox.Name = "selectGroupCombobox";
+            this.selectGroupCombobox.Size = new System.Drawing.Size(468, 33);
+            this.selectGroupCombobox.TabIndex = 25;
+            // 
+            // selectLecturerLabel
+            // 
+            this.selectLecturerLabel.AutoSize = true;
+            this.selectLecturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectLecturerLabel.Location = new System.Drawing.Point(46, 33);
+            this.selectLecturerLabel.Name = "selectLecturerLabel";
+            this.selectLecturerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.selectLecturerLabel.Size = new System.Drawing.Size(143, 25);
+            this.selectLecturerLabel.TabIndex = 16;
+            this.selectLecturerLabel.Text = "Select Lecturer";
+            // 
+            // selectLecturerCombobox
+            // 
+            this.selectLecturerCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectLecturerCombobox.FormattingEnabled = true;
+            this.selectLecturerCombobox.Location = new System.Drawing.Point(247, 30);
+            this.selectLecturerCombobox.Name = "selectLecturerCombobox";
+            this.selectLecturerCombobox.Size = new System.Drawing.Size(468, 33);
+            this.selectLecturerCombobox.TabIndex = 18;
+            // 
+            // roomSaveBtn
+            // 
+            this.roomSaveBtn.BackColor = System.Drawing.Color.Blue;
+            this.roomSaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.roomSaveBtn.FlatAppearance.BorderSize = 0;
+            this.roomSaveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.roomSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomSaveBtn.ForeColor = System.Drawing.Color.White;
+            this.roomSaveBtn.Location = new System.Drawing.Point(397, 472);
+            this.roomSaveBtn.Name = "roomSaveBtn";
+            this.roomSaveBtn.Padding = new System.Windows.Forms.Padding(10);
+            this.roomSaveBtn.Size = new System.Drawing.Size(131, 53);
+            this.roomSaveBtn.TabIndex = 23;
+            this.roomSaveBtn.Text = "Save";
+            this.roomSaveBtn.UseVisualStyleBackColor = false;
+            this.roomSaveBtn.Click += new System.EventHandler(this.roomSaveBtn_Click);
             // 
             // AddNotAvailableSessionForm
             // 

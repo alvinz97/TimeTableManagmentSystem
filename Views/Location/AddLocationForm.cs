@@ -14,7 +14,6 @@ namespace TimeTableManagmentSystem
 {
     public partial class AddLocationForm : Form
     {
-        private readonly ManageLocation _parent;
         private int type;
 
         public AddLocationForm()

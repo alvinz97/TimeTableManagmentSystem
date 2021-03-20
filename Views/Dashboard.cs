@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTableManagmentSystem.Views.Lecturer;
 using TimeTableManagmentSystem.Views.Session;
+using TimeTableManagmentSystem.Views.Student;
 using TimeTableManagmentSystem.Views.Working;
 
 namespace TimeTableManagmentSystem.Views
@@ -189,6 +191,44 @@ namespace TimeTableManagmentSystem.Views
         private void roomManagmentMenuBtn_Click(object sender, EventArgs e)
         {
             showSubMenu(roomManagmentSubmenuPanel);
+        }
+
+        private void addLecturerSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new AddLecturerForm());
+            changeHeaderText("Add Lecturer");
+            hideSubmenu();
+        }
+
+        private void lecturerListSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new ManageLecturerForm());
+            changeHeaderText("Manage Lecturers");
+            hideSubmenu();
+        }
+
+        private void addStudentGroupSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new AddStudentForm());
+            changeHeaderText("Add Students Group");
+            hideSubmenu();
+        }
+
+        private void listStudentGroupSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new ManageStudentForm());
+            changeHeaderText("Manage Student Groups");
+            hideSubmenu();
+        }
+
+        private void subjectListSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void addSubjectSubMenuBtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

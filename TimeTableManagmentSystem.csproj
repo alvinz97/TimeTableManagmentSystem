@@ -115,8 +115,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\Connection.cs" />
+    <Compile Include="Controllers\Lecturer\LecturerController.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
+    <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Workingday.cs" />
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
@@ -124,11 +129,17 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Lecturer\AddLecturer.cs">
+    <Compile Include="Views\Lecturer\AddLecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Lecturer\AddLecturer.Designer.cs">
-      <DependentUpon>AddLecturer.cs</DependentUpon>
+    <Compile Include="Views\Lecturer\AddLecturerForm.Designer.cs">
+      <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lecturer\ManageLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lecturer\ManageLecturerForm.Designer.cs">
+      <DependentUpon>ManageLecturerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Location\EditLocationForm.cs">
       <SubType>Form</SubType>
@@ -164,6 +175,18 @@
     <Compile Include="Views\Session\AddSessionRoomForm.Designer.cs">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Student\AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student\AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\ManageStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student\ManageStudentForm.Designer.cs">
+      <DependentUpon>ManageStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SubMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,8 +214,11 @@
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Lecturer\AddLecturer.resx">
-      <DependentUpon>AddLecturer.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Lecturer\AddLecturerForm.resx">
+      <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lecturer\ManageLecturerForm.resx">
+      <DependentUpon>ManageLecturerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Location\AddLocationForm.resx">
       <DependentUpon>AddLocationForm.cs</DependentUpon>
@@ -218,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Session\AddSessionRoomForm.resx">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\ManageStudentForm.resx">
+      <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
