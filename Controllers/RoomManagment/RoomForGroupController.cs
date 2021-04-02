@@ -10,7 +10,7 @@ using TimeTableManagmentSystem.Configurations;
 
 namespace TimeTableManagmentSystem.Controllers.RoomManagment
 {
-    class RoomForTagController
+    class RoomForGroupController
     {
         public static void Index(string query, DataGridView dataGridView)
         {
@@ -22,18 +22,19 @@ namespace TimeTableManagmentSystem.Controllers.RoomManagment
             dataGridView.DataSource = dataTable;
             connection.Close();
         }
-        public static void Store(Models.RoomTag roomTag)
+        public static void Store(Models.RoomGroup roomGroup)
         {
-            string query = "INSERT INTO roomTag " +
-                "(TagName, RoomName, CreatedAt, UpdatedAt) " +
+            string query = "INSERT INTO roomGroup " +
+                "(GroupID, SubGroupID, RoomName, CreatedAt, UpdatedAt) " +
                 "VALUES " +
-                "(@TagName, @RoomName, @CreatedAt, @UpdatedAt)";
+                "(@GroupID, @SubGroupID, @RoomName, @CreatedAt, @UpdatedAt)";
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
             command.CommandType = CommandType.Text;
-            command.Parameters.AddWithValue("@TagName", roomTag.TagName);
-            command.Parameters.AddWithValue("@RoomName", roomTag.RoomName);
+            command.Parameters.AddWithValue("@GroupID", roomGroup.GroupID);
+            command.Parameters.AddWithValue("@SubGroupID", roomGroup.SubGroupID);
+            command.Parameters.AddWithValue("@RoomName", roomGroup.RoomName);
             command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
             command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
 
@@ -55,7 +56,7 @@ namespace TimeTableManagmentSystem.Controllers.RoomManagment
 
         public static void Delete(string id)
         {
-            string query = "DELETE FROM roomTag WHERE id = @ID";
+            string query = "DELETE FROM roomGroup WHERE id = @ID";
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
             command.CommandType = CommandType.Text;

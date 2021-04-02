@@ -253,6 +253,7 @@
             this.roomsForGroupsSubmenuBtn.Text = "Rooms For Groups";
             this.roomsForGroupsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roomsForGroupsSubmenuBtn.UseVisualStyleBackColor = false;
+            this.roomsForGroupsSubmenuBtn.Click += new System.EventHandler(this.roomsForGroupsSubmenuBtn_Click);
             // 
             // roomsForLecturersSubmenuBtn
             // 
@@ -270,6 +271,7 @@
             this.roomsForLecturersSubmenuBtn.Text = "Rooms For Lecturers";
             this.roomsForLecturersSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roomsForLecturersSubmenuBtn.UseVisualStyleBackColor = false;
+            this.roomsForLecturersSubmenuBtn.Click += new System.EventHandler(this.roomsForLecturersSubmenuBtn_Click);
             // 
             // roomsForSubjectsSubmenuBtn
             // 

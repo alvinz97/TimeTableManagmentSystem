@@ -11,32 +11,34 @@ using System.Windows.Forms;
 using TimeTableManagmentSystem.Configurations;
 using TimeTableManagmentSystem.Controllers.RoomManagment;
 
-namespace TimeTableManagmentSystem.Views.Room
+namespace TimeTableManagmentSystem.Views.RoomManagment
 {
-    public partial class RoomsForTagForm : Form
+    public partial class RoomsForLecturerForm : Form
     {
-        string tag = string.Empty;
+        string lecturer = string.Empty;
         string room = string.Empty;
-        public RoomsForTagForm()
+
+        public RoomsForLecturerForm()
         {
             InitializeComponent();
-            SetTagsComboBoxValues();
+            SetLecturersComboBoxValues();
             SetRoomsComboBoxValues();
-            tagSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            lecturerSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             roomSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        void SetTagsComboBoxValues()
+        void SetLecturersComboBoxValues()
         {
-            string query = "SELECT * FROM tag";
+            string query = "SELECT * FROM lecturer";
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
 
             try {
                 using (SqlDataReader read = command.ExecuteReader())
                 {
-                    while (read.Read()) {
-                        tag = read["Name"].ToString();
-                        tagSelectCombobox.Items.Add(tag);
+                    while (read.Read())
+                    {
+                        lecturer = read["LecturerName"].ToString();
+                        lecturerSelectCombobox.Items.Add(lecturer);
                     }
                 }
             } finally {
@@ -64,21 +66,21 @@ namespace TimeTableManagmentSystem.Views.Room
         }
         public void Clear()
         {
-            tagSelectCombobox.Text =
+            lecturerSelectCombobox.Text =
             roomSelectCombobox.Text = string.Empty;
         }
 
         public void Display()
         {
-            string query = "SELECT id, TagName, RoomName FROM roomTag";
-            RoomForTagController.Index(query, roomForTagDataGridView);
+            string query = "SELECT id, LecturerName, RoomName FROM roomLecturer";
+            RoomForLecturerController.Index(query, roomForLecturerDataGridView);
         }
 
         private void roomForTagSaveBtn_Click(object sender, EventArgs e)
         {
-            if (tagSelectCombobox.Text == "")
+            if (lecturerSelectCombobox.Text == "")
             {
-                MessageBox.Show("Tag Name is required.", "ERROR");
+                MessageBox.Show("Lecturer is required.", "ERROR");
                 return;
             }
 
@@ -90,32 +92,32 @@ namespace TimeTableManagmentSystem.Views.Room
 
             if (roomForTagSaveBtn.Text == "Save")
             {
-                Models.RoomTag roomTag = new Models.RoomTag(
-                                                    tagSelectCombobox.Text.Trim(),
+                Models.RoomLecturer roomLecturer = new Models.RoomLecturer(
+                                                    lecturerSelectCombobox.Text.Trim(),
                                                     roomSelectCombobox.Text.Trim());
-                RoomForTagController.Store(roomTag);
+                RoomForLecturerController.Store(roomLecturer);
                 Clear();
                 Display();
             }
         }
 
-        private void roomForTagDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void RoomsForTagForm_Shown(object sender, EventArgs e)
+        private void RoomsForLecturerForm_Shown(object sender, EventArgs e)
         {
             Display();
         }
 
-        private void roomForTagDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void roomForLecturerDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void roomForLecturerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
                 if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    RoomForTagController.Delete(roomForTagDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    RoomForLecturerController.Delete(roomForLecturerDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
                     Display();
                 }
                 return;

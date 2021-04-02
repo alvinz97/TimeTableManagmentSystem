@@ -117,12 +117,16 @@
     <Compile Include="Configurations\Connection.cs" />
     <Compile Include="Controllers\Lecturer\LecturerController.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
+    <Compile Include="Controllers\RoomManagment\RoomForGroupController.cs" />
+    <Compile Include="Controllers\RoomManagment\RoomForLecturerController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForTagController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Tag\TagController.cs" />
     <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\RoomGroup.cs" />
+    <Compile Include="Models\RoomLecturer.cs" />
     <Compile Include="Models\RoomTag.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -173,6 +177,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\RoomManagment\RoomsForGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForGroupsForm.Designer.cs">
+      <DependentUpon>RoomsForGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForLecturerForm.Designer.cs">
+      <DependentUpon>RoomsForLecturerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RoomManagment\RoomsForTagForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +286,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\RoomManagment\RoomsForGroupsForm.resx">
+      <DependentUpon>RoomsForGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RoomManagment\RoomsForLecturerForm.resx">
+      <DependentUpon>RoomsForLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\RoomManagment\RoomsForTagForm.resx">
       <DependentUpon>RoomsForTagForm.cs</DependentUpon>
     </EmbeddedResource>
