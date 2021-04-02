@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.subSystemNameLable = new System.Windows.Forms.Label();
             this.systemNameLable = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerDynamicLabel = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.roomManagmentSubmenuPanel = new System.Windows.Forms.Panel();
@@ -76,9 +77,9 @@
             this.workingHDMenuBtn = new System.Windows.Forms.Button();
             this.dashboardMenuBtn = new System.Windows.Forms.Button();
             this.childContainerPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topHeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebarPanel.SuspendLayout();
             this.roomManagmentSubmenuPanel.SuspendLayout();
             this.sessionManagemntSubmenuPanel.SuspendLayout();
@@ -88,7 +89,6 @@
             this.tagSubMenuPanel.SuspendLayout();
             this.lecturerSubMenuPanel.SuspendLayout();
             this.workingHDSubMenuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topHeaderPanel
@@ -135,6 +135,19 @@
             this.systemNameLable.Size = new System.Drawing.Size(110, 39);
             this.systemNameLable.TabIndex = 1;
             this.systemNameLable.Text = "TTMS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.Image = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.InitialImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // headerDynamicLabel
             // 
@@ -291,6 +304,7 @@
             this.roomsForTagsSubmenuBtn.Text = "Rooms For Tags";
             this.roomsForTagsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roomsForTagsSubmenuBtn.UseVisualStyleBackColor = false;
+            this.roomsForTagsSubmenuBtn.Click += new System.EventHandler(this.roomsForTagsSubmenuBtn_Click);
             // 
             // roomManagmentMenuBtn
             // 
@@ -847,19 +861,6 @@
             this.childContainerPanel.Size = new System.Drawing.Size(1152, 670);
             this.childContainerPanel.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
-            this.pictureBox1.Image = global::TimeTableManagmentSystem.Properties.Resources.logo;
-            this.pictureBox1.InitialImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -877,6 +878,7 @@
             this.topHeaderPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
             this.roomManagmentSubmenuPanel.ResumeLayout(false);
             this.sessionManagemntSubmenuPanel.ResumeLayout(false);
@@ -886,7 +888,6 @@
             this.tagSubMenuPanel.ResumeLayout(false);
             this.lecturerSubMenuPanel.ResumeLayout(false);
             this.workingHDSubMenuPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

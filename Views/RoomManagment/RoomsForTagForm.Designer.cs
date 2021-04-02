@@ -32,20 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomsForTagForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.roomForTagDataGridView = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TagName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.roomForTagSaveBtn = new System.Windows.Forms.Button();
             this.roomSelectCombobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tagSelectCombobox = new System.Windows.Forms.ComboBox();
             this.buildingNameLabel = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TagName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomForTagDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +66,6 @@
             // 
             // roomForTagDataGridView
             // 
-            this.roomForTagDataGridView.AllowDrop = true;
             this.roomForTagDataGridView.AllowUserToAddRows = false;
             this.roomForTagDataGridView.AllowUserToDeleteRows = false;
             this.roomForTagDataGridView.AllowUserToResizeColumns = false;
@@ -84,88 +81,20 @@
             this.id,
             this.TagName,
             this.RoomName,
-            this.Edit,
             this.Delete});
             this.roomForTagDataGridView.Cursor = System.Windows.Forms.Cursors.Default;
             this.roomForTagDataGridView.GridColor = System.Drawing.Color.White;
             this.roomForTagDataGridView.Location = new System.Drawing.Point(12, 215);
-            this.roomForTagDataGridView.MultiSelect = false;
             this.roomForTagDataGridView.Name = "roomForTagDataGridView";
             this.roomForTagDataGridView.ReadOnly = true;
-            this.roomForTagDataGridView.RowHeadersVisible = false;
             this.roomForTagDataGridView.RowHeadersWidth = 51;
+            this.roomForTagDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.roomForTagDataGridView.RowTemplate.Height = 24;
             this.roomForTagDataGridView.ShowEditingIcon = false;
             this.roomForTagDataGridView.Size = new System.Drawing.Size(1102, 357);
             this.roomForTagDataGridView.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // TagName
-            // 
-            this.TagName.DataPropertyName = "TagName";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.TagName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TagName.HeaderText = "Tag Name";
-            this.TagName.MinimumWidth = 6;
-            this.TagName.Name = "TagName";
-            this.TagName.ReadOnly = true;
-            this.TagName.ToolTipText = "Tag Name";
-            // 
-            // RoomName
-            // 
-            this.RoomName.DataPropertyName = "RoomName";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.RoomName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RoomName.HeaderText = "Room Name";
-            this.RoomName.MinimumWidth = 6;
-            this.RoomName.Name = "RoomName";
-            this.RoomName.ReadOnly = true;
-            this.RoomName.ToolTipText = "Room Name";
-            // 
-            // Edit
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Edit";
-            this.Edit.ToolTipText = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.roomForTagDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomForTagDataGridView_CellClick);
+            this.roomForTagDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomForTagDataGridView_CellContentClick);
             // 
             // roomForTagSaveBtn
             // 
@@ -183,6 +112,7 @@
             this.roomForTagSaveBtn.TabIndex = 33;
             this.roomForTagSaveBtn.Text = "Save";
             this.roomForTagSaveBtn.UseVisualStyleBackColor = false;
+            this.roomForTagSaveBtn.Click += new System.EventHandler(this.roomForTagSaveBtn_Click);
             // 
             // roomSelectCombobox
             // 
@@ -224,6 +154,56 @@
             this.buildingNameLabel.TabIndex = 4;
             this.buildingNameLabel.Text = "Tag Name";
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // TagName
+            // 
+            this.TagName.DataPropertyName = "TagName";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.TagName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TagName.HeaderText = "Tag Name";
+            this.TagName.MinimumWidth = 6;
+            this.TagName.Name = "TagName";
+            this.TagName.ReadOnly = true;
+            this.TagName.ToolTipText = "Tag Name";
+            // 
+            // RoomName
+            // 
+            this.RoomName.DataPropertyName = "RoomName";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.RoomName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.RoomName.HeaderText = "Room Name";
+            this.RoomName.MinimumWidth = 6;
+            this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
+            this.RoomName.ToolTipText = "Room Name";
+            // 
+            // Delete
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // RoomsForTagForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,6 +214,7 @@
             this.Name = "RoomsForTagForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "Rooms For Tag";
+            this.Shown += new System.EventHandler(this.RoomsForTagForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomForTagDataGridView)).EndInit();
@@ -253,7 +234,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn TagName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

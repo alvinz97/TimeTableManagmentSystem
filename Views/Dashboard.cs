@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagmentSystem.Helpers;
 using TimeTableManagmentSystem.Views.Lecturer;
+using TimeTableManagmentSystem.Views.Room;
 using TimeTableManagmentSystem.Views.Session;
 using TimeTableManagmentSystem.Views.Student;
 using TimeTableManagmentSystem.Views.Tag;
@@ -249,6 +250,13 @@ namespace TimeTableManagmentSystem.Views
         {
             openChildContainer(new ManageTagForm());
             changeHeaderText("Manage Tags");
+            hideSubmenu();
+        }
+
+        private void roomsForTagsSubmenuBtn_Click(object sender, EventArgs e)
+        {
+            openChildContainer(new RoomsForTagForm());
+            changeHeaderText("Rooms For Tags");
             hideSubmenu();
         }
     }

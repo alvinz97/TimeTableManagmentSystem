@@ -123,6 +123,7 @@
     <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\RoomTag.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Workingday.cs" />

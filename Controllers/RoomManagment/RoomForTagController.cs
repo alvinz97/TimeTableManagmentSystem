@@ -22,18 +22,18 @@ namespace TimeTableManagmentSystem.Controllers.RoomManagment
             dataGridView.DataSource = dataTable;
             connection.Close();
         }
-        public static void Store(Models.Student student)
+        public static void Store(Models.RoomTag roomTag)
         {
-            string query = "INSERT INTO student " +
-                "(Year, Semester, Program, GroupNo, GroupID, SubGroupNo, SubGroupID, CreatedAt, UpdatedAt) " +
+            string query = "INSERT INTO roomTag " +
+                "(TagName, RoomName, CreatedAt, UpdatedAt) " +
                 "VALUES " +
-                "(@Year, @Semester, @Program, @GroupNo, @GroupID, @SubGroupNo, @SubGroupID, @CreatedAt, @UpdatedAt)";
+                "(@TagName, @RoomName, @CreatedAt, @UpdatedAt)";
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
             command.CommandType = CommandType.Text;
-            command.Parameters.AddWithValue("@Program", student.Program);
-            command.Parameters.AddWithValue("@GroupID", student.GroupID);
+            command.Parameters.AddWithValue("@TagName", roomTag.TagName);
+            command.Parameters.AddWithValue("@RoomName", roomTag.RoomName);
             command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
             command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
 
@@ -55,7 +55,7 @@ namespace TimeTableManagmentSystem.Controllers.RoomManagment
 
         public static void Update(Models.Student student, string id)
         {
-            string query = "UPDATE student SET " +
+            string query = "UPDATE roomTag SET " +
                 "Year = @Year, " +
                 "Semester = @Semester, " +
                 "Program = @Program, " +
@@ -96,7 +96,7 @@ namespace TimeTableManagmentSystem.Controllers.RoomManagment
 
         public static void Delete(string id)
         {
-            string query = "DELETE FROM student WHERE id = @ID";
+            string query = "DELETE FROM roomTag WHERE id = @ID";
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
             command.CommandType = CommandType.Text;
