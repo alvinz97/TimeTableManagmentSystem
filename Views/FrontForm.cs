@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagmentSystem.Helpers;
+using TimeTableManagmentSystem.Views.Lecturer;
 
 namespace TimeTableManagmentSystem.Views
 {
     public partial class FrontForm : Form
     {
         Helper helper = new Helper();
+        Dashboard dashboard;
         public FrontForm()
         {
             InitializeComponent();
@@ -25,6 +27,19 @@ namespace TimeTableManagmentSystem.Views
             latestLectDisplay.Text = helper.getLatestLecturer();
             latestGroupDisplay.Text = helper.getLatestStudentGroup();
             latestSubjectDisplay.Text = helper.getLatestSubject();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lecturerCount_Click(object sender, EventArgs e)
+        {
+            dashboard = new Dashboard();
+            dashboard.openChildContainer(new ManageLecturerForm());
+            dashboard.changeHeaderText("Add Details");
+            dashboard.hideSubmenu();
         }
     }
 }

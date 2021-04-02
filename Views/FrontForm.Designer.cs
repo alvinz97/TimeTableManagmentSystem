@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lecturersPanel = new System.Windows.Forms.Panel();
             this.lecturerCount = new System.Windows.Forms.Label();
             this.studentsPanel = new System.Windows.Forms.Panel();
@@ -56,6 +60,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lecturersPanel);
             this.panel1.Controls.Add(this.studentsPanel);
             this.panel1.Controls.Add(this.subjectsPanel);
@@ -66,6 +74,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1094, 583);
             this.panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(882, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(187, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Registered Rooms";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(591, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(205, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Registered Subjects";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(294, 228);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Registered Students";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 228);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(211, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Registered Lecturers";
             // 
             // lecturersPanel
             // 
@@ -89,6 +137,7 @@
             this.lecturerCount.Size = new System.Drawing.Size(95, 67);
             this.lecturerCount.TabIndex = 0;
             this.lecturerCount.Text = "25";
+            this.lecturerCount.Click += new System.EventHandler(this.lecturerCount_Click);
             // 
             // studentsPanel
             // 
@@ -170,9 +219,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(495, 227);
+            this.panel2.Location = new System.Drawing.Point(495, 344);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 356);
+            this.panel2.Size = new System.Drawing.Size(592, 239);
             this.panel2.TabIndex = 9;
             // 
             // latestSubjectDisplay
@@ -180,7 +229,7 @@
             this.latestSubjectDisplay.AutoSize = true;
             this.latestSubjectDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latestSubjectDisplay.ForeColor = System.Drawing.Color.White;
-            this.latestSubjectDisplay.Location = new System.Drawing.Point(236, 280);
+            this.latestSubjectDisplay.Location = new System.Drawing.Point(234, 173);
             this.latestSubjectDisplay.Name = "latestSubjectDisplay";
             this.latestSubjectDisplay.Size = new System.Drawing.Size(81, 29);
             this.latestSubjectDisplay.TabIndex = 5;
@@ -192,7 +241,7 @@
             this.latestGroupDisplay.AutoSize = true;
             this.latestGroupDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latestGroupDisplay.ForeColor = System.Drawing.Color.White;
-            this.latestGroupDisplay.Location = new System.Drawing.Point(234, 167);
+            this.latestGroupDisplay.Location = new System.Drawing.Point(234, 98);
             this.latestGroupDisplay.Name = "latestGroupDisplay";
             this.latestGroupDisplay.Size = new System.Drawing.Size(81, 29);
             this.latestGroupDisplay.TabIndex = 4;
@@ -204,7 +253,7 @@
             this.latestLectDisplay.AutoSize = true;
             this.latestLectDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latestLectDisplay.ForeColor = System.Drawing.Color.White;
-            this.latestLectDisplay.Location = new System.Drawing.Point(232, 50);
+            this.latestLectDisplay.Location = new System.Drawing.Point(232, 25);
             this.latestLectDisplay.Name = "latestLectDisplay";
             this.latestLectDisplay.Size = new System.Drawing.Size(81, 29);
             this.latestLectDisplay.TabIndex = 3;
@@ -216,7 +265,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 279);
+            this.label3.Location = new System.Drawing.Point(21, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(188, 29);
             this.label3.TabIndex = 2;
@@ -227,18 +276,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 167);
+            this.label2.Location = new System.Drawing.Point(20, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Latest Group :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 52);
+            this.label1.Location = new System.Drawing.Point(18, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 29);
             this.label1.TabIndex = 0;
@@ -255,6 +305,7 @@
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "Front Form";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.lecturersPanel.ResumeLayout(false);
             this.lecturersPanel.PerformLayout();
             this.studentsPanel.ResumeLayout(false);
@@ -287,5 +338,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

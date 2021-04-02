@@ -117,6 +117,7 @@
     <Compile Include="Configurations\Connection.cs" />
     <Compile Include="Controllers\Lecturer\LecturerController.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
+    <Compile Include="Controllers\RoomManagment\RoomForTagController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Tag\TagController.cs" />
     <Compile Include="Controllers\Workingday\WorkingdayController.cs" />
@@ -171,6 +172,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\RoomManagment\RoomsForTagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForTagForm.Designer.cs">
+      <DependentUpon>RoomsForTagForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Session\AddNotAvailableSessionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +269,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\RoomManagment\RoomsForTagForm.resx">
+      <DependentUpon>RoomsForTagForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Session\AddNotAvailableSessionForm.resx">
       <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,11 +33,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.subSystemNameLable = new System.Windows.Forms.Label();
             this.systemNameLable = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerDynamicLabel = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.roomManagmentSubmenuPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.roomsForConsecutiveSessionsSubmenuBtn = new System.Windows.Forms.Button();
+            this.roomsForSessionsSubmenuBtn = new System.Windows.Forms.Button();
+            this.roomsForGroupsSubmenuBtn = new System.Windows.Forms.Button();
+            this.roomsForLecturersSubmenuBtn = new System.Windows.Forms.Button();
+            this.roomsForSubjectsSubmenuBtn = new System.Windows.Forms.Button();
+            this.roomsForTagsSubmenuBtn = new System.Windows.Forms.Button();
             this.roomManagmentMenuBtn = new System.Windows.Forms.Button();
             this.sessionManagemntSubmenuPanel = new System.Windows.Forms.Panel();
             this.addSessionSubmenuBtn = new System.Windows.Forms.Button();
@@ -72,9 +76,9 @@
             this.workingHDMenuBtn = new System.Windows.Forms.Button();
             this.dashboardMenuBtn = new System.Windows.Forms.Button();
             this.childContainerPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topHeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebarPanel.SuspendLayout();
             this.roomManagmentSubmenuPanel.SuspendLayout();
             this.sessionManagemntSubmenuPanel.SuspendLayout();
@@ -84,6 +88,7 @@
             this.tagSubMenuPanel.SuspendLayout();
             this.lecturerSubMenuPanel.SuspendLayout();
             this.workingHDSubMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topHeaderPanel
@@ -131,16 +136,6 @@
             this.systemNameLable.TabIndex = 1;
             this.systemNameLable.Text = "TTMS";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // headerDynamicLabel
             // 
             this.headerDynamicLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -183,29 +178,119 @@
             // roomManagmentSubmenuPanel
             // 
             this.roomManagmentSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.roomManagmentSubmenuPanel.Controls.Add(this.button1);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForConsecutiveSessionsSubmenuBtn);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForSessionsSubmenuBtn);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForGroupsSubmenuBtn);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForLecturersSubmenuBtn);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForSubjectsSubmenuBtn);
+            this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForTagsSubmenuBtn);
             this.roomManagmentSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 910);
             this.roomManagmentSubmenuPanel.Name = "roomManagmentSubmenuPanel";
-            this.roomManagmentSubmenuPanel.Size = new System.Drawing.Size(254, 158);
+            this.roomManagmentSubmenuPanel.Size = new System.Drawing.Size(254, 264);
             this.roomManagmentSubmenuPanel.TabIndex = 17;
             // 
-            // button1
+            // roomsForConsecutiveSessionsSubmenuBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(254, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Not Overlapping Sessions";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.roomsForConsecutiveSessionsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForConsecutiveSessionsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForConsecutiveSessionsSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForConsecutiveSessionsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForConsecutiveSessionsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForConsecutiveSessionsSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForConsecutiveSessionsSubmenuBtn.Location = new System.Drawing.Point(0, 175);
+            this.roomsForConsecutiveSessionsSubmenuBtn.Name = "roomsForConsecutiveSessionsSubmenuBtn";
+            this.roomsForConsecutiveSessionsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForConsecutiveSessionsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForConsecutiveSessionsSubmenuBtn.TabIndex = 10;
+            this.roomsForConsecutiveSessionsSubmenuBtn.Text = "Consecutive Sessions";
+            this.roomsForConsecutiveSessionsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForConsecutiveSessionsSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // roomsForSessionsSubmenuBtn
+            // 
+            this.roomsForSessionsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForSessionsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForSessionsSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForSessionsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForSessionsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForSessionsSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForSessionsSubmenuBtn.Location = new System.Drawing.Point(0, 140);
+            this.roomsForSessionsSubmenuBtn.Name = "roomsForSessionsSubmenuBtn";
+            this.roomsForSessionsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForSessionsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForSessionsSubmenuBtn.TabIndex = 9;
+            this.roomsForSessionsSubmenuBtn.Text = "Rooms For Sessions";
+            this.roomsForSessionsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForSessionsSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // roomsForGroupsSubmenuBtn
+            // 
+            this.roomsForGroupsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForGroupsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForGroupsSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForGroupsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForGroupsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForGroupsSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForGroupsSubmenuBtn.Location = new System.Drawing.Point(0, 105);
+            this.roomsForGroupsSubmenuBtn.Name = "roomsForGroupsSubmenuBtn";
+            this.roomsForGroupsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForGroupsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForGroupsSubmenuBtn.TabIndex = 8;
+            this.roomsForGroupsSubmenuBtn.Text = "Rooms For Groups";
+            this.roomsForGroupsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForGroupsSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // roomsForLecturersSubmenuBtn
+            // 
+            this.roomsForLecturersSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForLecturersSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForLecturersSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForLecturersSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForLecturersSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForLecturersSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForLecturersSubmenuBtn.Location = new System.Drawing.Point(0, 70);
+            this.roomsForLecturersSubmenuBtn.Name = "roomsForLecturersSubmenuBtn";
+            this.roomsForLecturersSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForLecturersSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForLecturersSubmenuBtn.TabIndex = 7;
+            this.roomsForLecturersSubmenuBtn.Text = "Rooms For Lecturers";
+            this.roomsForLecturersSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForLecturersSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // roomsForSubjectsSubmenuBtn
+            // 
+            this.roomsForSubjectsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForSubjectsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForSubjectsSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForSubjectsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForSubjectsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForSubjectsSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForSubjectsSubmenuBtn.Location = new System.Drawing.Point(0, 35);
+            this.roomsForSubjectsSubmenuBtn.Name = "roomsForSubjectsSubmenuBtn";
+            this.roomsForSubjectsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForSubjectsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForSubjectsSubmenuBtn.TabIndex = 6;
+            this.roomsForSubjectsSubmenuBtn.Text = "Rooms For Subjects";
+            this.roomsForSubjectsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForSubjectsSubmenuBtn.UseVisualStyleBackColor = false;
+            // 
+            // roomsForTagsSubmenuBtn
+            // 
+            this.roomsForTagsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.roomsForTagsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roomsForTagsSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.roomsForTagsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roomsForTagsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsForTagsSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.roomsForTagsSubmenuBtn.Location = new System.Drawing.Point(0, 0);
+            this.roomsForTagsSubmenuBtn.Name = "roomsForTagsSubmenuBtn";
+            this.roomsForTagsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.roomsForTagsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.roomsForTagsSubmenuBtn.TabIndex = 5;
+            this.roomsForTagsSubmenuBtn.Text = "Rooms For Tags";
+            this.roomsForTagsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roomsForTagsSubmenuBtn.UseVisualStyleBackColor = false;
             // 
             // roomManagmentMenuBtn
             // 
@@ -762,6 +847,19 @@
             this.childContainerPanel.Size = new System.Drawing.Size(1152, 670);
             this.childContainerPanel.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.Image = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.InitialImage = global::TimeTableManagmentSystem.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -779,7 +877,6 @@
             this.topHeaderPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidebarPanel.ResumeLayout(false);
             this.roomManagmentSubmenuPanel.ResumeLayout(false);
             this.sessionManagemntSubmenuPanel.ResumeLayout(false);
@@ -789,6 +886,7 @@
             this.tagSubMenuPanel.ResumeLayout(false);
             this.lecturerSubMenuPanel.ResumeLayout(false);
             this.workingHDSubMenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -812,14 +910,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label subSystemNameLable;
         private System.Windows.Forms.Label systemNameLable;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button notOverlappingSessionSubmenuBtn;
         private System.Windows.Forms.Button paralleSessionSubmenuBtn;
         private System.Windows.Forms.Button consecutiveSessionSubmenuBtn;
         private System.Windows.Forms.Button allocateNotAvailableSubmenuBtn;
         private System.Windows.Forms.Button addSessionSubmenuBtn;
         private System.Windows.Forms.Panel roomManagmentSubmenuPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button roomsForTagsSubmenuBtn;
         private System.Windows.Forms.Panel lecturerSubMenuPanel;
         private System.Windows.Forms.Button addLecturerSubMenuBtn;
         private System.Windows.Forms.Button lecturerListSubMenuBtn;
@@ -838,5 +935,11 @@
         private System.Windows.Forms.Button addStudentGroupSubMenuBtn;
         private System.Windows.Forms.Panel sessionManagemntSubmenuPanel;
         private System.Windows.Forms.Button roomManagmentMenuBtn;
+        private System.Windows.Forms.Button roomsForConsecutiveSessionsSubmenuBtn;
+        private System.Windows.Forms.Button roomsForSessionsSubmenuBtn;
+        private System.Windows.Forms.Button roomsForGroupsSubmenuBtn;
+        private System.Windows.Forms.Button roomsForLecturersSubmenuBtn;
+        private System.Windows.Forms.Button roomsForSubjectsSubmenuBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

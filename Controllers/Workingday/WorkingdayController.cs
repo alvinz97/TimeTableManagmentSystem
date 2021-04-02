@@ -12,8 +12,7 @@ namespace TimeTableManagmentSystem.Controllers.Workingday
 {
     class WorkingdayController
     {
-        public static void Index(string query, DataGridView dataGridView)
-        {
+        public static void Index(string query, DataGridView dataGridView) {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
@@ -23,8 +22,7 @@ namespace TimeTableManagmentSystem.Controllers.Workingday
             connection.Close();
         }
 
-        public static void Store(Models.Workingday workingday)
-        {
+        public static void Store(Models.Workingday workingday) {
             string query = "INSERT INTO workingday " +
                 "(NoOfWorkingDay, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Hour, Minute, CreatedAt, UpdatedAt) " +
                 "VALUES " +
@@ -46,19 +44,13 @@ namespace TimeTableManagmentSystem.Controllers.Workingday
             command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
             command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
 
-            try
-            {
+            try {
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ManageLocation manageLocation = new ManageLocation();
-            }
-            catch (SqlException e)
-            {
+            } catch (SqlException e) {
                 MessageBox.Show("Error Occur. \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
+            } finally {
                 connection.Close();
             }
         }
