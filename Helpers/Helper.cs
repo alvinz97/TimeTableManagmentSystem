@@ -12,7 +12,7 @@ namespace TimeTableManagmentSystem.Helpers
     {
         public int GenerateID() { 
             Random random = new Random();
-            return random.Next(10000000);
+            return random.Next(1000000);
         }
 
         public int getRegisteredLecturersCount() {

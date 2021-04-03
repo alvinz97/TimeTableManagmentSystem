@@ -42,9 +42,9 @@ namespace TimeTableManagmentSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dashboard.openChildContainer(locationForm);
-            dashboard.changeHeaderText("Add Locations");
-            dashboard.hideSubmenu();
+            dashboard.OpenChildContainer(locationForm);
+            dashboard.ChangeHeaderText("Add Locations");
+            dashboard.HideSubmenu();
         }
 
         public void Display()
@@ -87,9 +87,9 @@ namespace TimeTableManagmentSystem
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0) {
-                dashboard.openChildContainer(new AddLocationForm());
-                dashboard.changeHeaderText("Add Locations");
-                dashboard.hideSubmenu();
+                dashboard.OpenChildContainer(new AddLocationForm());
+                dashboard.ChangeHeaderText("Add Locations");
+                dashboard.HideSubmenu();
                 return;
             }
             if (e.ColumnIndex == 1) {

@@ -14,6 +14,7 @@ using TimeTableManagmentSystem.Views.Room;
 using TimeTableManagmentSystem.Views.RoomManagment;
 using TimeTableManagmentSystem.Views.Session;
 using TimeTableManagmentSystem.Views.Student;
+using TimeTableManagmentSystem.Views.Subject;
 using TimeTableManagmentSystem.Views.Tag;
 using TimeTableManagmentSystem.Views.Working;
 
@@ -24,17 +25,18 @@ namespace TimeTableManagmentSystem.Views
         public Dashboard()
         {
             InitializeComponent();
-            customizedDetsing();
-            openChildContainer(new FrontForm());
-            changeHeaderText("Dashboard");
-            hideSubmenu();
+            CustomizedDetsing();
+            OpenChildContainer(new FrontForm());
+            ChangeHeaderText("Dashboard");
+            HideSubmenu();
+            ChangeTitleText("Dashboard");
         }
 
-        public void changeHeaderText(string hedaerText) {
+        public void ChangeHeaderText(string hedaerText) {
             headerDynamicLabel.Text = hedaerText;
         }
 
-        private void customizedDetsing() {
+        private void CustomizedDetsing() {
             workingHDSubMenuPanel.Visible = false;
             locationSubMenuPanel.Visible = false;
             lecturerSubMenuPanel.Visible = false;
@@ -45,7 +47,7 @@ namespace TimeTableManagmentSystem.Views
             roomManagmentSubmenuPanel.Visible = false;
         }
 
-        public void hideSubmenu() {
+        public void HideSubmenu() {
             if (workingHDSubMenuPanel.Visible == true) {
                 workingHDSubMenuPanel.Visible = false;
             }
@@ -71,14 +73,17 @@ namespace TimeTableManagmentSystem.Views
                 roomManagmentSubmenuPanel.Visible = false;
             }
         }
+        public void ChangeTitleText(string title)
+        {
+            this.Text = title;
+            this.Update();
+        }
 
-        public void showSubMenu(Panel submenu) {
-            if (submenu.Visible == false)
-            {
-                hideSubmenu();
+        public void ShowSubMenu(Panel submenu) {
+            if (submenu.Visible == false) {
+                HideSubmenu();
                 submenu.Visible = true;
-            }
-            else {
+            } else {
                 submenu.Visible = false;
             }
         }
@@ -100,25 +105,27 @@ namespace TimeTableManagmentSystem.Views
 
         private void weekendDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddWeekdayWeekendForm());
-            changeHeaderText("Add Details");
-            hideSubmenu();
+            OpenChildContainer(new AddWeekdayWeekendForm());
+            ChangeHeaderText("Add Details");
+            ChangeTitleText("Add Weekday Weekend Details");
+            HideSubmenu();
         }
 
         private void dashboardMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new FrontForm());
-            changeHeaderText("Dashboard");
-            hideSubmenu();
+            OpenChildContainer(new FrontForm());
+            ChangeHeaderText("Dashboard");
+            ChangeTitleText("Dashboard");
+            HideSubmenu();
         }
 
         private void workingHDMenuBtn_Click(object sender, EventArgs e)
         {
-            showSubMenu(workingHDSubMenuPanel);
+            ShowSubMenu(workingHDSubMenuPanel);
         }
 
         private Form activeForm = null;
-        public void openChildContainer(Form childForm) {
+        public void OpenChildContainer(Form childForm) {
             if (activeForm != null) {
                 activeForm.Close();
             }
@@ -134,145 +141,165 @@ namespace TimeTableManagmentSystem.Views
 
         private void locationListSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ManageLocation());
-            changeHeaderText("Manage Locations");
-            hideSubmenu();
+            OpenChildContainer(new ManageLocation());
+            ChangeHeaderText("Manage Locations");
+            ChangeTitleText("Manage Locations");
+            HideSubmenu();
         }
 
         private void addLocationSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddLocationForm());
-            changeHeaderText("Add Locations");
-            hideSubmenu();
+            OpenChildContainer(new AddLocationForm());
+            ChangeHeaderText("Add Locations");
+            ChangeTitleText("Add Locations");
+            HideSubmenu();
         }
 
         private void viewWeekdaysDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ManageWeekendNWeekdayFrom());
-            changeHeaderText("Working Hours And Days Details");
-            hideSubmenu();
+            OpenChildContainer(new ManageWeekendNWeekdayFrom());
+            ChangeHeaderText("Working Hours And Days Details");
+            ChangeTitleText("Working Hours And Days Details");
+            HideSubmenu();
         }
 
         private void addSessionSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddSessionRoomForm());
-            changeHeaderText("Add Session");
-            hideSubmenu();
+            OpenChildContainer(new AddSessionRoomForm());
+            ChangeHeaderText("Add Session");
+            ChangeTitleText("Add Session");
+            HideSubmenu();
         }
 
         private void allocateNotAvailableSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddNotAvailableSessionForm());
-            changeHeaderText("Add Not Available Session");
-            hideSubmenu();
+            OpenChildContainer(new AddNotAvailableSessionForm());
+            ChangeHeaderText("Add Not Available Session");
+            ChangeTitleText("Add Not Available Session");
+            HideSubmenu();
         }
 
         private void lecturersMenuBtn_Click(object sender, EventArgs e)
         {
-            showSubMenu(lecturerSubMenuPanel);
+            ShowSubMenu(lecturerSubMenuPanel);
         }
 
         private void tagMenuBtn_Click(object sender, EventArgs e)
         {
-            showSubMenu(tagSubMenuPanel);
+            ShowSubMenu(tagSubMenuPanel);
         }
 
         private void studentsMenuBtn_Click_1(object sender, EventArgs e)
         {
-            showSubMenu(studentSubMenuPanel);
+            ShowSubMenu(studentSubMenuPanel);
         }
 
         private void subjectMenuBtn_Click(object sender, EventArgs e)
         {
-            showSubMenu(subjectSubMenuPanel);
+            ShowSubMenu(subjectSubMenuPanel);
         }
 
         private void locationsMenuBtn_Click_2(object sender, EventArgs e)
         {
-            showSubMenu(locationSubMenuPanel);
+            ShowSubMenu(locationSubMenuPanel);
         }
 
         private void sessionManagemntMenuBtn_Click_1(object sender, EventArgs e)
         {
-            showSubMenu(sessionManagemntSubmenuPanel);
+            ShowSubMenu(sessionManagemntSubmenuPanel);
         }
 
         private void roomManagmentMenuBtn_Click(object sender, EventArgs e)
         {
-            showSubMenu(roomManagmentSubmenuPanel);
+            ShowSubMenu(roomManagmentSubmenuPanel);
         }
 
         private void addLecturerSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddLecturerForm());
-            changeHeaderText("Add Lecturer");
-            hideSubmenu();
+            OpenChildContainer(new AddLecturerForm());
+            ChangeHeaderText("Add Lecturer");
+            ChangeTitleText("Add Lecturer");
+            HideSubmenu();
         }
 
         private void lecturerListSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ManageLecturerForm());
-            changeHeaderText("Manage Lecturers");
-            hideSubmenu();
+            OpenChildContainer(new ManageLecturerForm());
+            ChangeHeaderText("Manage Lecturers");
+            ChangeTitleText("Manage Lecturer");
+            HideSubmenu();
         }
 
         private void addStudentGroupSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddStudentForm());
-            changeHeaderText("Add Students Group");
-            hideSubmenu();
+            OpenChildContainer(new AddStudentForm());
+            ChangeHeaderText("Add Students Group");
+            ChangeTitleText("Add Students Group");
+            HideSubmenu();
         }
 
         private void listStudentGroupSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ManageStudentForm());
-            changeHeaderText("Manage Student Groups");
-            hideSubmenu();
+            OpenChildContainer(new ManageStudentForm());
+            ChangeHeaderText("Manage Student Groups");
+            ChangeTitleText("Manage Students Group");
+            HideSubmenu();
         }
 
         private void subjectListSubMenuBtn_Click(object sender, EventArgs e)
         {
-            
+            OpenChildContainer(new ManageSubjectForm());
+            ChangeHeaderText("Manage Subjects");
+            ChangeTitleText("Manage Subjects");
+            HideSubmenu();
         }
 
         private void addSubjectSubMenuBtn_Click(object sender, EventArgs e)
         {
-            
+            OpenChildContainer(new AddSubjectForm());
+            ChangeHeaderText("Add Subjects");
+            ChangeTitleText("Add Subjects");
+            HideSubmenu();
         }
 
         private void addTagSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new AddTagForm());
-            changeHeaderText("Add Tags");
-            hideSubmenu();
+            OpenChildContainer(new AddTagForm());
+            ChangeHeaderText("Add Tags");
+            ChangeTitleText("Add Tags");
+            HideSubmenu();
         }
 
         private void tagListSubMenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new ManageTagForm());
-            changeHeaderText("Manage Tags");
-            hideSubmenu();
+            OpenChildContainer(new ManageTagForm());
+            ChangeHeaderText("Manage Tags");
+            ChangeTitleText("Manage Tags");
+            HideSubmenu();
         }
 
         private void roomsForTagsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new RoomsForTagForm());
-            changeHeaderText("Rooms For Tags");
-            hideSubmenu();
+            OpenChildContainer(new RoomsForTagForm());
+            ChangeHeaderText("Rooms For Tags");
+            ChangeTitleText("Rooms For Tags");
+            HideSubmenu();
         }
 
         private void roomsForLecturersSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new RoomsForLecturerForm());
-            changeHeaderText("Rooms For Lecturer");
-            hideSubmenu();
+            OpenChildContainer(new RoomsForLecturerForm());
+            ChangeHeaderText("Rooms For Lecturer");
+            ChangeTitleText("Rooms For Lecturer");
+            HideSubmenu();
         }
 
         private void roomsForGroupsSubmenuBtn_Click(object sender, EventArgs e)
         {
-            openChildContainer(new RoomsForGroupsForm());
-            changeHeaderText("Rooms For Groups");
-            hideSubmenu();
+            OpenChildContainer(new RoomsForGroupsForm());
+            ChangeHeaderText("Rooms For Groups");
+            ChangeTitleText("Rooms For Groups");
+            HideSubmenu();
         }
     }
 }

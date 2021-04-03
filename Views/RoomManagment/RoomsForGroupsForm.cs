@@ -26,6 +26,7 @@ namespace TimeTableManagmentSystem.Views.RoomManagment
             SetRoomsComboBoxValues();
             groupSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             subGroupSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            roomSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void SetRoomsComboBoxValues()
@@ -93,12 +94,52 @@ namespace TimeTableManagmentSystem.Views.RoomManagment
 
         public void Display()
         {
-            string query = "SELECT id, LecturerName, RoomName FROM roomLecturer";
+            string query = "SELECT id, GroupID, SubGroupID, RoomName FROM roomGroup";
             RoomForGroupController.Index(query, roomForGroupDataGridView);
         }
         private void RoomsForGroupsForm_Shown(object sender, EventArgs e)
         {
             Display();
+        }
+
+        private void roomForGroupDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0) {
+                if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    RoomForGroupController.Delete(roomForGroupDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    Display();
+                }
+                return;
+            }
+        }
+
+        private void roomForTagSaveBtn_Click(object sender, EventArgs e)
+        {
+            if (groupSelectCombobox.Text == "") {
+                MessageBox.Show("Group is required.", "ERROR");
+                return;
+            }
+
+            if (subGroupSelectCombobox.Text == "") {
+                MessageBox.Show("Sub Group is required.", "ERROR");
+                return;
+            }
+
+            if (roomSelectCombobox.Text == "") {
+                MessageBox.Show("Room is required.", "ERROR");
+                return;
+            }
+
+            if (roomForTagSaveBtn.Text == "Save") {
+                Models.RoomGroup roomGroup = new Models.RoomGroup(
+                                                    groupSelectCombobox.Text.Trim(),
+                                                    subGroupSelectCombobox.Text.Trim(),
+                                                    roomSelectCombobox.Text.Trim());
+                RoomForGroupController.Store(roomGroup);
+                Clear();
+                Display();
+            }
         }
     }
 }

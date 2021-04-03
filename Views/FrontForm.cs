@@ -37,9 +37,9 @@ namespace TimeTableManagmentSystem.Views
         private void lecturerCount_Click(object sender, EventArgs e)
         {
             dashboard = new Dashboard();
-            dashboard.openChildContainer(new ManageLecturerForm());
-            dashboard.changeHeaderText("Add Details");
-            dashboard.hideSubmenu();
+            dashboard.OpenChildContainer(new ManageLecturerForm());
+            dashboard.ChangeHeaderText("Add Details");
+            dashboard.HideSubmenu();
         }
     }
 }

@@ -32,19 +32,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.roomSelectCombobox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.roomForGroupDataGridView = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.roomForTagSaveBtn = new System.Windows.Forms.Button();
             this.subGroupSelectCombobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupSelectCombobox = new System.Windows.Forms.ComboBox();
             this.buildingNameLabel = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubGroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomForGroupDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +104,8 @@
             this.roomForGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomForGroupDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.LecturerName,
+            this.GroupID,
+            this.SubGroupID,
             this.RoomName,
             this.Delete});
             this.roomForGroupDataGridView.Cursor = System.Windows.Forms.Cursors.Default;
@@ -116,56 +119,7 @@
             this.roomForGroupDataGridView.ShowEditingIcon = false;
             this.roomForGroupDataGridView.Size = new System.Drawing.Size(1102, 323);
             this.roomForGroupDataGridView.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // LecturerName
-            // 
-            this.LecturerName.DataPropertyName = "LecturerName";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.LecturerName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.LecturerName.HeaderText = "Lecturer Name";
-            this.LecturerName.MinimumWidth = 6;
-            this.LecturerName.Name = "LecturerName";
-            this.LecturerName.ReadOnly = true;
-            this.LecturerName.ToolTipText = "Lecturer Name";
-            // 
-            // RoomName
-            // 
-            this.RoomName.DataPropertyName = "RoomName";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.RoomName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RoomName.HeaderText = "Room Name";
-            this.RoomName.MinimumWidth = 6;
-            this.RoomName.Name = "RoomName";
-            this.RoomName.ReadOnly = true;
-            this.RoomName.ToolTipText = "Room Name";
-            // 
-            // Delete
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.roomForGroupDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomForGroupDataGridView_CellContentClick);
             // 
             // roomForTagSaveBtn
             // 
@@ -183,6 +137,7 @@
             this.roomForTagSaveBtn.TabIndex = 33;
             this.roomForTagSaveBtn.Text = "Save";
             this.roomForTagSaveBtn.UseVisualStyleBackColor = false;
+            this.roomForTagSaveBtn.Click += new System.EventHandler(this.roomForTagSaveBtn_Click);
             // 
             // subGroupSelectCombobox
             // 
@@ -224,6 +179,67 @@
             this.buildingNameLabel.TabIndex = 4;
             this.buildingNameLabel.Text = "Group ID";
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // GroupID
+            // 
+            this.GroupID.DataPropertyName = "GroupID";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.GroupID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GroupID.HeaderText = "Group ID";
+            this.GroupID.MinimumWidth = 6;
+            this.GroupID.Name = "GroupID";
+            this.GroupID.ReadOnly = true;
+            this.GroupID.ToolTipText = "Group ID";
+            // 
+            // SubGroupID
+            // 
+            this.SubGroupID.DataPropertyName = "SubGroupID";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.SubGroupID.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SubGroupID.HeaderText = "Sub Group ID";
+            this.SubGroupID.MinimumWidth = 6;
+            this.SubGroupID.Name = "SubGroupID";
+            this.SubGroupID.ReadOnly = true;
+            this.SubGroupID.ToolTipText = "Sub Group ID";
+            // 
+            // RoomName
+            // 
+            this.RoomName.DataPropertyName = "RoomName";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.RoomName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.RoomName.HeaderText = "Room Name";
+            this.RoomName.MinimumWidth = 6;
+            this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
+            this.RoomName.ToolTipText = "Room Name";
+            // 
+            // Delete
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // RoomsForGroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,10 +261,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView roomForGroupDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LecturerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Button roomForTagSaveBtn;
         private System.Windows.Forms.ComboBox subGroupSelectCombobox;
         private System.Windows.Forms.Label label1;
@@ -256,5 +268,10 @@
         private System.Windows.Forms.Label buildingNameLabel;
         private System.Windows.Forms.ComboBox roomSelectCombobox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubGroupID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

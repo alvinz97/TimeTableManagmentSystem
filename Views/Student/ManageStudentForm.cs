@@ -20,7 +20,7 @@ namespace TimeTableManagmentSystem.Views.Student
         public void Display()
         {
             string query = "SELECT id, Year, Semester, Program, GroupNo, SubGroupNo, GroupID, SubGroupID FROM student";
-            StudentController.Index(query, studentDataGridView);
+            StudentController.Index(query, subjectDataGridView);
         }
 
         private void ManageStudentForm_Shown(object sender, EventArgs e)
@@ -34,6 +34,11 @@ namespace TimeTableManagmentSystem.Views.Student
         }
 
         private void studentDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void studentSearchInput_TextChanged(object sender, EventArgs e)
         {
 
         }
