@@ -40,7 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.subjectDataGridView = new System.Windows.Forms.DataGridView();
+            this.studentDataGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,14 +55,14 @@
             this.studentSearchInput = new System.Windows.Forms.TextBox();
             this.addNewLocationBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationSearcheIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.subjectDataGridView);
+            this.panel1.Controls.Add(this.studentDataGridView);
             this.panel1.Controls.Add(this.locationSearcheIcon);
             this.panel1.Controls.Add(this.studentSearchInput);
             this.panel1.Controls.Add(this.addNewLocationBtn);
@@ -72,19 +72,19 @@
             this.panel1.Size = new System.Drawing.Size(1126, 575);
             this.panel1.TabIndex = 17;
             // 
-            // subjectDataGridView
+            // studentDataGridView
             // 
-            this.subjectDataGridView.AllowUserToAddRows = false;
-            this.subjectDataGridView.AllowUserToDeleteRows = false;
-            this.subjectDataGridView.AllowUserToResizeRows = false;
-            this.subjectDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.studentDataGridView.AllowUserToAddRows = false;
+            this.studentDataGridView.AllowUserToDeleteRows = false;
+            this.studentDataGridView.AllowUserToResizeRows = false;
+            this.studentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subjectDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.subjectDataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.subjectDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.subjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.subjectDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.studentDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.Year,
             this.Semester,
@@ -95,19 +95,19 @@
             this.SubGroupID,
             this.Column1,
             this.Column2});
-            this.subjectDataGridView.Location = new System.Drawing.Point(0, 75);
-            this.subjectDataGridView.MultiSelect = false;
-            this.subjectDataGridView.Name = "subjectDataGridView";
-            this.subjectDataGridView.ReadOnly = true;
-            this.subjectDataGridView.RowHeadersVisible = false;
-            this.subjectDataGridView.RowHeadersWidth = 51;
-            this.subjectDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.subjectDataGridView.RowTemplate.Height = 24;
-            this.subjectDataGridView.ShowEditingIcon = false;
-            this.subjectDataGridView.Size = new System.Drawing.Size(1123, 497);
-            this.subjectDataGridView.TabIndex = 0;
-            this.subjectDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellClick_1);
-            this.subjectDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellContentClick_1);
+            this.studentDataGridView.Location = new System.Drawing.Point(0, 75);
+            this.studentDataGridView.MultiSelect = false;
+            this.studentDataGridView.Name = "studentDataGridView";
+            this.studentDataGridView.ReadOnly = true;
+            this.studentDataGridView.RowHeadersVisible = false;
+            this.studentDataGridView.RowHeadersWidth = 51;
+            this.studentDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.studentDataGridView.RowTemplate.Height = 24;
+            this.studentDataGridView.ShowEditingIcon = false;
+            this.studentDataGridView.Size = new System.Drawing.Size(1123, 497);
+            this.studentDataGridView.TabIndex = 0;
+            this.studentDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellClick_1);
+            this.studentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellContentClick_1);
             // 
             // id
             // 
@@ -269,6 +269,7 @@
             this.addNewLocationBtn.TabIndex = 3;
             this.addNewLocationBtn.Text = "New";
             this.addNewLocationBtn.UseVisualStyleBackColor = false;
+            this.addNewLocationBtn.Click += new System.EventHandler(this.addNewLocationBtn_Click);
             // 
             // ManageStudentForm
             // 
@@ -283,7 +284,7 @@
             this.Shown += new System.EventHandler(this.ManageStudentForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationSearcheIcon)).EndInit();
             this.ResumeLayout(false);
 
@@ -295,7 +296,7 @@
         private System.Windows.Forms.PictureBox locationSearcheIcon;
         private System.Windows.Forms.TextBox studentSearchInput;
         private System.Windows.Forms.Button addNewLocationBtn;
-        private System.Windows.Forms.DataGridView subjectDataGridView;
+        private System.Windows.Forms.DataGridView studentDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Year;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semester;

@@ -17,14 +17,12 @@ namespace TimeTableManagmentSystem.Views.Student
         {
             InitializeComponent();
         }
-        public void Display()
-        {
+        public void Display() {
             string query = "SELECT id, Year, Semester, Program, GroupNo, SubGroupNo, GroupID, SubGroupID FROM student";
-            StudentController.Index(query, subjectDataGridView);
+            StudentController.Index(query, studentDataGridView);
         }
 
-        private void ManageStudentForm_Shown(object sender, EventArgs e)
-        {
+        private void ManageStudentForm_Shown(object sender, EventArgs e) {
             Display();
         }
 
@@ -35,12 +33,43 @@ namespace TimeTableManagmentSystem.Views.Student
 
         private void studentDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 0) {
+            }
+            if (e.ColumnIndex == 1) {
+                if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes) {
+                    StudentController.Delete(studentDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display();
+                }
+                return;
+            }
         }
 
         private void studentSearchInput_TextChanged(object sender, EventArgs e)
         {
+            string query =
+                "SELECT id, Year, Semester, Program, GroupNo, SubGroupNo, GroupID, SubGroupID " +
+                "FROM student " +
+                "WHERE Year " +
+                "LIKE '%" + studentSearchInput.Text + "%' " +
+                "OR Semester " +
+                "LIKE '%" + studentSearchInput.Text + "%' " +
+                "OR Program " +
+                "LIKE '%" + studentSearchInput.Text + "%' " +
+                "OR GroupNo " +
+                "LIKE '%" + studentSearchInput.Text + "%' " +
+                "OR SubGroupID " +
+                "LIKE '%" + studentSearchInput.Text + "%' ";
+            StudentController.Index(query, studentDataGridView);
+        }
 
+        private void addNewLocationBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.OpenChildContainer(new AddStudentForm());
+            dashboard.ChangeHeaderText("Add Lecturer");
+            dashboard.ChangeTitleText("Add Lecturer");
+            dashboard.HideSubmenu();
+            this.Close();
         }
     }
 }

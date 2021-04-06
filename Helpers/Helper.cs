@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -56,5 +57,6 @@ namespace TimeTableManagmentSystem.Helpers
             int count = Convert.ToInt32(command.ExecuteScalar());
             return count;
         }
+
     }
 }

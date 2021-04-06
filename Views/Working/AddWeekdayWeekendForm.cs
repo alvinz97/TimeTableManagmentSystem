@@ -92,26 +92,22 @@ namespace TimeTableManagmentSystem.Views.Working
         private void weekendNweekdaySaveBtn_Click(object sender, EventArgs e)
         {
 
-            if (noOfWorkingDaysInput.Text == "")
-            {
-                MessageBox.Show("No of workingdays is required.", "ERROR");
+            if (noOfWorkingDaysInput.Text == "0") { 
+                MessageBox.Show("Please select number of days.", "ERROR");
                 return;
             }
 
-            if (workingTimeHoursInput.Text == "")
-            {
+            if (workingTimeHoursInput.Text == "0") {
                 MessageBox.Show("Working hour is required.", "ERROR");
                 return;
             }
 
-            if (workingTimeMinutesInput.Text == "")
-            {
+            if (workingTimeMinutesInput.Text == "0") {
                 MessageBox.Show("Working minute is required.", "ERROR");
                 return;
             }
 
-            if (weekendNweekdaySaveBtn.Text == "Save")
-            {
+            if (weekendNweekdaySaveBtn.Text == "Save") {
                 int noOfWorkingDays = Int16.Parse(noOfWorkingDaysInput.Text.Trim());
                 int hours = Int16.Parse(workingTimeHoursInput.Text.Trim());
                 int minutes = Int16.Parse(workingTimeMinutesInput.Text.Trim());

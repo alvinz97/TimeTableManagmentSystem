@@ -124,7 +124,7 @@ namespace TimeTableManagmentSystem.Views
             ShowSubMenu(workingHDSubMenuPanel);
         }
 
-        private Form activeForm = null;
+        public Form activeForm = null;
         public void OpenChildContainer(Form childForm) {
             if (activeForm != null) {
                 activeForm.Close();
