@@ -233,12 +233,6 @@
     <Compile Include="Views\Subject\ManageSubjectForm.Designer.cs">
       <DependentUpon>ManageSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SubMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\SubMenu.Designer.cs">
-      <DependentUpon>SubMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Tag\AddTagForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,9 +320,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Subject\ManageSubjectForm.resx">
       <DependentUpon>ManageSubjectForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\SubMenu.resx">
-      <DependentUpon>SubMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Tag\AddTagForm.resx">
       <DependentUpon>AddTagForm.cs</DependentUpon>

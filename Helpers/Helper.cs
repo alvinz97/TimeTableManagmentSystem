@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TimeTableManagmentSystem.Configurations;
+using TimeTableManagmentSystem.Views.Student;
 
 namespace TimeTableManagmentSystem.Helpers
 {
@@ -58,5 +59,21 @@ namespace TimeTableManagmentSystem.Helpers
             return count;
         }
 
+        public Form activeForm = null;
+        public void OpenChildContainer(Form childForm, Panel property)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            property.Controls.Add(childForm);
+            property.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
     }
 }

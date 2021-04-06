@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagmentSystem.Controllers.Student;
+using TimeTableManagmentSystem.Helpers;
 
 namespace TimeTableManagmentSystem.Views.Student
 {
     public partial class ManageStudentForm : Form
     {
+        Helper helper = new Helper();
+        Dashboard dashboard = new Dashboard();
         public ManageStudentForm()
         {
             InitializeComponent();
@@ -64,7 +67,7 @@ namespace TimeTableManagmentSystem.Views.Student
 
         private void addNewLocationBtn_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
+            //helper.OpenChildContainer(new AddStudentForm(), ((Dashboard)this.Owner).childContainerPanel);
             dashboard.OpenChildContainer(new AddStudentForm());
             dashboard.ChangeHeaderText("Add Lecturer");
             dashboard.ChangeTitleText("Add Lecturer");

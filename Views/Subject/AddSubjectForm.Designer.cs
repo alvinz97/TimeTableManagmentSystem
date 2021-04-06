@@ -146,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 321);
+            this.label3.Location = new System.Drawing.Point(46, 321);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(131, 25);
@@ -213,7 +213,7 @@
             // 
             this.levelLable.AutoSize = true;
             this.levelLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelLable.Location = new System.Drawing.Point(34, 127);
+            this.levelLable.Location = new System.Drawing.Point(46, 129);
             this.levelLable.Name = "levelLable";
             this.levelLable.Size = new System.Drawing.Size(155, 25);
             this.levelLable.TabIndex = 36;
@@ -223,7 +223,7 @@
             // 
             this.employeeIDLable.AutoSize = true;
             this.employeeIDLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeIDLable.Location = new System.Drawing.Point(46, 223);
+            this.employeeIDLable.Location = new System.Drawing.Point(46, 221);
             this.employeeIDLable.Name = "employeeIDLable";
             this.employeeIDLable.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.employeeIDLable.Size = new System.Drawing.Size(135, 25);
