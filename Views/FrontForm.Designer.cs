@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,17 +53,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.statistic = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.lecturersPanel.SuspendLayout();
             this.studentsPanel.SuspendLayout();
             this.subjectsPanel.SuspendLayout();
             this.roomsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statistic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.statistic);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -294,6 +301,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Latest Lecturer :";
             // 
+            // statistic
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.statistic.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.statistic.Legends.Add(legend1);
+            this.statistic.Location = new System.Drawing.Point(8, 283);
+            this.statistic.Name = "statistic";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Lecturer Hours";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Laboratory";
+            this.statistic.Series.Add(series1);
+            this.statistic.Series.Add(series2);
+            this.statistic.Size = new System.Drawing.Size(481, 300);
+            this.statistic.TabIndex = 14;
+            this.statistic.Text = "chart1";
+            // 
             // FrontForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,6 +331,7 @@
             this.Name = "FrontForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "Front Form";
+            this.Load += new System.EventHandler(this.FrontForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.lecturersPanel.ResumeLayout(false);
@@ -316,6 +344,7 @@
             this.roomsPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statistic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,5 +371,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart statistic;
     }
 }

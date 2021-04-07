@@ -139,6 +139,41 @@ namespace TimeTableManagmentSystem.Views
             childForm.Show();
         }
 
+        private void lecturersMenuBtn_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(lecturerSubMenuPanel);
+        }
+
+        private void tagMenuBtn_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(tagSubMenuPanel);
+        }
+
+        private void studentsMenuBtn_Click_1(object sender, EventArgs e)
+        {
+            ShowSubMenu(studentSubMenuPanel);
+        }
+
+        private void subjectMenuBtn_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(subjectSubMenuPanel);
+        }
+
+        private void locationsMenuBtn_Click_2(object sender, EventArgs e)
+        {
+            ShowSubMenu(locationSubMenuPanel);
+        }
+
+        private void sessionManagemntMenuBtn_Click_1(object sender, EventArgs e)
+        {
+            ShowSubMenu(sessionManagemntSubmenuPanel);
+        }
+
+        private void roomManagmentMenuBtn_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(roomManagmentSubmenuPanel);
+        }
+
         private void locationListSubMenuBtn_Click(object sender, EventArgs e)
         {
             OpenChildContainer(new ManageLocation());
@@ -177,41 +212,6 @@ namespace TimeTableManagmentSystem.Views
             ChangeHeaderText("Add Not Available Session");
             ChangeTitleText("Add Not Available Session");
             HideSubmenu();
-        }
-
-        private void lecturersMenuBtn_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(lecturerSubMenuPanel);
-        }
-
-        private void tagMenuBtn_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(tagSubMenuPanel);
-        }
-
-        private void studentsMenuBtn_Click_1(object sender, EventArgs e)
-        {
-            ShowSubMenu(studentSubMenuPanel);
-        }
-
-        private void subjectMenuBtn_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(subjectSubMenuPanel);
-        }
-
-        private void locationsMenuBtn_Click_2(object sender, EventArgs e)
-        {
-            ShowSubMenu(locationSubMenuPanel);
-        }
-
-        private void sessionManagemntMenuBtn_Click_1(object sender, EventArgs e)
-        {
-            ShowSubMenu(sessionManagemntSubmenuPanel);
-        }
-
-        private void roomManagmentMenuBtn_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(roomManagmentSubmenuPanel);
         }
 
         private void addLecturerSubMenuBtn_Click(object sender, EventArgs e)
@@ -301,5 +301,6 @@ namespace TimeTableManagmentSystem.Views
             ChangeTitleText("Rooms For Groups");
             HideSubmenu();
         }
+
     }
 }

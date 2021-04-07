@@ -14,7 +14,6 @@ namespace TimeTableManagmentSystem.Views.Student
 {
     public partial class ManageStudentForm : Form
     {
-        Helper helper = new Helper();
         Dashboard dashboard = new Dashboard();
         public ManageStudentForm()
         {
@@ -67,7 +66,6 @@ namespace TimeTableManagmentSystem.Views.Student
 
         private void addNewLocationBtn_Click(object sender, EventArgs e)
         {
-            //helper.OpenChildContainer(new AddStudentForm(), ((Dashboard)this.Owner).childContainerPanel);
             dashboard.OpenChildContainer(new AddStudentForm());
             dashboard.ChangeHeaderText("Add Lecturer");
             dashboard.ChangeTitleText("Add Lecturer");

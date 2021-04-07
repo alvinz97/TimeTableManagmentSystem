@@ -58,22 +58,5 @@ namespace TimeTableManagmentSystem.Helpers
             int count = Convert.ToInt32(command.ExecuteScalar());
             return count;
         }
-
-        public Form activeForm = null;
-        public void OpenChildContainer(Form childForm, Panel property)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            property.Controls.Add(childForm);
-            property.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
     }
 }
