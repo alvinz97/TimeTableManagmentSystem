@@ -18,6 +18,7 @@ namespace TimeTableManagmentSystem.Views.Lecturer
     {
         string LecturerLevel = string.Empty;
         Helper helper = new Helper();
+        readonly string type = "ERROR";
 
         public AddLecturerForm() {
             InitializeComponent();
@@ -48,44 +49,44 @@ namespace TimeTableManagmentSystem.Views.Lecturer
         private void roomSaveBtn_Click(object sender, EventArgs e)
         {
             if (lecturerNameInput.Text == "") {
-                MessageBox.Show("Lecturer Name is required.", "ERROR");
+                MessageBox.Show("Lecturer Name is required.", type);
                 return;
             }
 
             if (employeeIDInput.Text == "") {
-                MessageBox.Show("Employee ID is required.", "ERROR");
+                MessageBox.Show("Employee ID is required.", type);
                 return;
             }
 
             if (facultySelectCombobox.Text == "") {
-                MessageBox.Show("Select the faculty.", "ERROR");
+                MessageBox.Show("Select the faculty.", type);
                 return;
             }
 
             if (departmentSelectCombobox.Text == "") {
-                MessageBox.Show("Select the department.", "ERROR");
+                MessageBox.Show("Select the department.", type);
                 return;
             }
 
             if (selectCenterCombobox.Text == "") {
-                MessageBox.Show("Center is required.", "ERROR");
+                MessageBox.Show("Center is required.", type);
                 return;
             }
 
             if (buildingInput.Text == "") {
-                MessageBox.Show("Building is required.", "ERROR");
+                MessageBox.Show("Building is required.", type);
                 return;
             }
 
             if (selectLevelComboBox.Text == "")
             {
-                MessageBox.Show("Select lavel.", "ERROR");
+                MessageBox.Show("Select lavel.", type);
                 return;
             }
 
             if (rankInput.Text == "")
             {
-                MessageBox.Show("Rank is required.", "ERROR");
+                MessageBox.Show("Rank is required.", type);
                 return;
             }
 
@@ -166,7 +167,6 @@ namespace TimeTableManagmentSystem.Views.Lecturer
 
         private void selectLevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             int selectedIndex = selectLevelComboBox.SelectedIndex;
             rankInput.Text = (selectedIndex+1).ToString()+"." + employeeIDInput.Text;
         }

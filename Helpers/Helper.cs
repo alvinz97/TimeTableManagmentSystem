@@ -58,5 +58,6 @@ namespace TimeTableManagmentSystem.Helpers
             int count = Convert.ToInt32(command.ExecuteScalar());
             return count;
         }
+
     }
 }

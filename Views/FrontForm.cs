@@ -42,16 +42,15 @@ namespace TimeTableManagmentSystem.Views
             dashboard.HideSubmenu();
         }
 
-        private void fillChart()
+        private void FillChart()
         {
-            statistic.Series["Lecturer Hours"].Points.AddXY("Ajay", "10000");
-            statistic.Series["Laboratory"].Points.AddXY("Ramesh", "8000");
-            statistic.Series["Laboratory"].Points.AddXY("Ramesh", "8000");
+            statistic.Series["Lecturer Hours"].Points.AddXY("", "10000");
+            statistic.Series["Laboratory"].Points.AddXY("", "8000");
         }
 
         private void FrontForm_Load(object sender, EventArgs e)
         {
-            fillChart();
+            FillChart();
         }
     }
 }
