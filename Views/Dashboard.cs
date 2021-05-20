@@ -106,8 +106,8 @@ namespace TimeTableManagmentSystem.Views
         private void weekendDetailsSubmenuBtn_Click(object sender, EventArgs e)
         {
             OpenChildContainer(new AddWeekdayWeekendForm());
-            ChangeHeaderText("Add Details");
-            ChangeTitleText("Add Weekday Weekend Details");
+            ChangeHeaderText("Update Details");
+            ChangeTitleText("Update Weekday Weekend Details");
             HideSubmenu();
         }
 
@@ -302,5 +302,12 @@ namespace TimeTableManagmentSystem.Views
             HideSubmenu();
         }
 
+        private void roomsForSubjectsSubmenuBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildContainer(new RoomsForSubjectsForm());
+            ChangeHeaderText("Rooms For Subjects");
+            ChangeTitleText("Rooms For Subjects");
+            HideSubmenu();
+        }
     }
 }

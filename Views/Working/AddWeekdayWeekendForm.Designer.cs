@@ -28,8 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWeekdayWeekendForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.weekendWeekdayDataGridView = new System.Windows.Forms.DataGridView();
             this.weekendNweekdaySaveBtn = new System.Windows.Forms.Button();
             this.minutesLable = new System.Windows.Forms.Label();
             this.hoursLable = new System.Windows.Forms.Label();
@@ -46,7 +58,19 @@
             this.workingDaysLable = new System.Windows.Forms.Label();
             this.noOfWorkingDaysInput = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Minute = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.weekendWeekdayDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeMinutesInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeHoursInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noOfWorkingDaysInput)).BeginInit();
@@ -55,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.weekendWeekdayDataGridView);
             this.panel1.Controls.Add(this.weekendNweekdaySaveBtn);
             this.panel1.Controls.Add(this.minutesLable);
             this.panel1.Controls.Add(this.hoursLable);
@@ -75,8 +100,44 @@
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Margin = new System.Windows.Forms.Padding(20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1126, 575);
+            this.panel1.Size = new System.Drawing.Size(1382, 765);
             this.panel1.TabIndex = 23;
+            // 
+            // weekendWeekdayDataGridView
+            // 
+            this.weekendWeekdayDataGridView.AllowUserToAddRows = false;
+            this.weekendWeekdayDataGridView.AllowUserToDeleteRows = false;
+            this.weekendWeekdayDataGridView.AllowUserToResizeColumns = false;
+            this.weekendWeekdayDataGridView.AllowUserToResizeRows = false;
+            this.weekendWeekdayDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.weekendWeekdayDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.weekendWeekdayDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.weekendWeekdayDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.weekendWeekdayDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.weekendWeekdayDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column4,
+            this.Column2,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Hour,
+            this.Minute});
+            this.weekendWeekdayDataGridView.Location = new System.Drawing.Point(33, 497);
+            this.weekendWeekdayDataGridView.Name = "weekendWeekdayDataGridView";
+            this.weekendWeekdayDataGridView.ReadOnly = true;
+            this.weekendWeekdayDataGridView.RowHeadersWidth = 51;
+            this.weekendWeekdayDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.weekendWeekdayDataGridView.RowTemplate.Height = 24;
+            this.weekendWeekdayDataGridView.ShowEditingIcon = false;
+            this.weekendWeekdayDataGridView.Size = new System.Drawing.Size(1334, 265);
+            this.weekendWeekdayDataGridView.TabIndex = 37;
+            this.weekendWeekdayDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.weekendWeekdayDataGridView_CellContentClick);
             // 
             // weekendNweekdaySaveBtn
             // 
@@ -92,7 +153,7 @@
             this.weekendNweekdaySaveBtn.Padding = new System.Windows.Forms.Padding(10);
             this.weekendNweekdaySaveBtn.Size = new System.Drawing.Size(131, 53);
             this.weekendNweekdaySaveBtn.TabIndex = 36;
-            this.weekendNweekdaySaveBtn.Text = "Save";
+            this.weekendNweekdaySaveBtn.Text = "Update";
             this.weekendNweekdaySaveBtn.UseVisualStyleBackColor = false;
             this.weekendNweekdaySaveBtn.Click += new System.EventHandler(this.weekendNweekdaySaveBtn_Click);
             // 
@@ -292,18 +353,140 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "No Of Working Days";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 4;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NoOfWorkingDay";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column3.HeaderText = "No Of Working Days Per Week";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.ToolTipText = "No Of Working Days Per Week";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Monday";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column4.HeaderText = "Monday";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.ToolTipText = "Monday";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Tuesday";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "Tuesday";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.ToolTipText = "Tuesday";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Wednesday";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column5.HeaderText = "Wednesday";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.ToolTipText = "Wednesday";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Thursday";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column6.HeaderText = "Thursday";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.ToolTipText = "Thursday";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Friday";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column7.HeaderText = "Friday";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.ToolTipText = "Friday";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Saturday";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column8.HeaderText = "Saturday";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.ToolTipText = "Saturday";
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Sunday";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Column9.HeaderText = "Sunday";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.ToolTipText = "Sunday";
+            // 
+            // Hour
+            // 
+            this.Hour.DataPropertyName = "Hour";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Hour.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Hour.HeaderText = "Hours Per Day (H)";
+            this.Hour.MinimumWidth = 6;
+            this.Hour.Name = "Hour";
+            this.Hour.ReadOnly = true;
+            this.Hour.ToolTipText = "Hours Per Day (H)";
+            // 
+            // Minute
+            // 
+            this.Minute.DataPropertyName = "Minute";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Minute.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Minute.HeaderText = "Minutes Per Day (M)";
+            this.Minute.MinimumWidth = 6;
+            this.Minute.Name = "Minute";
+            this.Minute.ReadOnly = true;
+            this.Minute.ToolTipText = "Minutes Per Day (M)";
+            // 
             // AddWeekdayWeekendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 615);
+            this.ClientSize = new System.Drawing.Size(1422, 805);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddWeekdayWeekendForm";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "Add Weekday Form";
+            this.Shown += new System.EventHandler(this.AddWeekdayWeekendForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.weekendWeekdayDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeMinutesInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workingTimeHoursInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noOfWorkingDaysInput)).EndInit();
@@ -330,5 +513,17 @@
         private System.Windows.Forms.Label workingDaysLable;
         private System.Windows.Forms.NumericUpDown noOfWorkingDaysInput;
         private System.Windows.Forms.Button weekendNweekdaySaveBtn;
+        private System.Windows.Forms.DataGridView weekendWeekdayDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Minute;
     }
 }

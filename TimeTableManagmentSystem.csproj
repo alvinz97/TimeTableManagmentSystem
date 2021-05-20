@@ -120,6 +120,7 @@
     <Compile Include="Controllers\Location\LocationController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForGroupController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForLecturerController.cs" />
+    <Compile Include="Controllers\RoomManagment\RoomForSubjectController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForTagController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Subject\SubjectController.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\RoomGroup.cs" />
     <Compile Include="Models\RoomLecturer.cs" />
+    <Compile Include="Models\RoomSubject.cs" />
     <Compile Include="Models\RoomTag.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
@@ -191,6 +193,12 @@
     </Compile>
     <Compile Include="Views\RoomManagment\RoomsForLecturerForm.Designer.cs">
       <DependentUpon>RoomsForLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForSubjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomManagment\RoomsForSubjectsForm.Designer.cs">
+      <DependentUpon>RoomsForSubjectsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RoomManagment\RoomsForTagForm.cs">
       <SubType>Form</SubType>
@@ -300,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RoomManagment\RoomsForLecturerForm.resx">
       <DependentUpon>RoomsForLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RoomManagment\RoomsForSubjectsForm.resx">
+      <DependentUpon>RoomsForSubjectsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RoomManagment\RoomsForTagForm.resx">
       <DependentUpon>RoomsForTagForm.cs</DependentUpon>

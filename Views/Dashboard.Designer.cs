@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerDynamicLabel = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.timtableGenerateMenuBtn = new System.Windows.Forms.Button();
             this.roomManagmentSubmenuPanel = new System.Windows.Forms.Panel();
             this.roomsForConsecutiveSessionsSubmenuBtn = new System.Windows.Forms.Button();
             this.roomsForSessionsSubmenuBtn = new System.Windows.Forms.Button();
@@ -72,12 +73,10 @@
             this.addLecturerSubMenuBtn = new System.Windows.Forms.Button();
             this.lecturersMenuBtn = new System.Windows.Forms.Button();
             this.workingHDSubMenuPanel = new System.Windows.Forms.Panel();
-            this.viewWeekdaysDetailsSubmenuBtn = new System.Windows.Forms.Button();
             this.weekendDayDetailsSubmenuBtn = new System.Windows.Forms.Button();
             this.workingHDMenuBtn = new System.Windows.Forms.Button();
             this.dashboardMenuBtn = new System.Windows.Forms.Button();
             this.childContainerPanel = new System.Windows.Forms.Panel();
-            this.timtableGenerateMenuBtn = new System.Windows.Forms.Button();
             this.topHeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -190,6 +189,23 @@
             this.sidebarPanel.Size = new System.Drawing.Size(275, 670);
             this.sidebarPanel.TabIndex = 1;
             // 
+            // timtableGenerateMenuBtn
+            // 
+            this.timtableGenerateMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(138)))));
+            this.timtableGenerateMenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.timtableGenerateMenuBtn.FlatAppearance.BorderSize = 0;
+            this.timtableGenerateMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timtableGenerateMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timtableGenerateMenuBtn.ForeColor = System.Drawing.Color.White;
+            this.timtableGenerateMenuBtn.Location = new System.Drawing.Point(0, 1052);
+            this.timtableGenerateMenuBtn.Name = "timtableGenerateMenuBtn";
+            this.timtableGenerateMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.timtableGenerateMenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.timtableGenerateMenuBtn.TabIndex = 18;
+            this.timtableGenerateMenuBtn.Text = "Generate Timetable";
+            this.timtableGenerateMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.timtableGenerateMenuBtn.UseVisualStyleBackColor = false;
+            // 
             // roomManagmentSubmenuPanel
             // 
             this.roomManagmentSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
@@ -200,7 +216,7 @@
             this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForSubjectsSubmenuBtn);
             this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForTagsSubmenuBtn);
             this.roomManagmentSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 875);
+            this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 847);
             this.roomManagmentSubmenuPanel.Name = "roomManagmentSubmenuPanel";
             this.roomManagmentSubmenuPanel.Size = new System.Drawing.Size(254, 205);
             this.roomManagmentSubmenuPanel.TabIndex = 17;
@@ -291,6 +307,7 @@
             this.roomsForSubjectsSubmenuBtn.Text = "Rooms For Subjects";
             this.roomsForSubjectsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roomsForSubjectsSubmenuBtn.UseVisualStyleBackColor = false;
+            this.roomsForSubjectsSubmenuBtn.Click += new System.EventHandler(this.roomsForSubjectsSubmenuBtn_Click);
             // 
             // roomsForTagsSubmenuBtn
             // 
@@ -318,7 +335,7 @@
             this.roomManagmentMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomManagmentMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomManagmentMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.roomManagmentMenuBtn.Location = new System.Drawing.Point(0, 840);
+            this.roomManagmentMenuBtn.Location = new System.Drawing.Point(0, 812);
             this.roomManagmentMenuBtn.Name = "roomManagmentMenuBtn";
             this.roomManagmentMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.roomManagmentMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -337,7 +354,7 @@
             this.sessionManagemntSubmenuPanel.Controls.Add(this.notOverlappingSessionSubmenuBtn);
             this.sessionManagemntSubmenuPanel.Controls.Add(this.consecutiveSessionSubmenuBtn);
             this.sessionManagemntSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sessionManagemntSubmenuPanel.Location = new System.Drawing.Point(0, 670);
+            this.sessionManagemntSubmenuPanel.Location = new System.Drawing.Point(0, 642);
             this.sessionManagemntSubmenuPanel.Name = "sessionManagemntSubmenuPanel";
             this.sessionManagemntSubmenuPanel.Size = new System.Drawing.Size(254, 170);
             this.sessionManagemntSubmenuPanel.TabIndex = 16;
@@ -437,7 +454,7 @@
             this.sessionManagemntMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sessionManagemntMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sessionManagemntMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.sessionManagemntMenuBtn.Location = new System.Drawing.Point(0, 635);
+            this.sessionManagemntMenuBtn.Location = new System.Drawing.Point(0, 607);
             this.sessionManagemntMenuBtn.Name = "sessionManagemntMenuBtn";
             this.sessionManagemntMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.sessionManagemntMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -453,7 +470,7 @@
             this.locationSubMenuPanel.Controls.Add(this.addLocationSubMenuBtn);
             this.locationSubMenuPanel.Controls.Add(this.locationListSubMenuBtn);
             this.locationSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.locationSubMenuPanel.Location = new System.Drawing.Point(0, 570);
+            this.locationSubMenuPanel.Location = new System.Drawing.Point(0, 542);
             this.locationSubMenuPanel.Name = "locationSubMenuPanel";
             this.locationSubMenuPanel.Size = new System.Drawing.Size(254, 65);
             this.locationSubMenuPanel.TabIndex = 13;
@@ -504,7 +521,7 @@
             this.locationsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.locationsMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationsMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.locationsMenuBtn.Location = new System.Drawing.Point(0, 535);
+            this.locationsMenuBtn.Location = new System.Drawing.Point(0, 507);
             this.locationsMenuBtn.Name = "locationsMenuBtn";
             this.locationsMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.locationsMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -520,7 +537,7 @@
             this.subjectSubMenuPanel.Controls.Add(this.addSubjectSubMenuBtn);
             this.subjectSubMenuPanel.Controls.Add(this.subjectListSubMenuBtn);
             this.subjectSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subjectSubMenuPanel.Location = new System.Drawing.Point(0, 470);
+            this.subjectSubMenuPanel.Location = new System.Drawing.Point(0, 442);
             this.subjectSubMenuPanel.Name = "subjectSubMenuPanel";
             this.subjectSubMenuPanel.Size = new System.Drawing.Size(254, 65);
             this.subjectSubMenuPanel.TabIndex = 13;
@@ -569,7 +586,7 @@
             this.subjectMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subjectMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subjectMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.subjectMenuBtn.Location = new System.Drawing.Point(0, 435);
+            this.subjectMenuBtn.Location = new System.Drawing.Point(0, 407);
             this.subjectMenuBtn.Name = "subjectMenuBtn";
             this.subjectMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.subjectMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -585,7 +602,7 @@
             this.studentSubMenuPanel.Controls.Add(this.listStudentGroupSubMenuBtn);
             this.studentSubMenuPanel.Controls.Add(this.addStudentGroupSubMenuBtn);
             this.studentSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.studentSubMenuPanel.Location = new System.Drawing.Point(0, 370);
+            this.studentSubMenuPanel.Location = new System.Drawing.Point(0, 342);
             this.studentSubMenuPanel.Name = "studentSubMenuPanel";
             this.studentSubMenuPanel.Size = new System.Drawing.Size(254, 65);
             this.studentSubMenuPanel.TabIndex = 12;
@@ -634,7 +651,7 @@
             this.studentsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.studentsMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentsMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.studentsMenuBtn.Location = new System.Drawing.Point(0, 335);
+            this.studentsMenuBtn.Location = new System.Drawing.Point(0, 307);
             this.studentsMenuBtn.Name = "studentsMenuBtn";
             this.studentsMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.studentsMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -650,7 +667,7 @@
             this.tagSubMenuPanel.Controls.Add(this.tagListSubMenuBtn);
             this.tagSubMenuPanel.Controls.Add(this.addTagSubMenuBtn);
             this.tagSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tagSubMenuPanel.Location = new System.Drawing.Point(0, 270);
+            this.tagSubMenuPanel.Location = new System.Drawing.Point(0, 242);
             this.tagSubMenuPanel.Name = "tagSubMenuPanel";
             this.tagSubMenuPanel.Size = new System.Drawing.Size(254, 65);
             this.tagSubMenuPanel.TabIndex = 10;
@@ -699,7 +716,7 @@
             this.tagMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tagMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tagMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.tagMenuBtn.Location = new System.Drawing.Point(0, 235);
+            this.tagMenuBtn.Location = new System.Drawing.Point(0, 207);
             this.tagMenuBtn.Name = "tagMenuBtn";
             this.tagMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.tagMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -715,7 +732,7 @@
             this.lecturerSubMenuPanel.Controls.Add(this.lecturerListSubMenuBtn);
             this.lecturerSubMenuPanel.Controls.Add(this.addLecturerSubMenuBtn);
             this.lecturerSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lecturerSubMenuPanel.Location = new System.Drawing.Point(0, 170);
+            this.lecturerSubMenuPanel.Location = new System.Drawing.Point(0, 142);
             this.lecturerSubMenuPanel.Name = "lecturerSubMenuPanel";
             this.lecturerSubMenuPanel.Size = new System.Drawing.Size(254, 65);
             this.lecturerSubMenuPanel.TabIndex = 8;
@@ -764,7 +781,7 @@
             this.lecturersMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lecturersMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lecturersMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.lecturersMenuBtn.Location = new System.Drawing.Point(0, 135);
+            this.lecturersMenuBtn.Location = new System.Drawing.Point(0, 107);
             this.lecturersMenuBtn.Name = "lecturersMenuBtn";
             this.lecturersMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.lecturersMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -777,31 +794,12 @@
             // workingHDSubMenuPanel
             // 
             this.workingHDSubMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.workingHDSubMenuPanel.Controls.Add(this.viewWeekdaysDetailsSubmenuBtn);
             this.workingHDSubMenuPanel.Controls.Add(this.weekendDayDetailsSubmenuBtn);
             this.workingHDSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.workingHDSubMenuPanel.Location = new System.Drawing.Point(0, 70);
             this.workingHDSubMenuPanel.Name = "workingHDSubMenuPanel";
-            this.workingHDSubMenuPanel.Size = new System.Drawing.Size(254, 65);
+            this.workingHDSubMenuPanel.Size = new System.Drawing.Size(254, 37);
             this.workingHDSubMenuPanel.TabIndex = 6;
-            // 
-            // viewWeekdaysDetailsSubmenuBtn
-            // 
-            this.viewWeekdaysDetailsSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
-            this.viewWeekdaysDetailsSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.viewWeekdaysDetailsSubmenuBtn.FlatAppearance.BorderSize = 0;
-            this.viewWeekdaysDetailsSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewWeekdaysDetailsSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewWeekdaysDetailsSubmenuBtn.ForeColor = System.Drawing.Color.White;
-            this.viewWeekdaysDetailsSubmenuBtn.Location = new System.Drawing.Point(0, 35);
-            this.viewWeekdaysDetailsSubmenuBtn.Name = "viewWeekdaysDetailsSubmenuBtn";
-            this.viewWeekdaysDetailsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.viewWeekdaysDetailsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
-            this.viewWeekdaysDetailsSubmenuBtn.TabIndex = 8;
-            this.viewWeekdaysDetailsSubmenuBtn.Text = "View Details";
-            this.viewWeekdaysDetailsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewWeekdaysDetailsSubmenuBtn.UseVisualStyleBackColor = false;
-            this.viewWeekdaysDetailsSubmenuBtn.Click += new System.EventHandler(this.viewWeekdaysDetailsSubmenuBtn_Click);
             // 
             // weekendDayDetailsSubmenuBtn
             // 
@@ -814,7 +812,7 @@
             this.weekendDayDetailsSubmenuBtn.Location = new System.Drawing.Point(0, 0);
             this.weekendDayDetailsSubmenuBtn.Name = "weekendDayDetailsSubmenuBtn";
             this.weekendDayDetailsSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.weekendDayDetailsSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.weekendDayDetailsSubmenuBtn.Size = new System.Drawing.Size(254, 37);
             this.weekendDayDetailsSubmenuBtn.TabIndex = 7;
             this.weekendDayDetailsSubmenuBtn.Text = "Add Details";
             this.weekendDayDetailsSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -865,23 +863,6 @@
             this.childContainerPanel.Size = new System.Drawing.Size(1152, 670);
             this.childContainerPanel.TabIndex = 2;
             // 
-            // timtableGenerateMenuBtn
-            // 
-            this.timtableGenerateMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(138)))));
-            this.timtableGenerateMenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.timtableGenerateMenuBtn.FlatAppearance.BorderSize = 0;
-            this.timtableGenerateMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timtableGenerateMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timtableGenerateMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.timtableGenerateMenuBtn.Location = new System.Drawing.Point(0, 1080);
-            this.timtableGenerateMenuBtn.Name = "timtableGenerateMenuBtn";
-            this.timtableGenerateMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.timtableGenerateMenuBtn.Size = new System.Drawing.Size(254, 35);
-            this.timtableGenerateMenuBtn.TabIndex = 18;
-            this.timtableGenerateMenuBtn.Text = "Generate Timetable";
-            this.timtableGenerateMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.timtableGenerateMenuBtn.UseVisualStyleBackColor = false;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -926,7 +907,6 @@
         private System.Windows.Forms.Button locationListSubMenuBtn;
         private System.Windows.Forms.Panel childContainerPanel;
         private System.Windows.Forms.Label headerDynamicLabel;
-        private System.Windows.Forms.Button viewWeekdaysDetailsSubmenuBtn;
         private System.Windows.Forms.Panel workingHDSubMenuPanel;
         private System.Windows.Forms.Button lecturersMenuBtn;
         private System.Windows.Forms.Button subjectMenuBtn;

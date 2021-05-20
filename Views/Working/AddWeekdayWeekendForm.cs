@@ -48,12 +48,30 @@ namespace TimeTableManagmentSystem.Views.Working
             }
         }
 
+        private void AddWeekdayWeekendForm_Shown(object sender, EventArgs e)
+        {
+            Display();
+        }
+
         private void thursdayCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if (thursdayCheckbox.Checked) {
                 thursday = 1;
             } else {
                 thursday = 0;
+            }
+        }
+
+        private void weekendWeekdayDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    WorkingdayController.Delete(weekendWeekdayDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display();
+                }
+                return;
             }
         }
 
@@ -107,14 +125,20 @@ namespace TimeTableManagmentSystem.Views.Working
                 return;
             }
 
-            if (weekendNweekdaySaveBtn.Text == "Save") {
+            if (weekendNweekdaySaveBtn.Text == "Update") {
                 int noOfWorkingDays = Int16.Parse(noOfWorkingDaysInput.Text.Trim());
                 int hours = Int16.Parse(workingTimeHoursInput.Text.Trim());
                 int minutes = Int16.Parse(workingTimeMinutesInput.Text.Trim());
                 Workingday workingday= new Workingday(noOfWorkingDays, monday, tuesday, wednesday, thursday, friday, saturday, sunday, hours, minutes);
-                WorkingdayController.Store(workingday);
+                WorkingdayController.Update(workingday, 1002);
                 Clear();
+                Display();
             }
+        }
+        public void Display()
+        {
+            string query = "SELECT id, NoOfWorkingDay, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Hour, Minute FROM workingday WHERE id=1002";
+            WorkingdayController.Index(query, weekendWeekdayDataGridView);
         }
     }
 }

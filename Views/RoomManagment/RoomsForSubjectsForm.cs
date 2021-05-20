@@ -11,36 +11,64 @@ using System.Windows.Forms;
 using TimeTableManagmentSystem.Configurations;
 using TimeTableManagmentSystem.Controllers.RoomManagment;
 
-namespace TimeTableManagmentSystem.Views.Room
+namespace TimeTableManagmentSystem.Views.RoomManagment
 {
-    public partial class RoomsForTagForm : Form
+    public partial class RoomsForSubjectsForm : Form
     {
         string tag = string.Empty;
         string room = string.Empty;
-        public RoomsForTagForm()
+        string subject = string.Empty;
+        public RoomsForSubjectsForm()
         {
             InitializeComponent();
             SetTagsComboBoxValues();
             SetRoomsComboBoxValues();
+            SetSubjectsComboBoxValues();
             tagSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             roomSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            subjectSelectCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+        private void SetSubjectsComboBoxValues()
+        {
+            string query = "SELECT * FROM subject";
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
 
+            try
+            {
+                using (SqlDataReader read = command.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        subject = read["SubjectName"].ToString();
+                        subjectSelectCombobox.Items.Add(subject);
+                    }
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         void SetTagsComboBoxValues()
         {
             string query = "SELECT * FROM tag";
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
 
-            try {
+            try
+            {
                 using (SqlDataReader read = command.ExecuteReader())
                 {
-                    while (read.Read()) {
+                    while (read.Read())
+                    {
                         tag = read["Name"].ToString();
                         tagSelectCombobox.Items.Add(tag);
                     }
                 }
-            } finally {
+            }
+            finally
+            {
                 connection.Close();
             }
         }
@@ -50,7 +78,8 @@ namespace TimeTableManagmentSystem.Views.Room
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
 
-            try {
+            try
+            {
                 using (SqlDataReader read = command.ExecuteReader())
                 {
                     while (read.Read())
@@ -59,23 +88,26 @@ namespace TimeTableManagmentSystem.Views.Room
                         roomSelectCombobox.Items.Add(room);
                     }
                 }
-            } finally {
+            }
+            finally
+            {
                 connection.Close();
             }
         }
         public void Clear()
         {
             tagSelectCombobox.Text =
+            subjectSelectCombobox.Text =
             roomSelectCombobox.Text = string.Empty;
         }
 
         public void Display()
         {
-            string query = "SELECT id, TagName, RoomName FROM roomTag";
-            RoomForTagController.Index(query, roomForTagDataGridView);
+            string query = "SELECT id, TagName, SubjectName, RoomName FROM roomSubject";
+            RoomForSubjectController.Index(query, subjectForTagDataGridView);
         }
 
-        private void roomForTagSaveBtn_Click(object sender, EventArgs e)
+        private void subjectForTagSaveBtn_Click(object sender, EventArgs e)
         {
             if (tagSelectCombobox.Text == "")
             {
@@ -83,49 +115,51 @@ namespace TimeTableManagmentSystem.Views.Room
                 return;
             }
 
+            if (subjectSelectCombobox.Text == "")
+            {
+                MessageBox.Show("Select the subject.", "ERROR");
+            }
+
+
             if (roomSelectCombobox.Text == "")
             {
                 MessageBox.Show("Room Name is required.", "ERROR");
                 return;
             }
 
-            if (roomForTagSaveBtn.Text == "Save")
+            if (subjectForTagSaveBtn.Text == "Save")
             {
-                Models.RoomTag roomTag = new Models.RoomTag(
+                Models.RoomSubject roomSubject = new Models.RoomSubject(
                                                     tagSelectCombobox.Text.Trim(),
+                                                    subjectSelectCombobox.Text.Trim(),
                                                     roomSelectCombobox.Text.Trim());
-                RoomForTagController.Store(roomTag);
+                RoomForSubjectController.Store(roomSubject);
                 Clear();
                 Display();
             }
         }
 
-        private void roomForTagDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void subjectForTagDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void RoomsForTagForm_Shown(object sender, EventArgs e)
-        {
-            Display();
-        }
-
-        private void roomForTagDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void subjectForTagDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
                 if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    RoomForTagController.Delete(roomForTagDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    RoomForSubjectController.Delete(subjectForTagDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
                     Display();
                 }
                 return;
             }
         }
 
-        private void RoomsForTagForm_Load(object sender, EventArgs e)
+        private void RoomsForSubjectsForm_Shown(object sender, EventArgs e)
         {
-
+            Display();
         }
     }
 }

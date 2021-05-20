@@ -55,7 +55,7 @@ namespace TimeTableManagmentSystem.Controllers.Workingday
             }
         }
 
-        public static void Update(Models.Workingday workingday, string id)
+        public static void Update(Models.Workingday workingday, int id)
         {
             string query = "UPDATE workingday SET " +
                 "NoOfWorkingDay = @NoOfWorkingDay, " +
@@ -68,7 +68,7 @@ namespace TimeTableManagmentSystem.Controllers.Workingday
                 "Sunday = @Sunday, " +
                 "Hour = @Hour, " +
                 "Minute = @Minute, " +
-                "UpdatedAt = @UpdatedAt WHERE id = @ID";
+                "UpdatedAt = @UpdatedAt WHERE id = "+id;
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
