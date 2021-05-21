@@ -107,32 +107,27 @@ namespace TimeTableManagmentSystem.Views.Session
 
         private void sessionSaveBtn_Click(object sender, EventArgs e)
         {
-            if (selectLecturerCombobox.Text == "")
-            {
+            if (selectLecturerCombobox.Text == "") {
                 MessageBox.Show("Select Lecturer.", "ERROR");
                 return;
             }
 
-            if (selectGroupcombobox.Text == "")
-            {
+            if (selectGroupcombobox.Text == "") {
                 MessageBox.Show("Select Group.", "ERROR");
                 return;
             }
 
-            if (selectTagCombobox.Text == "")
-            {
+            if (selectTagCombobox.Text == "") {
                 MessageBox.Show("Select Tag.", "ERROR");
                 return;
             }
 
-            if (selectSubGroupCombobox.Text == "")
-            {
+            if (selectSubGroupCombobox.Text == "") {
                 MessageBox.Show("Select Sub Group.", "ERROR");
                 return;
             }
 
-            if (sessionSaveBtn.Text == "Save")
-            {
+            if (sessionSaveBtn.Text == "Save") {
                 int hours = Int16.Parse(hoursUpAndDown.Text.Trim());
                 int minutes = Int16.Parse(minutesUpAndDown.Text.Trim());
                 Models.Session session = new Models.Session(
@@ -159,6 +154,9 @@ namespace TimeTableManagmentSystem.Views.Session
             selectLecturerCombobox.Text =
             selectGroupcombobox.Text =
             selectTagCombobox.Text =
+            noOfStudentUpAndDown.Text =
+            hoursUpAndDown.Text =
+            minutesUpAndDown.Text =
             selectSubGroupCombobox.Text = string.Empty;
         }
 
@@ -169,11 +167,9 @@ namespace TimeTableManagmentSystem.Views.Session
 
         private void sessionDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0)
-            {
+            if (e.ColumnIndex == 0) {
             }
-            if (e.ColumnIndex == 1)
-            {
+            if (e.ColumnIndex == 1) {
                 if (MessageBox.Show("Are you sure? You want to delete this record?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     SessionController.Delete(sessionDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());

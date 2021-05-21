@@ -42,18 +42,12 @@ namespace TimeTableManagmentSystem.Controllers.SessionManagement
             command.Parameters.AddWithValue("@CreatedAt", DateTime.Now); 
             command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
 
-            try
-            {
+            try {
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (SqlException e)
-            {
+            } catch (SqlException e) {
                 MessageBox.Show("Error Occur. \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
+            } finally {
                 connection.Close();
             }
         }
@@ -66,17 +60,12 @@ namespace TimeTableManagmentSystem.Controllers.SessionManagement
             command.CommandType = CommandType.Text;
             command.Parameters.Add("@ID", SqlDbType.VarChar).Value = id;
 
-            try
-            {
+            try {
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (SqlException e)
-            {
+            } catch (SqlException e) {
                 MessageBox.Show("Error Occur. \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
+            } finally {
                 connection.Close();
             }
         }
