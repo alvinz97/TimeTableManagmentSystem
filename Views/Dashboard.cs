@@ -201,8 +201,8 @@ namespace TimeTableManagmentSystem.Views
         private void addSessionSubmenuBtn_Click(object sender, EventArgs e)
         {
             OpenChildContainer(new AddSessionRoomForm());
-            ChangeHeaderText("Add Session");
-            ChangeTitleText("Add Session");
+            ChangeHeaderText("Add Session Room");
+            ChangeTitleText("Add Session Room");
             HideSubmenu();
         }
 
@@ -307,6 +307,14 @@ namespace TimeTableManagmentSystem.Views
             OpenChildContainer(new RoomsForSubjectsForm());
             ChangeHeaderText("Rooms For Subjects");
             ChangeTitleText("Rooms For Subjects");
+            HideSubmenu();
+        }
+
+        private void addSessionSubmenuBtn_Click_1(object sender, EventArgs e)
+        {
+            OpenChildContainer(new AddSessionForm());
+            ChangeHeaderText("Add Session");
+            ChangeTitleText("Add Session");
             HideSubmenu();
         }
     }

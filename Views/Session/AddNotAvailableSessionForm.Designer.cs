@@ -63,7 +63,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1126, 575);
-            this.panel1.TabIndex = 23;
+            this.panel1.TabIndex = 25;
             // 
             // setTimeInput
             // 
@@ -181,7 +181,6 @@
             this.roomSaveBtn.TabIndex = 23;
             this.roomSaveBtn.Text = "Save";
             this.roomSaveBtn.UseVisualStyleBackColor = false;
-            this.roomSaveBtn.Click += new System.EventHandler(this.roomSaveBtn_Click);
             // 
             // AddNotAvailableSessionForm
             // 

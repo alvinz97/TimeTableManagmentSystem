@@ -46,7 +46,7 @@
             this.roomsForTagsSubmenuBtn = new System.Windows.Forms.Button();
             this.roomManagmentMenuBtn = new System.Windows.Forms.Button();
             this.sessionManagemntSubmenuPanel = new System.Windows.Forms.Panel();
-            this.addSessionSubmenuBtn = new System.Windows.Forms.Button();
+            this.addSessionRoomSubmenuBtn = new System.Windows.Forms.Button();
             this.paralleSessionSubmenuBtn = new System.Windows.Forms.Button();
             this.allocateNotAvailableSubmenuBtn = new System.Windows.Forms.Button();
             this.notOverlappingSessionSubmenuBtn = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.workingHDMenuBtn = new System.Windows.Forms.Button();
             this.dashboardMenuBtn = new System.Windows.Forms.Button();
             this.childContainerPanel = new System.Windows.Forms.Panel();
+            this.addSessionSubmenuBtn = new System.Windows.Forms.Button();
             this.topHeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -197,7 +198,7 @@
             this.timtableGenerateMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.timtableGenerateMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timtableGenerateMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.timtableGenerateMenuBtn.Location = new System.Drawing.Point(0, 1052);
+            this.timtableGenerateMenuBtn.Location = new System.Drawing.Point(0, 1087);
             this.timtableGenerateMenuBtn.Name = "timtableGenerateMenuBtn";
             this.timtableGenerateMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.timtableGenerateMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -216,7 +217,7 @@
             this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForSubjectsSubmenuBtn);
             this.roomManagmentSubmenuPanel.Controls.Add(this.roomsForTagsSubmenuBtn);
             this.roomManagmentSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 847);
+            this.roomManagmentSubmenuPanel.Location = new System.Drawing.Point(0, 882);
             this.roomManagmentSubmenuPanel.Name = "roomManagmentSubmenuPanel";
             this.roomManagmentSubmenuPanel.Size = new System.Drawing.Size(254, 205);
             this.roomManagmentSubmenuPanel.TabIndex = 17;
@@ -335,7 +336,7 @@
             this.roomManagmentMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomManagmentMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomManagmentMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.roomManagmentMenuBtn.Location = new System.Drawing.Point(0, 812);
+            this.roomManagmentMenuBtn.Location = new System.Drawing.Point(0, 847);
             this.roomManagmentMenuBtn.Name = "roomManagmentMenuBtn";
             this.roomManagmentMenuBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.roomManagmentMenuBtn.Size = new System.Drawing.Size(254, 35);
@@ -349,6 +350,7 @@
             // 
             this.sessionManagemntSubmenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.sessionManagemntSubmenuPanel.Controls.Add(this.addSessionSubmenuBtn);
+            this.sessionManagemntSubmenuPanel.Controls.Add(this.addSessionRoomSubmenuBtn);
             this.sessionManagemntSubmenuPanel.Controls.Add(this.paralleSessionSubmenuBtn);
             this.sessionManagemntSubmenuPanel.Controls.Add(this.allocateNotAvailableSubmenuBtn);
             this.sessionManagemntSubmenuPanel.Controls.Add(this.notOverlappingSessionSubmenuBtn);
@@ -356,26 +358,26 @@
             this.sessionManagemntSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.sessionManagemntSubmenuPanel.Location = new System.Drawing.Point(0, 642);
             this.sessionManagemntSubmenuPanel.Name = "sessionManagemntSubmenuPanel";
-            this.sessionManagemntSubmenuPanel.Size = new System.Drawing.Size(254, 170);
+            this.sessionManagemntSubmenuPanel.Size = new System.Drawing.Size(254, 205);
             this.sessionManagemntSubmenuPanel.TabIndex = 16;
             // 
-            // addSessionSubmenuBtn
+            // addSessionRoomSubmenuBtn
             // 
-            this.addSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
-            this.addSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.addSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
-            this.addSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
-            this.addSessionSubmenuBtn.Location = new System.Drawing.Point(0, 140);
-            this.addSessionSubmenuBtn.Name = "addSessionSubmenuBtn";
-            this.addSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.addSessionSubmenuBtn.Size = new System.Drawing.Size(254, 35);
-            this.addSessionSubmenuBtn.TabIndex = 0;
-            this.addSessionSubmenuBtn.Text = "Add Session";
-            this.addSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addSessionSubmenuBtn.UseVisualStyleBackColor = false;
-            this.addSessionSubmenuBtn.Click += new System.EventHandler(this.addSessionSubmenuBtn_Click);
+            this.addSessionRoomSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.addSessionRoomSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addSessionRoomSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.addSessionRoomSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSessionRoomSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSessionRoomSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.addSessionRoomSubmenuBtn.Location = new System.Drawing.Point(0, 140);
+            this.addSessionRoomSubmenuBtn.Name = "addSessionRoomSubmenuBtn";
+            this.addSessionRoomSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.addSessionRoomSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.addSessionRoomSubmenuBtn.TabIndex = 0;
+            this.addSessionRoomSubmenuBtn.Text = "Add Session Room";
+            this.addSessionRoomSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addSessionRoomSubmenuBtn.UseVisualStyleBackColor = false;
+            this.addSessionRoomSubmenuBtn.Click += new System.EventHandler(this.addSessionSubmenuBtn_Click);
             // 
             // paralleSessionSubmenuBtn
             // 
@@ -863,6 +865,24 @@
             this.childContainerPanel.Size = new System.Drawing.Size(1152, 670);
             this.childContainerPanel.TabIndex = 2;
             // 
+            // addSessionSubmenuBtn
+            // 
+            this.addSessionSubmenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(67)))), ((int)(((byte)(100)))));
+            this.addSessionSubmenuBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addSessionSubmenuBtn.FlatAppearance.BorderSize = 0;
+            this.addSessionSubmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSessionSubmenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSessionSubmenuBtn.ForeColor = System.Drawing.Color.White;
+            this.addSessionSubmenuBtn.Location = new System.Drawing.Point(0, 175);
+            this.addSessionSubmenuBtn.Name = "addSessionSubmenuBtn";
+            this.addSessionSubmenuBtn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.addSessionSubmenuBtn.Size = new System.Drawing.Size(254, 35);
+            this.addSessionSubmenuBtn.TabIndex = 5;
+            this.addSessionSubmenuBtn.Text = "Add Session";
+            this.addSessionSubmenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addSessionSubmenuBtn.UseVisualStyleBackColor = false;
+            this.addSessionSubmenuBtn.Click += new System.EventHandler(this.addSessionSubmenuBtn_Click_1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -917,7 +937,7 @@
         private System.Windows.Forms.Button paralleSessionSubmenuBtn;
         private System.Windows.Forms.Button consecutiveSessionSubmenuBtn;
         private System.Windows.Forms.Button allocateNotAvailableSubmenuBtn;
-        private System.Windows.Forms.Button addSessionSubmenuBtn;
+        private System.Windows.Forms.Button addSessionRoomSubmenuBtn;
         private System.Windows.Forms.Panel roomManagmentSubmenuPanel;
         private System.Windows.Forms.Button roomsForTagsSubmenuBtn;
         private System.Windows.Forms.Panel lecturerSubMenuPanel;
@@ -945,5 +965,6 @@
         private System.Windows.Forms.Button roomsForSubjectsSubmenuBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button timtableGenerateMenuBtn;
+        private System.Windows.Forms.Button addSessionSubmenuBtn;
     }
 }

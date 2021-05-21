@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeTableManagmentSystem.Views.Session
+namespace TimeTableManagmentSystem.Views
 {
-    public partial class AddNotAvailableSessionForm : Form
+    public partial class test : Form
     {
-        public AddNotAvailableSessionForm()
+        public test()
         {
             InitializeComponent();
         }

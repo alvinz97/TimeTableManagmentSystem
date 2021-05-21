@@ -122,6 +122,7 @@
     <Compile Include="Controllers\RoomManagment\RoomForLecturerController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForSubjectController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForTagController.cs" />
+    <Compile Include="Controllers\SessionManagement\SessionController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Subject\SubjectController.cs" />
     <Compile Include="Controllers\Tag\TagController.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Models\RoomLecturer.cs" />
     <Compile Include="Models\RoomSubject.cs" />
     <Compile Include="Models\RoomTag.cs" />
+    <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -212,6 +214,12 @@
     <Compile Include="Views\Session\AddNotAvailableSessionForm.Designer.cs">
       <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Session\AddSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Session\AddSessionForm.Designer.cs">
+      <DependentUpon>AddSessionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Session\AddSessionRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +261,12 @@
     </Compile>
     <Compile Include="Views\Tag\ManageTagForm.Designer.cs">
       <DependentUpon>ManageTagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Working\AddWeekdayWeekendForm.cs">
       <SubType>Form</SubType>
@@ -318,6 +332,9 @@
     <EmbeddedResource Include="Views\Session\AddNotAvailableSessionForm.resx">
       <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Session\AddSessionForm.resx">
+      <DependentUpon>AddSessionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Session\AddSessionRoomForm.resx">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Tag\ManageTagForm.resx">
       <DependentUpon>ManageTagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Working\AddWeekdayWeekendForm.resx">
       <DependentUpon>AddWeekdayWeekendForm.cs</DependentUpon>
