@@ -208,22 +208,22 @@
     <Compile Include="Views\RoomManagment\RoomsForTagForm.Designer.cs">
       <DependentUpon>RoomsForTagForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Session\AddNotAvailableSessionForm.cs">
+    <Compile Include="Views\SessionManagment\AddNotAvailableSessionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Session\AddNotAvailableSessionForm.Designer.cs">
+    <Compile Include="Views\SessionManagment\AddNotAvailableSessionForm.Designer.cs">
       <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Session\AddSessionForm.cs">
+    <Compile Include="Views\SessionManagment\AddSessionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Session\AddSessionForm.Designer.cs">
+    <Compile Include="Views\SessionManagment\AddSessionForm.Designer.cs">
       <DependentUpon>AddSessionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Session\AddSessionRoomForm.cs">
+    <Compile Include="Views\SessionManagment\AddSessionRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Session\AddSessionRoomForm.Designer.cs">
+    <Compile Include="Views\SessionManagment\AddSessionRoomForm.Designer.cs">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Student\AddStudentForm.cs">
@@ -329,13 +329,13 @@
     <EmbeddedResource Include="Views\RoomManagment\RoomsForTagForm.resx">
       <DependentUpon>RoomsForTagForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Session\AddNotAvailableSessionForm.resx">
+    <EmbeddedResource Include="Views\SessionManagment\AddNotAvailableSessionForm.resx">
       <DependentUpon>AddNotAvailableSessionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Session\AddSessionForm.resx">
+    <EmbeddedResource Include="Views\SessionManagment\AddSessionForm.resx">
       <DependentUpon>AddSessionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Session\AddSessionRoomForm.resx">
+    <EmbeddedResource Include="Views\SessionManagment\AddSessionRoomForm.resx">
       <DependentUpon>AddSessionRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Student\AddStudentForm.resx">
