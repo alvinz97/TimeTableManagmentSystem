@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\Connection.cs" />
+    <Compile Include="Configurations\Connection_Example.cs" />
     <Compile Include="Controllers\Lecturer\LecturerController.cs" />
     <Compile Include="Controllers\Location\LocationController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForGroupController.cs" />

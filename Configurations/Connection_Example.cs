@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,17 +8,16 @@ using System.Windows.Forms;
 
 namespace TimeTableManagmentSystem.Configurations
 {
-    class Connection
+    class Connection_Example
     {
-        public static SqlConnection GetConnection() 
+        public static SqlConnection GetConnection()
         {
-            string url = "Data Source=ALVIN-NOTEBOOK\\DEVELOPERSQL;Initial Catalog=itpm_db;Integrated Security=True";
-
+            string url = "YOUR_SQL_SERVER_MANAGEMENT_CONNECTION_STRING";
             SqlConnection connection = new SqlConnection(url);
 
             try {
                 connection.Open();
-            } catch (SqlException e){
+            } catch (SqlException e)  {
                 MessageBox.Show("SQL Server Connection! \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return connection;
