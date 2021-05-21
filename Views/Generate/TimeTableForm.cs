@@ -55,7 +55,7 @@ namespace TimeTableManagmentSystem.Views.Generate
         public void getSession() {
             String getStartingTime;
             String getLecturers;
-            String getSubject;
+            String getTag;
             String getStudentGroup;
             String getDay;
             String getRoom;
@@ -63,11 +63,78 @@ namespace TimeTableManagmentSystem.Views.Generate
 
             string query = "SELECT s.Lecturer , s.Tag , " +
                 "s.Hours , s.Minutes , s.GroupID , " +
-                "s.SubGroupID , r.SessionRoom " +
+                "s.SubGroupID , r.Room " +
                 "FROM session s, sessionRoom r " +
                 "WHERE s.id = r.SessionID and s.Lecturer = " + lecturer;
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
+
+            try {
+                using (SqlDataReader read = command.ExecuteReader()) {
+                    while (read.Read()) {
+                        getLecturers = (read["Lecturer"].ToString());
+                        getStartingTime = (read["Hours"].ToString());
+                        getTag = (read["Tag"].ToString());
+                        getStudentGroup = (read["SubGroupID"].ToString());
+                        getDay = (read["Minutes"].ToString());
+                        getRoom = (read["Room"].ToString());
+
+                        sessionDetails = getLecturers + "\n" + getTag + "-" + getStudentGroup + " " + getRoom;
+
+                        if (getDay == "Monday")
+                        {
+                            switch (getStartingTime)
+                            {
+                                case "8.30":
+                                    r1c1.Text = sessionDetails;
+                                    break;
+
+                                case "9.30":
+                                    r2c1.Text = sessionDetails;
+                                    break;
+
+                                case "10.30":
+                                    r3c1.Text = sessionDetails;
+                                    break;
+
+                                case "11.30":
+                                    r4c1.Text = sessionDetails;
+                                    break;
+
+                                case "12.30":
+                                    r5c1.Text = sessionDetails;
+                                    break;
+
+                                case "13.30":
+                                    r6c1.Text = sessionDetails;
+                                    break;
+
+                                case "14.30":
+                                    r7c1.Text = sessionDetails;
+                                    break;
+
+                                case "15.30":
+                                    r8c1.Text = sessionDetails;
+                                    break;
+
+                                case "16.30":
+                                    r9c1.Text = sessionDetails;
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                }
+            } finally {
+                connection.Close();
+            }
+        }
+
+        private void timeTableSearchBtn_Click(object sender, EventArgs e)
+        {
+            getSession();
         }
     }
 }

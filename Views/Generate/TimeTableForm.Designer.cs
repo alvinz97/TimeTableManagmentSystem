@@ -465,6 +465,7 @@
             this.timeTableSearchBtn.TabIndex = 2;
             this.timeTableSearchBtn.Text = "Search";
             this.timeTableSearchBtn.UseVisualStyleBackColor = false;
+            this.timeTableSearchBtn.Click += new System.EventHandler(this.timeTableSearchBtn_Click);
             // 
             // r1c1
             // 
