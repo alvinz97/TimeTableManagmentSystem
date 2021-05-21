@@ -42,7 +42,7 @@ namespace TimeTableManagmentSystem.Helpers
         }
         public string getLatestSubject()
         {
-            return FindLatest("SELECT TOP 1 SubGroupID FROM student ORDER BY id DESC;");
+            return FindLatest("SELECT TOP 1 SubjectName FROM subject ORDER BY id DESC;");
         }
 
         protected string FindLatest(string query) {

@@ -35,7 +35,7 @@
             this.selectRoomLable = new System.Windows.Forms.Label();
             this.selectedSessionLable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roomSaveBtn = new System.Windows.Forms.Button();
+            this.sessionSaveBtn = new System.Windows.Forms.Button();
             this.selectedSessionTextBox = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.roomSaveBtn);
+            this.panel1.Controls.Add(this.sessionSaveBtn);
             this.panel1.Controls.Add(this.selectedSessionTextBox);
             this.panel1.Controls.Add(this.selectedSessionLable);
             this.panel1.Controls.Add(this.selectSessionLabel);
@@ -105,22 +105,23 @@
             this.panel1.Size = new System.Drawing.Size(1126, 575);
             this.panel1.TabIndex = 22;
             // 
-            // roomSaveBtn
+            // sessionSaveBtn
             // 
-            this.roomSaveBtn.BackColor = System.Drawing.Color.Blue;
-            this.roomSaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.roomSaveBtn.FlatAppearance.BorderSize = 0;
-            this.roomSaveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.roomSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roomSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.roomSaveBtn.Location = new System.Drawing.Point(397, 472);
-            this.roomSaveBtn.Name = "roomSaveBtn";
-            this.roomSaveBtn.Padding = new System.Windows.Forms.Padding(10);
-            this.roomSaveBtn.Size = new System.Drawing.Size(131, 53);
-            this.roomSaveBtn.TabIndex = 23;
-            this.roomSaveBtn.Text = "Save";
-            this.roomSaveBtn.UseVisualStyleBackColor = false;
+            this.sessionSaveBtn.BackColor = System.Drawing.Color.Blue;
+            this.sessionSaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.sessionSaveBtn.FlatAppearance.BorderSize = 0;
+            this.sessionSaveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.sessionSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sessionSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionSaveBtn.ForeColor = System.Drawing.Color.White;
+            this.sessionSaveBtn.Location = new System.Drawing.Point(397, 472);
+            this.sessionSaveBtn.Name = "sessionSaveBtn";
+            this.sessionSaveBtn.Padding = new System.Windows.Forms.Padding(10);
+            this.sessionSaveBtn.Size = new System.Drawing.Size(131, 53);
+            this.sessionSaveBtn.TabIndex = 23;
+            this.sessionSaveBtn.Text = "Save";
+            this.sessionSaveBtn.UseVisualStyleBackColor = false;
+            this.sessionSaveBtn.Click += new System.EventHandler(this.roomSaveBtn_Click);
             // 
             // selectedSessionTextBox
             // 
@@ -154,6 +155,6 @@
         private System.Windows.Forms.ComboBox selectSessionInput;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox selectedSessionTextBox;
-        private System.Windows.Forms.Button roomSaveBtn;
+        private System.Windows.Forms.Button sessionSaveBtn;
     }
 }

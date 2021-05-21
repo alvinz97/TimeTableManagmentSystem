@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagmentSystem.Helpers;
+using TimeTableManagmentSystem.Views.Generate;
 using TimeTableManagmentSystem.Views.Lecturer;
 using TimeTableManagmentSystem.Views.Room;
 using TimeTableManagmentSystem.Views.RoomManagment;
@@ -315,6 +316,14 @@ namespace TimeTableManagmentSystem.Views
             OpenChildContainer(new AddSessionForm());
             ChangeHeaderText("Add Session");
             ChangeTitleText("Add Session");
+            HideSubmenu();
+        }
+
+        private void timtableGenerateMenuBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildContainer(new TimeTableForm());
+            ChangeHeaderText("Generate Time Table");
+            ChangeTitleText("Generate Time Table");
             HideSubmenu();
         }
     }

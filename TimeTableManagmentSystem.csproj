@@ -124,6 +124,7 @@
     <Compile Include="Controllers\RoomManagment\RoomForSubjectController.cs" />
     <Compile Include="Controllers\RoomManagment\RoomForTagController.cs" />
     <Compile Include="Controllers\SessionManagement\SessionController.cs" />
+    <Compile Include="Controllers\SessionManagement\SessionRoomController.cs" />
     <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Controllers\Subject\SubjectController.cs" />
     <Compile Include="Controllers\Tag\TagController.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Models\RoomSubject.cs" />
     <Compile Include="Models\RoomTag.cs" />
     <Compile Include="Models\Session.cs" />
+    <Compile Include="Models\SessionRoom.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -150,6 +152,12 @@
     </Compile>
     <Compile Include="Views\FrontForm.Designer.cs">
       <DependentUpon>FrontForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Generate\TimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Generate\TimeTableForm.Designer.cs">
+      <DependentUpon>TimeTableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Lecturer\AddLecturerForm.cs">
       <SubType>Form</SubType>
@@ -176,7 +184,6 @@
       <DependentUpon>ManageLocationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Location.cs" />
-    <Compile Include="Test.cs" />
     <Compile Include="Views\Location\AddLocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrontForm.resx">
       <DependentUpon>FrontForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Generate\TimeTableForm.resx">
+      <DependentUpon>TimeTableForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Lecturer\AddLecturerForm.resx">
       <DependentUpon>AddLecturerForm.cs</DependentUpon>
