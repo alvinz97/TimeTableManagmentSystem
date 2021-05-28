@@ -83,7 +83,7 @@ namespace TimeTableManagmentSystem.Controllers.Subject
                 "LabHours = @LabHours, " +
                 "EvaluationHours = @EvaluationHours, " +
                 "UpdatedAt = @UpdatedAt " +
-                "WHERE id = @ID";
+                "WHERE id =" + id;
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);

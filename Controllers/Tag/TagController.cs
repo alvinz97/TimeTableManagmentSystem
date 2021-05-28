@@ -56,7 +56,7 @@ namespace TimeTableManagmentSystem.Controllers.Tag
                 "Code = @Code, " +
                 "RelatedTag = @RelatedTag, " +
                 "UpdatedAt = @UpdatedAt " +
-                "WHERE id = @ID";
+                "WHERE id =" + id;
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);

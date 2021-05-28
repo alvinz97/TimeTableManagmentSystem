@@ -67,7 +67,7 @@ namespace TimeTableManagmentSystem.Controllers
                 "RoomType = @RoomType, " +
                 "RoomCapacity = @RoomCapacity, " +
                 "UpdatedAt = @UpdatedAt " +
-                "WHERE id = @ID";
+                "WHERE id =" + id;
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);

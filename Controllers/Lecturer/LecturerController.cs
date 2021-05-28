@@ -70,7 +70,7 @@ namespace TimeTableManagmentSystem.Controllers.Lecturer
                 "LecturerLevel = @LecturerLevel, " +
                 "Rank = @Rank, " +
                 "UpdatedAt = @UpdatedAt " +
-                "WHERE id = @ID";
+                "WHERE id =" + id;
 
             SqlConnection connection = Connection.GetConnection();
             SqlCommand command = new SqlCommand(query, connection);
