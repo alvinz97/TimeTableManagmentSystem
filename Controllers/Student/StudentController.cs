@@ -98,5 +98,28 @@ namespace TimeTableManagmentSystem.Controllers.Student
                 connection.Close();
             }
         }
+        public static void Delete(string id)
+        {
+            string query = "DELETE FROM student WHERE id = @ID";
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
+            command.CommandType = CommandType.Text;
+            command.Parameters.Add("@ID", SqlDbType.VarChar).Value = id;
+
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Error Occur. \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
