@@ -12,6 +12,15 @@ namespace TimeTableManagmentSystem.Controllers.Student
 {
     class StudentController
     {
-        
+        public static void Index(string query, DataGridView dataGridView)
+        {
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView.DataSource = dataTable;
+            connection.Close();
+        }
     }
 }
