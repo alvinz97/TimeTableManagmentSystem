@@ -58,5 +58,45 @@ namespace TimeTableManagmentSystem.Controllers.Student
                 connection.Close();
             }
         }
+        public static void Update(Models.Student student, string id)
+        {
+            string query = "UPDATE student SET " +
+                "Year = @Year, " +
+                "Semester = @Semester, " +
+                "Program = @Program, " +
+                "GroupNo = @GroupNo, " +
+                "GroupID = @GroupID, " +
+                "SubGroupNo = @SubGroupNo, " +
+                "SubGroupID = @SubGroupID, " +
+                "UpdatedAt = @UpdatedAt " +
+                "WHERE id =" + id;
+
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand command = new SqlCommand(query, connection);
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@Year", Convert.ToInt16(student.Year));
+            command.Parameters.AddWithValue("@Semester", Convert.ToInt16(student.Semester));
+            command.Parameters.AddWithValue("@Program", student.Program);
+            command.Parameters.AddWithValue("@GroupNo", Convert.ToInt16(student.GroupNo));
+            command.Parameters.AddWithValue("@GroupID", student.GroupID);
+            command.Parameters.AddWithValue("@SubGroupNo", Convert.ToInt16(student.SubGroupNo));
+            command.Parameters.AddWithValue("@SubGroupID", student.SubGroupID);
+            command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
+
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Error Occur. \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
